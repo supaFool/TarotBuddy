@@ -54,7 +54,7 @@ public class ReadingController {
     }
 
     public ReadingController() {
-
+             System.out.println(wantsHelp);
     }
 
     @FXML
@@ -67,16 +67,19 @@ public class ReadingController {
         ReadingController.stage = stage;
     }
 
+    public void setWantsHelp(boolean wantsHelp) {
+        this.wantsHelp = wantsHelp;
+    }
+
     @FXML
     private void setHelp() {
-        if (helpToggle.isSelected()) {
-            helpToggle.setText(disabled);
-            wantsHelp = false;
-        } else {
-            helpToggle.setText(enabled);
-            wantsHelp = true;
-        }
-        flashSelection(wantsHelp ? enabled : disabled);
+
+        helpToggle.setText(helpToggle.isSelected() ? disabled : enabled);
+
+        setWantsHelp(helpToggle.isSelected() ? false : true);
+
+        flashSelection(helpToggle.getText());
+
         System.out.println("Help = " + wantsHelp);
     }
 
@@ -94,7 +97,7 @@ public class ReadingController {
     @FXML
     public void invertSelected() {
         setInvert(invert.isSelected() ? true : false);
-        flashSelection(invertCards ? "Cards Inverted" : "Inverted Cards Off");
+        flashSelection(invertCards ? "Inverted Cards On" : "Inverted Cards Off");
         System.out.println(invertCards);
     }
 
