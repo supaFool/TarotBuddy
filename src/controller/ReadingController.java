@@ -54,7 +54,7 @@ public class ReadingController {
     }
 
     public ReadingController() {
-             System.out.println(wantsHelp);
+        System.out.println(wantsHelp);
     }
 
     @FXML

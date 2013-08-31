@@ -3,7 +3,6 @@ package controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
-import javafx.scene.control.ProgressBar;
 import runner.Main;
 
 /**
