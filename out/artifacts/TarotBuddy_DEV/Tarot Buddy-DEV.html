@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'Tarot Buddy-DEV.jnlp'
+            },
+            {
+                javafx : '2.2+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbed_Tarot Buddy-DEV_id() {
+        dtjava.embed(
+            {
+                id : 'Tarot Buddy-DEV_id',
+                url : 'Tarot Buddy-DEV.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : 600,
+                height : 400
+            },
+            {
+                javafx : '2.2+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbed_Tarot Buddy-DEV_id);
+</script>
+
+</head><body>
+<h2>Test page for <b>Tarot Buddy-DEV</b></h2>
+  <b>Webstart:</b> <a href='Tarot Buddy-DEV.jnlp' onclick="return launchApplication('Tarot Buddy-DEV.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>
