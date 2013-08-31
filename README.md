@@ -5,6 +5,6 @@ Currently adding functionality.
 
 To Install
 ==========
-[Download Zip File](https://github.com/supaFool/TarotHelper/archive/master.zip)
-Navigate to -- TarotBuddy\out\artifacts\TarotBuddy_DEV
-Place the .jar file anywhere you like and run the Application
+[Download Zip File](https://github.com/supaFool/TarotHelper/archive/master.zip)  
+Navigate to -- TarotBuddy\out\artifacts\TarotBuddy_DEV  
+Place the .jar file anywhere you like and run the Application  
