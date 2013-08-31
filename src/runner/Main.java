@@ -16,7 +16,6 @@ public class Main extends Application {
     /**
      * I guess you have to initialize all .fxml in menu class
      */
-    //TODO See about moving this to the controller package
     private static Parent reading;
     private static Parent lookAt;
     private static Parent quiz;

@@ -58,7 +58,7 @@ public class ReadingController {
     }
 
     @FXML
-    public void wants3Card() {    //TODO Add new Stage
+    public void wants3Card() {
         wants3Card = true;
         typeOfReading.setText(typeOfReading.getItems().get(0).getText());
     }

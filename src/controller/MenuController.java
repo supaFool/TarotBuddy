@@ -19,8 +19,6 @@ public class MenuController {
     private boolean wantsQuiz = false;
     private boolean wantsLookAt = false;
 
-    @FXML
-    private ProgressBar progress = new ProgressBar();
 
     @FXML
     private MenuButton todo;
@@ -48,7 +46,6 @@ public class MenuController {
 
     @FXML
     public void setRequestedStage() {
-        //TODO Make a xml Parser to read scene values
         System.out.println("Read " + wantsReading + ", Quiz " + wantsQuiz +
                 ", Study " + wantsStudy + ", Look At " + wantsLookAt);
 
@@ -87,7 +84,6 @@ public class MenuController {
 
     @FXML
     public void studyCards() {
-//        odo.setText(todo.getItems().get(1).getText());
         todo.setText(coming);
         wantsStudy = true;
         wantsReading = false;
@@ -97,7 +93,6 @@ public class MenuController {
 
     @FXML
     public void takeQuiz() {
-//        odo.setText(todo.getItems().get(2).getText());
         todo.setText(coming);
         wantsStudy = false;
         wantsReading = false;
@@ -107,7 +102,6 @@ public class MenuController {
 
     @FXML
     public void lookAtTarotDeck() {
-//        odo.setText(todo.getItems().get(3).getText());
         todo.setText(coming);
         wantsStudy = false;
         wantsReading = false;
@@ -120,16 +114,6 @@ public class MenuController {
         Platform.exit();
     }
 
-    @FXML
-    public void soundSelected() {
-        System.out.println("Sound Selected");
-    }
-
-    @FXML
-    public void graphicsSelected() {
-        System.out.println("Graphics Selected");
-
-    }
 
     @FXML
     public void showProgress() {
