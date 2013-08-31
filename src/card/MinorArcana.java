@@ -4,11 +4,11 @@ package card;
  * Created with IntelliJ IDEA.
  * User: Erick
  * Date: 8/31/13
- * Time: 4:32 AM
+ * Time: 4:48 AM
  */
 
 /**
- * Class to hold Info about Major Cards
+ * Class to hold info for Minor Cards
  */
-public class MajorArcana {
+public class MinorArcana {
 }
