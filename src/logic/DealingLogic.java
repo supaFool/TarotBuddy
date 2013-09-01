@@ -7,9 +7,12 @@ package logic;
  * Time: 4:54 AM
  */
 
+import card.TarotCard;
 import javafx.animation.Timeline;
+import javafx.scene.image.Image;
 
 import java.util.HashSet;
+import java.util.Random;
 
 /**
  * This Class is used to Deal Cards
@@ -20,9 +23,12 @@ public class DealingLogic {
 
 
     // Holds the card images that are going to be shown in spread
-    private HashSet spreadCards;
+    private HashSet<Image> spreadCards;
 
-    // How many cards to deal
+    //card numbers
+    private int[] cardNumbers;
+
+    // How many cards to getSpreadCardImages
     private int amountToDeal = 0;
 
     //Should cards be inverted
@@ -35,86 +41,32 @@ public class DealingLogic {
         //Init card array
         spreadCards = new HashSet();
 
+        //init card numbers
+        cardNumbers = new int[amountToDeal];
+
     }
     //Constructor END//
 
-    public void deal() {
+    public HashSet<Image> getSpreadCardImages() {
         //todo Finish
 
 
-//        Random r = new Random();
-//
-//        int c1 = r.nextInt(77);
-//        int c2 = r.nextInt(77);
-//        int c3 = r.nextInt(77);
-//
-//        if (c1 == c2 || c1 == c3) {
-//            do {
-//                c1 = r.nextInt(77);
-//                System.out.println("Changed c1");
-//            } while (c1 == c2 || c1 == c3);
-//        }
-//
-//        if (c2 == c1 || c2 == c3) {
-//            do {
-//                c2 = r.nextInt(77);
-//                System.out.println("Changed c2");
-//            } while (c2 == c3);
-//        }
-//
-//
-//
-//        // Present Card
-//        presentCard = new TarotCard(c1, g);
-//
-//        // if the group doesnt contain the card ten add it
-//        if (!g.getChildren().contains(presentCard)) {
-//            g.getChildren().add(presentCard);
-//        } else {
-//            // If the card is already in the spread, then choose another card
-//            presentCard = new TarotCard(r.nextInt(77), g);
-//            g.getChildren().add(presentCard);
-//        }
-//
-//
-//        // Past Card
-//        pastCard = new TarotCard(c2, g);
-//
-//
-//        // if the group doesnt contain the card ten add it
-//        if (!g.getChildren().contains(pastCard)) {
-//            g.getChildren().add(pastCard);
-//        } else {
-//            // If the card is already in the spread, then choose another card
-//            pastCard = new TarotCard(r.nextInt(77), g);
-//            g.getChildren().add(pastCard);
-//        }
-//
-//
-//        //Future Card
-//        futureCard = new TarotCard(c3, g);
-//
-//
-//        // if the group doesnt contain the card ten add it
-//        if (!g.getChildren().contains(futureCard)) {
-//            g.getChildren().add(futureCard);
-//        } else {
-//            // If the card is already in the spread, then choose another card
-//            futureCard = new TarotCard(r.nextInt(77), futureCard);
-//            g.getChildren().add(futureCard);
-//        }
-//
-//        // Set the Layout for drawnCards
-//        setFaceLayout();
-//
-//        //Randomize Rotaion
-//        randomizeRotation();
-//
-//        //Set the backs
-//        setBacks();
-//
-//        scRoot.getChildren().add(g);
+        Random r = new Random();
+
+        //Get random numbers to call the cards with
+        for (int card = 0; card < amountToDeal; card++) {
+            Image image = TarotCard.getImageView(r.nextInt(77)).getImage();
+
+            while (spreadCards.contains(image)) {
+                image = TarotCard.getImageView(r.nextInt(77)).getImage();
+            }
+            spreadCards.add(image);
+
+        }
+
+        return spreadCards;
     }
+
 
     // Shows the card, animation should be played here
     public void showCard(int cardToShow) {
