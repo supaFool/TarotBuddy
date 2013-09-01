@@ -16,7 +16,7 @@ public class TarotCard {
      * Card Numbers used to get cards from []
      */
 
-    static final int THE_FOOL = 0;
+    public static final int THE_FOOL = 0;
     public static final int THE_MAGUS = 1;
     public static final int THE_HIGH_PRIESTESS = 2;
     public static final int THE_EMPRESS = 3;
@@ -188,7 +188,7 @@ public class TarotCard {
      * Major Arcana card names
      */
 
-    public static String[] MAJOR_ARCANA = new String[]{
+    public static String[] CARD_TITLE = new String[]{
             "0 - The Fool",
             "1 - The Magus",
             "2 - The High Priestess",
@@ -210,14 +210,73 @@ public class TarotCard {
             "18 - The Moon",
             "19 - The Sun",
             "20 - Judgement",
-            "21 - The World"
+            "21 - The World",                     //s,w,c,p
+            //SWORDS
+            "Ace of Swords",
+            "Two of Swords",
+            "Three of Sword",
+            "Four of Swords",
+            "Five of Swords",
+            "Six of Swords",
+            "Seven of Swords",
+            "Eight of Swords",
+            "Nine of Swords",
+            "Ten of Swords",
+            "Page of Swords",
+            "Knight of Swords",
+            "King of Swords",
+            "Queen of Swords",
+            //WANDS
+            "Ace of Wands",
+            "Two of Wands",
+            "Three of Wands",
+            "Four of Wands",
+            "Five of Wands",
+            "Six of Wands",
+            "Seven of Wands",
+            "Eight of Wands",
+            "Nine of Wands",
+            "Ten of Wands",
+            "Page of Wands",
+            "Knight of Wands",
+            "King of Wands",
+            "Queen of wands",
+            //CUPS
+            "Ace of Cups",
+            "Two of Cups",
+            "Three of Cups",
+            "Four of Cups",
+            "Five of Cups",
+            "Six of Cups",
+            "Seven of Cups",
+            "Eight of Cups",
+            "Nine of Cups",
+            "Ten of Cups",
+            "Page of Cups",
+            "Knight of Cups",
+            "King of Cups",
+            "Queen of Cups",
+            //COINS
+            "Ace of Pentacles",
+            "Two of Pentacles",
+            "Three of Pentacles",
+            "Four of Pentacles",
+            "Five of Pentacles",
+            "Six of Pentacles",
+            "Seven of Pentacles",
+            "Eight of Pentacles",
+            "Nine of Pentacles",
+            "Ten of Pentacles",
+            "Page of Pentacles",
+            "Knight of Pentacles",
+            "Queen of Pentacles"
     };
 
     /**
      * Card Images
      */
 
-    public static ImageView[] cardImage = new ImageView[]{
+    static final ImageView[] cardImage = new ImageView[]{
             new ImageView(new Image(getImageFile(THE_FOOL))),
             new ImageView(new Image(getImageFile(THE_MAGUS))),
             new ImageView(new Image(getImageFile(THE_HIGH_PRIESTESS))),
@@ -302,8 +361,36 @@ public class TarotCard {
             new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES))),
             new ImageView(new Image("/card/image/ZSpBack.gif"))};
 
+    /**
+     * @param card card requested
+     * @return the URL of requested card Image
+     */
     public static String getImageFile(int card) {
         return "/card/image/" + card + ".gif";
+    }
+
+    /**
+     * @param card card Number
+     * @return the Image View of requested card
+     */
+    public static ImageView getImageView(int card) {
+        return cardImage[card];
+    }
+
+    /**
+     * @param card card number
+     * @return The in depth meaning of the card
+     */
+    public static String getCardMeaning(int card) {
+        return CARD_MEANINGS[card];
+    }
+
+    /**
+     * @param card the requested card
+     * @return Title of the Card
+     */
+    public static String getCardTitle(int card) {
+        return CARD_TITLE[card];
     }
 
 }
