@@ -115,7 +115,7 @@ public class TCSController {
             futurec = r.nextInt(77);
         }
 
-        if (counter == 0) {
+        if (counter == 1) {
 
             KeyValue v1 = new KeyValue(past.opacityProperty(), 0);
             KeyValue v2 = new KeyValue(past.opacityProperty(), 1);
@@ -133,7 +133,7 @@ public class TCSController {
 
         }
 
-        if (counter == 1) {
+        if (counter == 0) {
 
             KeyValue v1 = new KeyValue(present.opacityProperty(), 0);
             KeyValue v2 = new KeyValue(present.opacityProperty(), 1);
