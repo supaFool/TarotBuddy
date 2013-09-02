@@ -25,6 +25,11 @@ public class Main extends Application {
 
     private static Stage ps;
 
+    private  static double version = 1.0;
+    public static String ver = "Beta ver." + version;
+
+    public static String TITLE = "Tarot-Buddy " + ver;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
@@ -43,10 +48,12 @@ public class Main extends Application {
         //set stage props
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS)));
-        primaryStage.setTitle("Tarot Helper");
+        primaryStage.setTitle("Tarot Buddy");
         primaryStage.setScene(new Scene(menu, Color.BURLYWOOD));
         primaryStage.show();
     }
+
+
 
     /**
      * @return the reading parent

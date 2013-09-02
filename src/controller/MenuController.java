@@ -3,6 +3,7 @@ package controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
+import javafx.scene.text.Text;
 import runner.Main;
 
 /**
@@ -22,12 +23,16 @@ public class MenuController {
     @FXML
     private MenuButton todo;
 
+//    @FXML
+//    private Text title;
+
     private String coming = "Coming Soon...";
 
 
-    public MenuController() {
-
+        public MenuController() {
     }
+
+
 
     @FXML
     public void getReading() {

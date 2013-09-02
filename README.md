@@ -1,4 +1,4 @@
-TarotBuddy Dev 0.5
+TarotBuddy Dev 1.0
 ==================
 Tarot Buddy Dev. Build - Fortune Telling Software
 Currently adding functionality.
