@@ -93,7 +93,7 @@
         </HBox>
         <HBox id="HBox" alignment="CENTER" layoutX="596.0" layoutY="525.0" opacity="0.43" spacing="5.0">
             <children>
-                <Button mnemonicParsing="false" text="Show Next Card"/>
+                <Button mnemonicParsing="false" onAction="#showNext" text="Show Next Card"/>
                 <Button mnemonicParsing="false" onAction="#done" text="Done"/>
             </children>
             <effect>

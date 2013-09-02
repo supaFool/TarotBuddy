@@ -70,12 +70,6 @@
                                 <Tooltip text="Enable to show guides for reading the spread and the cards"/>
                             </tooltip>
                         </ToggleButton>
-                        <CheckBox fx:id="invert" mnemonicParsing="false" onAction="#invertSelected"
-                                  text="Inverted Cards">
-                            <tooltip>
-                                <Tooltip text="Turn on to allow cards  to be reversed"/>
-                            </tooltip>
-                        </CheckBox>
                     </children>
                 </HBox>
             </children>

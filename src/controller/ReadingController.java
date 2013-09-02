@@ -5,6 +5,7 @@ import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.ToggleButton;
@@ -55,12 +56,13 @@ public class ReadingController {
     }
 
     public ReadingController() {
-        System.out.println(wantsHelp);
     }
 
     @FXML
     public void getReading() {
-        Main.getStage().getScene().setRoot(Main.getTCS());
+        Parent p = Main.getTCS();
+        Main.getStage().getScene().setRoot(p);
+        TCSController.invert = invertCards;
         Main.getStage().getScene().setFill(Color.BLACK);
         Main.getStage().setWidth(778.0);
         Main.getStage().setHeight(572.0);
@@ -108,7 +110,8 @@ public class ReadingController {
     public void invertSelected() {
         setInvert(invert.isSelected() ? true : false);
         flashSelection(invertCards ? "Inverted Cards On" : "Inverted Cards Off");
-        System.out.println(invertCards);
+        System.out.println("Inversion: " + invertCards);
+        TCSController.invert = this.invertCards;
     }
 
     @FXML
