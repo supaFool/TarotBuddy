@@ -7,9 +7,10 @@ package logic;
  * Time: 4:54 AM
  */
 
-import card.CardData;
+import card.TarotCard;
 import javafx.animation.Timeline;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.util.HashSet;
 import java.util.Random;
@@ -23,19 +24,21 @@ public class DealingLogic {
 
 
     // Holds the card images that are going to be shown in spread
-    private HashSet<Image> spreadCards;
+    private HashSet<TarotCard> spreadCards;
+    private HashSet<ImageView> views;
 
     //card numbers
     private int[] cardNumbers;
 
-    // How many cards to getSpreadCardImages
+    // How many cards to getCards
     private int amountToDeal = 0;
 
     //Should cards be inverted
     private boolean isInverted = false;
 
-    public DealingLogic(int amountToDeal, boolean inverted) {
+    public DealingLogic(int amountToDeal, HashSet<ImageView> views, boolean inverted) {
         this.amountToDeal = amountToDeal;
+        this.views = views;
         isInverted = inverted;
 
         //Init card array
@@ -47,30 +50,46 @@ public class DealingLogic {
     }
     //Constructor END//
 
-    public HashSet<Image> getSpreadCardImages() {
+    public Image[] getCards() {
         //todo Finish
-
-
+        Image[] image = new Image[amountToDeal];
         Random r = new Random();
+        ImageView v = views.iterator().next();
 
-        //Get random numbers to call the cards with
-        for (int card = 0; card < amountToDeal; card++) {
-            Image image = CardData.getImageView(r.nextInt(77)).getImage();
+        for (int i = 0; i < amountToDeal; i++) {
 
-            while (spreadCards.contains(image)) {
-                image = CardData.getImageView(r.nextInt(77)).getImage();
+            //getCard
+            TarotCard card = new TarotCard(v, r.nextInt(77), false);
+
+            //Make sure card is not already drawn
+            do {
+                card = new TarotCard(v, r.nextInt(77), false);
+            } while (spreadCards.contains(card));
+
+            //add
+            spreadCards.add(card);
+
+            //Make v = the next view in hash set
+            if (views.iterator().hasNext()) {
+                v = views.iterator().next();
+            } else {
+                System.out.println("HashSet is empty");
             }
-            spreadCards.add(image);
 
         }
+        int ii = 0;
+        for (TarotCard c : spreadCards) {
+            image[ii] = c.getImage();
+            ii++;
+        }
 
-        return spreadCards;
+        return image;
     }
 
     //Create animation
     public void initAnimation() {
 
-        for (Image im : spreadCards) {
+        for (TarotCard im : spreadCards) {
 
         }
 

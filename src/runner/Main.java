@@ -21,6 +21,7 @@ public class Main extends Application {
     private static Parent quiz;
     private static Parent study;
     private static Parent menu;
+    private static Parent tcs;
 
     private static Stage ps;
 
@@ -31,6 +32,7 @@ public class Main extends Application {
         reading = FXMLLoader.load(getClass().getResource("reading.fxml"));
         lookAt = FXMLLoader.load(getClass().getResource("lookAt.fxml"));
         quiz = FXMLLoader.load(getClass().getResource("quiz.fxml"));
+        tcs = FXMLLoader.load(getClass().getResource("TCS.fxml"));
         study = FXMLLoader.load(getClass().getResource("study.fxml"));
 
         //Set Stage so we can retrieve it later
@@ -55,6 +57,10 @@ public class Main extends Application {
 
     public static Parent getMenu() {
         return menu;
+    }
+
+    public static Parent getTCS() {
+        return tcs;
     }
 
     public static Stage getStage() {

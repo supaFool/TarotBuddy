@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -55,6 +56,15 @@ public class ReadingController {
 
     public ReadingController() {
         System.out.println(wantsHelp);
+    }
+
+    @FXML
+    public void getReading() {
+        Main.getStage().getScene().setRoot(Main.getTCS());
+        Main.getStage().getScene().setFill(Color.BLACK);
+        Main.getStage().setWidth(778.0);
+        Main.getStage().setHeight(572.0);
+        Main.getStage().centerOnScreen();
     }
 
     @FXML
