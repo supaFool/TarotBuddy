@@ -58,18 +58,14 @@ public class DealingLogic {
 
         for (int i = 0; i < amountToDeal; i++) {
 
-            //getCard
-            TarotCard card = new TarotCard(v, r.nextInt(77), false);
+
+            TarotCard card = new TarotCard(r.nextInt(77), false);
 
             //Make sure card is not already drawn
-            do {
-                card = new TarotCard(v, r.nextInt(77), false);
-            } while (spreadCards.contains(card));
+            if (spreadCards.contains(card)) {
+                card = new TarotCard(r.nextInt(77), false);
+            }
 
-            //add
-            spreadCards.add(card);
-
-            //Make v = the next view in hash set
             if (views.iterator().hasNext()) {
                 v = views.iterator().next();
             } else {

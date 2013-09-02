@@ -1,11 +1,8 @@
 package card;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.util.Duration;
 
 
 /**
@@ -23,12 +20,10 @@ public class TarotCard {
     private Timeline flipAnimation;
     private ImageView view;
 
-    public TarotCard(ImageView view, int cardNumber, boolean allowReversed) {
-        this.view = view;
+    public TarotCard(int cardNumber, boolean allowReversed) {
         this.cardNumber = cardNumber;
         this.invert = allowReversed;
-        initCard();
-        buildAnimation();
+//        initCard();
 
     }
 
@@ -53,12 +48,12 @@ public class TarotCard {
         }
     }
 
-    private void buildAnimation() {
-        this.flipAnimation = new Timeline();
-        KeyFrame f1 = new KeyFrame(Duration.millis(0), new KeyValue(view.opacityProperty(), 0f));
-        KeyFrame f2 = new KeyFrame(Duration.millis(750), new KeyValue(view.opacityProperty(), 1f));
-        flipAnimation.getKeyFrames().addAll(f1, f2);
-    }
+//    private void buildAnimation() {
+//        this.flipAnimation = new Timeline();
+//        KeyFrame f1 = new KeyFrame(Duration.millis(0), new KeyValue(view.opacityProperty(), 0f));
+//        KeyFrame f2 = new KeyFrame(Duration.millis(750), new KeyValue(view.opacityProperty(), 1f));
+//        flipAnimation.getKeyFrames().addAll(f1, f2);
+//    }
 
     private void initCard() {
         //init card
