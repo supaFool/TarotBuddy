@@ -6,5 +6,5 @@ package card;
  * Date: 8/31/13
  * Time: 2:17 PM
  */
-public class MinorArcana extends TarotCard {
+public class MinorArcana extends CardData {
 }

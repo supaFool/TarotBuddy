@@ -7,7 +7,7 @@ package logic;
  * Time: 4:54 AM
  */
 
-import card.TarotCard;
+import card.CardData;
 import javafx.animation.Timeline;
 import javafx.scene.image.Image;
 
@@ -55,10 +55,10 @@ public class DealingLogic {
 
         //Get random numbers to call the cards with
         for (int card = 0; card < amountToDeal; card++) {
-            Image image = TarotCard.getImageView(r.nextInt(77)).getImage();
+            Image image = CardData.getImageView(r.nextInt(77)).getImage();
 
             while (spreadCards.contains(image)) {
-                image = TarotCard.getImageView(r.nextInt(77)).getImage();
+                image = CardData.getImageView(r.nextInt(77)).getImage();
             }
             spreadCards.add(image);
 
@@ -67,13 +67,18 @@ public class DealingLogic {
         return spreadCards;
     }
 
+    //Create animation
+    public void initAnimation() {
+
+        for (Image im : spreadCards) {
+
+        }
+
+    }
+
 
     // Shows the card, animation should be played here
     public void showCard(int cardToShow) {
-
-
-        //Make animation
-        cardFadeAnimation = new Timeline();
 
 
         //Play animation

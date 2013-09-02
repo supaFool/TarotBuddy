@@ -1,6 +1,6 @@
 package runner;
 
-import card.TarotCard;
+import card.CardData;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -40,7 +40,7 @@ public class Main extends Application {
 
         //set stage props
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.getIcons().add(new Image(TarotCard.getImageFile(TarotCard.THE_MAGUS)));
+        primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS)));
         primaryStage.setTitle("Tarot Helper");
         primaryStage.setScene(new Scene(menu, Color.BURLYWOOD));
         primaryStage.show();

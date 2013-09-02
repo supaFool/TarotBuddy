@@ -9,7 +9,7 @@ import javafx.scene.image.ImageView;
  * Date: 8/30/13
  * Time: 3:09 AM
  */
-public class TarotCard {
+public class CardData {
 
 
     /**
@@ -360,6 +360,17 @@ public class TarotCard {
             new ImageView(new Image(getImageFile(KING_OF_PENTACLES))),
             new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES))),
             new ImageView(new Image("/card/image/ZSpBack.gif"))};
+
+    //Keep track of which way the card is facing, prob going to use this in DealingLogic.initAnimation
+    private boolean hasBeenFlipped = false;
+
+    public boolean isHasBeenFlipped() {
+        return hasBeenFlipped;
+    }
+
+    public void setHasBeenFlipped(boolean b) {
+        //todo making another class
+    }
 
     /**
      * @param card card requested
