@@ -92,17 +92,22 @@
                 </VBox>
             </children>
         </HBox>
-        <HBox id="HBox" alignment="CENTER" layoutX="604.0" layoutY="692.0" opacity="0.43" spacing="5.0">
+        <HBox id="HBox" alignment="CENTER" layoutX="604.0" layoutY="692.0" opacity="0.63" spacing="5.0">
             <children>
                 <Button mnemonicParsing="false" onAction="#showNext" text="Show Next Card"/>
                 <Button mnemonicParsing="false" onAction="#done" text="Done"/>
             </children>
             <effect>
-                <Reflection>
+                <InnerShadow choke="0.5079365079365079" height="10.920634920634921" radius="4.9603174603174605"
+                             width="10.920634920634921">
                     <input>
-                        <SepiaTone/>
+                        <SepiaTone>
+                            <input>
+                                <Reflection bottomOpacity="0.5793650793650794" topOpacity="0.8015873015873016"/>
+                            </input>
+                        </SepiaTone>
                     </input>
-                </Reflection>
+                </InnerShadow>
             </effect>
         </HBox>
         <StackPane layoutX="14.0" layoutY="515.0" prefHeight="198.0" prefWidth="556.0">
@@ -142,7 +147,7 @@
                 </ScrollPane>
             </children>
             <effect>
-                <InnerShadow choke="0.5714285714285715" height="170.25396825396825" radius="105.81349206349206"
+                <InnerShadow choke="0.5714285714285715" height="212.62698412698413" radius="116.40674603174602"
                              width="255.0">
                     <input>
                         <SepiaTone/>

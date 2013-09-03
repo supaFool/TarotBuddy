@@ -60,13 +60,20 @@ public class ReadingController {
 
     @FXML
     public void getReading() {
+        Timeline fadeAni = new Timeline();
+        KeyFrame f1 = new KeyFrame(Duration.millis(250), new KeyValue(Main.getStage().opacityProperty(), 0.0f));
+        KeyFrame f2 = new KeyFrame(Duration.millis(1700), new KeyValue(Main.getStage().opacityProperty(), 1.0f));
+        fadeAni.getKeyFrames().addAll(f1, f2);
+
         Parent p = Main.getTCS();
+        Main.getStage().setOpacity(0f);
         Main.getStage().getScene().setRoot(p);
         TCSController.invert = invertCards;
         Main.getStage().getScene().setFill(Color.BLACK);
         Main.getStage().setWidth(778.0);
         Main.getStage().setHeight(727.0);
         Main.getStage().centerOnScreen();
+        fadeAni.play();
     }
 
     @FXML
