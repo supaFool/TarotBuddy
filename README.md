@@ -8,15 +8,15 @@ Currently adding functionality.
 >* Navigate to -- TarotBuddy\out\artifacts\TarotBuddy_DEV  
 >* Place the .jar file anywhere you like and run it  
 
-#### Dev 1.5
->* Added Look at Cards
+### Release Notes
 
-#### Dev 1.0
->* Added Card Info
+####> Dev 1.5
+>>* Added Look at Cards
 
-#### Dev.5 Release
->* Added 3 card spread
->* Bug fixes
+####> Dev 1.0
+>>* Added Card Info
 
-#####Coming Soon
->>Adding card info to teach card reading - DONE!
+####> Dev.5 Release
+>>* Added 3 card spread
+>>* Bug fixes
+
