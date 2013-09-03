@@ -17,9 +17,9 @@ public class Main extends Application {
      * I guess you have to initialize all .fxml in menu class
      */
     private static Parent reading;
-    private static Parent lookAt;
+    private static Parent studyCards;
     private static Parent quiz;
-    private static Parent study;
+    private static Parent lookAt;
     private static Parent menu;
     private static Parent tcs;
 
@@ -35,10 +35,10 @@ public class Main extends Application {
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
         reading = FXMLLoader.load(getClass().getResource("reading.fxml"));
-        lookAt = FXMLLoader.load(getClass().getResource("lookAt.fxml"));
+        studyCards = FXMLLoader.load(getClass().getResource("study.fxml"));
         quiz = FXMLLoader.load(getClass().getResource("quiz.fxml"));
         tcs = FXMLLoader.load(getClass().getResource("TCS.fxml"));
-        study = FXMLLoader.load(getClass().getResource("study.fxml"));
+        lookAt = FXMLLoader.load(getClass().getResource("lookAtDeck.fxml"));
 
         //Set Stage so we can retrieve it later
         Main.ps = primaryStage;
@@ -78,8 +78,8 @@ public class Main extends Application {
     /**
      * @return the look at cards parent
      */
-    public static Parent getLookAt() {
-        return lookAt;
+    public static Parent getStudyCards() {
+        return studyCards;
     }
 
     /**
@@ -90,10 +90,10 @@ public class Main extends Application {
     }
 
     /**
-     * @return the study parent
+     * @return the lookAt parent
      */
-    public static Parent getStudy() {
-        return study;
+    public static Parent getLookAt() {
+        return lookAt;
     }
 
     public static void main(String[] args) {

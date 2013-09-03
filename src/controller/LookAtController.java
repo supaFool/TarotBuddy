@@ -13,6 +13,10 @@ import runner.Main;
  * Date: 9/2/13
  * Time: 10:05 PM
  */
+
+/**
+ * Also gets used as study Controller
+ */
 public class LookAtController {
     private int currentCard = 0;
 
@@ -32,12 +36,15 @@ public class LookAtController {
             currentCard = 0;
         }
         view.setImage(CardData.getImageView(currentCard).getImage());
-        cardTitle.setText(CardData.getCardTitle(currentCard));
-        cardMeaning.setText(CardData.getCardMeaning(currentCard));
+        //Change meaning if we are studying
+        if (Main.getStage().getScene().getRoot() == Main.getStudyCards()) {
+            cardTitle.setText(CardData.getCardTitle(currentCard));
+            cardMeaning.setText(CardData.getCardMeaning(currentCard));
+        }
     }
 
     @FXML
-    public void home(){
+    public void home() {
         Main.getStage().getScene().setRoot(Main.getMenu());
         Main.getStage().getScene().setFill(Color.BURLYWOOD);
         Main.getStage().setWidth(540.0);
@@ -51,8 +58,11 @@ public class LookAtController {
             currentCard = 77;
         }
         view.setImage(CardData.getImageView(currentCard).getImage());
-        cardTitle.setText(CardData.getCardTitle(currentCard));
-        cardMeaning.setText(CardData.getCardMeaning(currentCard));
+        //Change meaning if we are studying
+        if (Main.getStage().getScene().getRoot() == Main.getStudyCards()) {
+            cardTitle.setText(CardData.getCardTitle(currentCard));
+            cardMeaning.setText(CardData.getCardMeaning(currentCard));
+        }
     }
 
 }

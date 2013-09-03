@@ -17,7 +17,11 @@ import java.util.Random;
 
 /**
  * This Class is used to Deal Cards
+ * <p/>
+ * Probably not going to use this
  */
+
+@Deprecated
 public class DealingLogic {
     //Fade effect vars
     private Timeline cardFadeAnimation;
@@ -51,7 +55,6 @@ public class DealingLogic {
     //Constructor END//
 
     public Image[] getCards() {
-        //todo Finish
         Image[] image = new Image[amountToDeal];
         Random r = new Random();
         ImageView v = views.iterator().next();

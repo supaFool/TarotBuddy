@@ -60,11 +60,10 @@ public class MenuController {
         }
         if (wantsLookAt) {
             Main.getStage().setWidth(674);
-            Main.getStage().setHeight(675);
-            Main.getStage().getScene().setFill(Color.BURLYWOOD);
+            Main.getStage().setHeight(405);
+            Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().getScene().setRoot(Main.getLookAt());
             Main.getStage().centerOnScreen();
-
         }
         if (wantsQuiz) {
             //Set 3 Card Stage
@@ -76,18 +75,18 @@ public class MenuController {
 //            s.show();
         }
         if (wantsStudy) {
-            //Set 3 Card Stage
-//            Stage s = new Stage();
-//            s.initStyle(StageStyle.UNDECORATED);
-//            Scene scene = new Scene(Main.getStudy(), Color.BURLYWOOD);
-//            s.setScene(scene);
-//            s.show();
+            Main.getStage().setWidth(674);
+            Main.getStage().setHeight(675);
+            Main.getStage().getScene().setFill(Color.BURLYWOOD);
+            Main.getStage().getScene().setRoot(Main.getStudyCards());
+            Main.getStage().centerOnScreen();
+
         }
     }
 
     @FXML
     public void studyCards() {
-        todo.setText(coming);
+        todo.setText(todo.getItems().get(1).getText());
         wantsStudy = true;
         wantsReading = false;
         wantsQuiz = false;

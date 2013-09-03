@@ -34,7 +34,6 @@ public class CardData {
     public static final int THE_DEVIL = 15;
     public static final int THE_TOWER = 16;
     public static final int THE_STAR = 17;
-    //todo Make these non-public
     public static final int THE_MOON = 18;
     public static final int THE_SUN = 19;
     public static final int JUDGEMENT = 20;
@@ -370,7 +369,6 @@ public class CardData {
     }
 
     public void setHasBeenFlipped(boolean b) {
-        //todo making another class
     }
 
     /**
