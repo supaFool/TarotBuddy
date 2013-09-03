@@ -65,7 +65,7 @@ public class ReadingController {
         TCSController.invert = invertCards;
         Main.getStage().getScene().setFill(Color.BLACK);
         Main.getStage().setWidth(778.0);
-        Main.getStage().setHeight(572.0);
+        Main.getStage().setHeight(727.0);
         Main.getStage().centerOnScreen();
     }
 

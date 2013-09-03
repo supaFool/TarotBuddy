@@ -7,6 +7,7 @@ import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 import logic.DealingLogic;
 import runner.Main;
@@ -23,9 +24,19 @@ import java.util.Random;
 public class TCSController {
     private Random r = new Random();
 
+    private String pastPositionMeaning;
+    private String presentPositionMeaning;
+    private String futurePositionMeaning;
+
+    private String[] meanings = new String[3];
+
     private int pastc = r.nextInt(77);
     private int presentc = r.nextInt(77);
     private int futurec = r.nextInt(77);
+
+    private boolean pastIsShowing = false;
+    private boolean presentIsShowing = false;
+    private boolean futureIsShowing = false;
 
     private boolean c1inverted = false;
     private boolean c2inverted = false;
@@ -40,6 +51,13 @@ public class TCSController {
 
     @FXML
     private ImageView future;
+
+
+    @FXML
+    private Text meaningTitle;
+
+    @FXML
+    private Text meaningText;
 
     private int counter = 0;
 
@@ -58,6 +76,30 @@ public class TCSController {
 //        future.setImage(images[2]);
 
 
+    }
+
+    @FXML
+    public void showPresentMeaning() {
+        if (presentIsShowing) {
+            meaningTitle.setText(CardData.getCardTitle(presentc));
+            meaningText.setText(CardData.getCardMeaning(presentc));
+        }
+    }
+
+    @FXML
+    public void showPastMeaning() {
+        if (pastIsShowing) {
+            meaningTitle.setText(CardData.getCardTitle(pastc));
+            meaningText.setText(CardData.getCardMeaning(pastc));
+        }
+    }
+
+    @FXML
+    public void showFutureMeaning() {
+        if (futureIsShowing) {
+            meaningTitle.setText(CardData.getCardTitle(futurec));
+            meaningText.setText(CardData.getCardMeaning(futurec));
+        }
     }
 
     @FXML
@@ -93,7 +135,15 @@ public class TCSController {
         c3inverted = false;
         c2inverted = false;
 
+        pastIsShowing = false;
+        presentIsShowing = false;
+        futureIsShowing = false;
+
+        meaningText.setText(null);
+        meaningTitle.setText(null);
+
     }
+
 
     @FXML
     public void showNext() {
@@ -120,13 +170,15 @@ public class TCSController {
             KeyValue v1 = new KeyValue(past.opacityProperty(), 0);
             KeyValue v2 = new KeyValue(past.opacityProperty(), 1);
             KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
-            KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
+            KeyFrame f2 = new KeyFrame(Duration.millis(650), v2);
             t.getKeyFrames().addAll(f1, f2);
             past.setImage(CardData.getImageView(pastc).getImage());
+            meanings[counter] = CardData.getCardMeaning(pastc);
             c1inverted = r.nextBoolean();
             if (invert && c1inverted) {
                 past.setRotate(180);
             }
+            pastIsShowing = true;
 
             System.out.println("Past card inverted: " + c3inverted);
 
@@ -141,10 +193,12 @@ public class TCSController {
             KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
             t.getKeyFrames().addAll(f1, f2);
             present.setImage(CardData.getImageView(presentc).getImage());
+            meanings[counter] = CardData.getCardMeaning(presentc);
             c2inverted = r.nextBoolean();
             if (invert && c2inverted) {
                 present.setRotate(180);
             }
+            presentIsShowing = true;
             System.out.println("Present card inverted: " + c2inverted);
         }
 
@@ -156,6 +210,7 @@ public class TCSController {
             KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
             t.getKeyFrames().addAll(f1, f2);
             future.setImage(CardData.getImageView(futurec).getImage());
+            meanings[counter] = CardData.getCardMeaning(futurec);
 
 
             c3inverted = r.nextBoolean();
@@ -163,7 +218,7 @@ public class TCSController {
                 future.setRotate(180);
             }
 
-
+            futureIsShowing = true;
             System.out.println("Future card inverted" + c3inverted);
         }
         counter++;
