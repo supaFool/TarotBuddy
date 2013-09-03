@@ -3,6 +3,7 @@ package controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import runner.Main;
 
@@ -57,15 +58,15 @@ public class MenuController {
             System.out.println(wantsReading + " Wants Reading");
             Main.getStage().getScene().setRoot(Main.getReading());
 
+
         }
         if (wantsLookAt) {
-            //Set 3 Card Stage
-//            Stage s = new Stage();
-//            s.initModality(Modality.APPLICATION_MODAL);
-//            s.initStyle(StageStyle.UNDECORATED);
-//            Scene scene = new Scene(Main.getLookAt(), Color.BURLYWOOD);
-//            s.setScene(scene);
-//            s.show();
+            Main.getStage().setWidth(674);
+            Main.getStage().setHeight(675);
+            Main.getStage().getScene().setFill(Color.BURLYWOOD);
+            Main.getStage().getScene().setRoot(Main.getLookAt());
+            Main.getStage().centerOnScreen();
+
         }
         if (wantsQuiz) {
             //Set 3 Card Stage
@@ -106,7 +107,7 @@ public class MenuController {
 
     @FXML
     public void lookAtTarotDeck() {
-        todo.setText(coming);
+        todo.setText(todo.getItems().get(3).getText());
         wantsStudy = false;
         wantsReading = false;
         wantsQuiz = false;

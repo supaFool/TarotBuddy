@@ -52,6 +52,7 @@ public class Main extends Application {
         primaryStage.setTitle("Tarot Buddy");
         primaryStage.setScene(new Scene(menu, Color.BURLYWOOD));
         primaryStage.show();
+        System.out.println(Color.BURLYWOOD);
     }
 
 
