@@ -1,6 +1,14 @@
 TarotBuddy Dev 1.5
 ==================
 Tarot Buddy Dev. Build - Fortune Telling Software
+
+### Caution If you dont like typo's stop reading >>.<< here
+
+>#### Features
+>>* Get Personalized Tarot Reading
+>>* Look thru Tarot Deck, With easy access to card meanings
+>>* More Tarot decks coming in future updates
+
 Currently adding functionality.
 
 #### To Install
