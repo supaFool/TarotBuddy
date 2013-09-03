@@ -1,86 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.*?>
 <?scenebuilder-background-color 0x000000ff?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="675.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.LookAtController">
-  <children>
-    <HBox id="HBox" alignment="CENTER" layoutX="117.0" layoutY="46.0" prefHeight="-1.0" prefWidth="-1.0" spacing="75.0">
-      <children>
-        <Button mnemonicParsing="false" onAction="#prev" text="Prev.">
-          <effect>
-            <SepiaTone>
-              <input>
-                <InnerShadow>
-                  <input>
-                    <Reflection />
-                  </input>
-                </InnerShadow>
-              </input>
-            </SepiaTone>
-          </effect>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="674.0" prefWidth="675.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.LookAtController">
+    <children>
+        <HBox id="HBox" alignment="CENTER" layoutX="117.0" layoutY="46.0" prefHeight="-1.0" prefWidth="-1.0"
+              spacing="75.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#prev" text="Prev.">
+                    <effect>
+                        <SepiaTone>
+                            <input>
+                                <InnerShadow>
+                                    <input>
+                                        <Reflection/>
+                                    </input>
+                                </InnerShadow>
+                            </input>
+                        </SepiaTone>
+                    </effect>
+                </Button>
+                <ImageView fx:id="view" fitHeight="330.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <effect>
+                        <DropShadow color="#99f3ff" height="54.39285714285714" radius="26.94940476190476"
+                                    width="55.404761904761905"/>
+                    </effect>
+                    <image>
+                        <Image url="@../card/image/0.gif"/>
+                    </image>
+                </ImageView>
+                <Button mnemonicParsing="false" onAction="#next" text="Next">
+                    <effect>
+                        <InnerShadow>
+                            <input>
+                                <SepiaTone>
+                                    <input>
+                                        <Reflection/>
+                                    </input>
+                                </SepiaTone>
+                            </input>
+                        </InnerShadow>
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+        <ScrollPane hbarPolicy="NEVER" layoutX="26.0" layoutY="446.0" pannable="true" prefHeight="200.0"
+                    prefWidth="624.0" vbarPolicy="NEVER">
+            <content>
+                <VBox id="VBox" alignment="CENTER" prefHeight="192.0" prefWidth="609.0" spacing="35.0">
+                    <children>
+                        <Text fx:id="cardTitle" fill="#216600" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="0 - The Fool" textAlignment="CENTER">
+                            <effect>
+                                <Reflection/>
+                            </effect>
+                            <font>
+                                <Font name="David" size="22.0"/>
+                            </font>
+                        </Text>
+                        <Text fx:id="cardMeaning" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="&quot;With light step, as if earth and its trammels had little power to restrain him, a young man in gorgeous vestments pauses at the brink of a precipice among the great heights of the world; he surveys the blue distance before him-its expanse of sky rather than the prospect below. His act of eager walking is still indicated, though he is stationary at the given moment; his dog is still bounding. The edge which opens on the depth has no terror; it is as if angels were waiting to uphold him, if it came about that he leaped from the height. His countenance is full of intelligence and expectant dream. He has a rose in one hand and in the other a costly wand, from which depends over his right shoulder a wallet curiously embroidered. He is a prince of the other world on his travels through this one-all amidst the morning glory, in the keen air. The sun, which shines behind him, knows whence he came, whither he is going, and how he will return by another path after many days. He is the spirit in search of experience. Many symbols of the Instituted Mysteries are summarized in this card, which reverses, under high warrants, all the confusions that have preceded it. In his Manual of Cartomancy, Grand Orient has a curious suggestion of the office of Mystic Fool, as apart of his process in higher divination; but it might call for more than ordinary gifts to put it into operation. We shall see how the card fares according to the common arts of fortune-telling, and it will be an example, to those who can discern, of the fact, otherwise so evident, that the Trumps Major had no place originally in the arts of psychic gambling, when cards are used as the counters and pretexts. Of the circumstances under which this art arose we know, however, very little. The conventional explanations say that the Fool signifies the flesh, the sensitive life, and by a peculiar satire its subsidiary name was at one time the alchemist, as depicting folly at the most insensate stage.&quot;,"
+                              textAlignment="CENTER" wrappingWidth="450.0">
+                            <font>
+                                <Font name="Simplified Arabic Fixed" size="14.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                    <padding>
+                        <Insets bottom="35.0" top="35.0"/>
+                    </padding>
+                </VBox>
+            </content>
+            <effect>
+                <InnerShadow choke="0.5317460317460317" color="BURLYWOOD" height="172.19047619047618"
+                             radius="85.59523809523809" width="172.19047619047618"/>
+            </effect>
+        </ScrollPane>
+        <Button layoutX="594.0" layoutY="646.0" mnemonicParsing="false" onAction="#home" text="Home">
+            <effect>
+                <SepiaTone/>
+            </effect>
         </Button>
-        <ImageView fx:id="view" fitHeight="330.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-          <effect>
-            <DropShadow color="#99f3ff" height="54.39285714285714" radius="26.94940476190476" width="55.404761904761905" />
-          </effect>
-          <image>
-            <Image url="@../card/image/0.gif" />
-          </image>
-        </ImageView>
-        <Button mnemonicParsing="false" onAction="#next" text="Next">
-          <effect>
-            <InnerShadow>
-              <input>
-                <SepiaTone>
-                  <input>
-                    <Reflection />
-                  </input>
-                </SepiaTone>
-              </input>
-            </InnerShadow>
-          </effect>
-        </Button>
-      </children>
-    </HBox>
-    <ScrollPane hbarPolicy="NEVER" layoutX="26.0" layoutY="446.0" pannable="true" prefHeight="200.0" prefWidth="624.0" vbarPolicy="NEVER">
-      <content>
-        <VBox id="VBox" alignment="CENTER" prefHeight="192.0" prefWidth="609.0" spacing="35.0">
-          <children>
-            <Text fx:id="cardTitle" fill="#216600" strokeType="OUTSIDE" strokeWidth="0.0" text="0 - The Fool" textAlignment="CENTER">
-              <effect>
-                <Reflection />
-              </effect>
-              <font>
-                <Font name="David" size="22.0" />
-              </font>
-            </Text>
-            <Text fx:id="cardMeaning" strokeType="OUTSIDE" strokeWidth="0.0" text="&quot;With light step, as if earth and its trammels had little power to restrain him, a young man in gorgeous vestments pauses at the brink of a precipice among the great heights of the world; he surveys the blue distance before him-its expanse of sky rather than the prospect below. His act of eager walking is still indicated, though he is stationary at the given moment; his dog is still bounding. The edge which opens on the depth has no terror; it is as if angels were waiting to uphold him, if it came about that he leaped from the height. His countenance is full of intelligence and expectant dream. He has a rose in one hand and in the other a costly wand, from which depends over his right shoulder a wallet curiously embroidered. He is a prince of the other world on his travels through this one-all amidst the morning glory, in the keen air. The sun, which shines behind him, knows whence he came, whither he is going, and how he will return by another path after many days. He is the spirit in search of experience. Many symbols of the Instituted Mysteries are summarized in this card, which reverses, under high warrants, all the confusions that have preceded it. In his Manual of Cartomancy, Grand Orient has a curious suggestion of the office of Mystic Fool, as apart of his process in higher divination; but it might call for more than ordinary gifts to put it into operation. We shall see how the card fares according to the common arts of fortune-telling, and it will be an example, to those who can discern, of the fact, otherwise so evident, that the Trumps Major had no place originally in the arts of psychic gambling, when cards are used as the counters and pretexts. Of the circumstances under which this art arose we know, however, very little. The conventional explanations say that the Fool signifies the flesh, the sensitive life, and by a peculiar satire its subsidiary name was at one time the alchemist, as depicting folly at the most insensate stage.&quot;," textAlignment="CENTER" wrappingWidth="450.0">
-              <font>
-                <Font name="Simplified Arabic Fixed" size="14.0" />
-              </font>
-            </Text>
-          </children>
-          <padding>
-            <Insets bottom="35.0" top="35.0" />
-          </padding>
-        </VBox>
-      </content>
-      <effect>
-        <InnerShadow choke="0.5317460317460317" color="BURLYWOOD" height="172.19047619047618" radius="85.59523809523809" width="172.19047619047618" />
-      </effect>
-    </ScrollPane>
-    <Button layoutX="594.0" layoutY="646.0" mnemonicParsing="false" onAction="#home" text="Home">
-      <effect>
-        <SepiaTone />
-      </effect>
-    </Button>
-  </children>
+    </children>
 </AnchorPane>
