@@ -10,13 +10,13 @@ Currently adding functionality.
 
 ### Release Notes
 
-####> Dev 1.5
+>#### Dev 1.5
 >>* Added Look at Cards
 
-####> Dev 1.0
+>#### Dev 1.0
 >>* Added Card Info
 
-####> Dev.5 Release
+>#### Dev.5 Release
 >>* Added 3 card spread
 >>* Bug fixes
 
