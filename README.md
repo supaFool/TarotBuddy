@@ -1,4 +1,4 @@
-TarotBuddy Dev 1.0
+TarotBuddy Dev 1.5
 ==================
 Tarot Buddy Dev. Build - Fortune Telling Software
 Currently adding functionality.
@@ -7,6 +7,9 @@ Currently adding functionality.
 >* [Download Zip File](https://github.com/supaFool/TarotBuddy/archive/Dev-Release.zip)  
 >* Navigate to -- TarotBuddy\out\artifacts\TarotBuddy_DEV  
 >* Place the .jar file anywhere you like and run it  
+
+#### Dev 1.5
+>* Added Look at Cards
 
 #### Dev 1.0
 >* Added Card Info
