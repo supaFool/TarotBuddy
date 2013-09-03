@@ -4,7 +4,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Text;
 import runner.Main;
 
 /**
@@ -30,9 +29,8 @@ public class MenuController {
     private String coming = "Coming Soon...";
 
 
-        public MenuController() {
+    public MenuController() {
     }
-
 
 
     @FXML
