@@ -25,7 +25,7 @@ public class Main extends Application {
 
     private static Stage ps;
 
-    private static double version = 1.0;
+    private static double version = 1.5;
     public static String ver = "Beta ver." + version;
 
     public static String TITLE = "Tarot-Buddy " + ver;

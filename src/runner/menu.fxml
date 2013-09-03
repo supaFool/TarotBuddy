@@ -72,7 +72,7 @@
     </HBox>
     <HBox id="HBox" alignment="CENTER" layoutX="221.0" layoutY="0.0" prefWidth="310.0" spacing="60.0">
       <children>
-        <Text fx:id="title" fontSmoothingType="LCD" scaleX="1.0" scaleY="0.8767203553082191" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarot-Buddy Dev 1.0">
+        <Text fx:id="title" fontSmoothingType="LCD" scaleX="1.0" scaleY="0.8767203553082191" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarot-Buddy Dev 1.5">
           <font>
             <Font name="SimHei" size="10.0" />
           </font>
