@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Tarot Buddy-DEV1.5.jnlp">
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Tarot Buddy v.0.1.0.jnlp">
   <information>
     <title>Tarot Buddy</title>
     <vendor>Supa-Fool</vendor>
-    <description>Sample JavaFX 2.0 application.</description>
+    <description>Beta Version  Fortune Telling Software</description>
     <offline-allowed/>
   </information>
   <resources>
@@ -11,11 +11,11 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Tarot Buddy-DEV1.5.jar" size="1093351" download="eager" />
+    <jar href="Tarot Buddy v.0.1.0.jar" size="1093190" download="eager" />
   </resources>
-  <applet-desc  width="600" height="400" main-class="com.javafx.main.NoJavaFXFallback"  name="Tarot Buddy-DEV1.5" >
+  <applet-desc  width="600" height="400" main-class="com.javafx.main.NoJavaFXFallback"  name="Tarot Buddy v.0.1.0" >
     <param name="requiredFXVersion" value="2.2+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="600" height="400" main-class="runner.Main"  name="Tarot Buddy-DEV1.5" />
+  <jfx:javafx-desc  width="600" height="400" main-class="runner.Main"  name="Tarot Buddy v.0.1.0" />
   <update check="background"/>
 </jnlp>
