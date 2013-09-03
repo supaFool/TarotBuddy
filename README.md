@@ -1,4 +1,4 @@
-TarotBuddy Dev 1.5
+TarotBuddy Beta
 ==================
 Tarot Buddy Dev. Build - Fortune Telling Software
 ####Features
@@ -9,11 +9,10 @@ Tarot Buddy Dev. Build - Fortune Telling Software
 Currently adding functionality.
 
 #### To Install
->* [Download Zip File](https://github.com/supaFool/TarotBuddy/archive/Dev-Release.zip)  
+>* [Download Beta](https://github.com/supaFool/TarotBuddy/archive/Dev-Release.zip)  
 >* Navigate to -- TarotBuddy\out\artifacts\TarotBuddy_DEV  
 >* Place the .jar file anywhere you like and run it  
 
-#### Dev. Release
+#### Release Beta
 
-#####Coming Soon
->>* Study Helper
+
