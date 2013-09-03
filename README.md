@@ -1,4 +1,4 @@
-TarotBuddy Dev 1.5
+TarotBuddy Dev 1.0
 ==================
 Tarot Buddy Dev. Build - Fortune Telling Software
 Currently adding functionality.
@@ -8,15 +8,9 @@ Currently adding functionality.
 >* Navigate to -- TarotBuddy\out\artifacts\TarotBuddy_DEV  
 >* Place the .jar file anywhere you like and run it  
 
-### Release Notes
+#### Dev. Release
+>* Added 3 card spread
+>* Bug fixes
 
-####> Dev 1.5
->>* Added Look at Cards
-
-####> Dev 1.0
->>* Added Card Info
-
-####> Dev.5 Release
->>* Added 3 card spread
->>* Bug fixes
-
+#####Coming Soon
+>>Adding card info to teach card reading
