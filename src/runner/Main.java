@@ -24,6 +24,7 @@ public class Main extends Application {
     private static Parent lookAt;
     private static Parent menu;
     private static Parent tcs;
+    private static Parent tcsNoHelp;
     //
 
     private static Stage ps;
@@ -42,6 +43,7 @@ public class Main extends Application {
         quiz = FXMLLoader.load(getClass().getResource("quiz.fxml"));
         tcs = FXMLLoader.load(getClass().getResource("TCS.fxml"));
         lookAt = FXMLLoader.load(getClass().getResource("lookAtDeck.fxml"));
+        tcsNoHelp = FXMLLoader.load(getClass().getResource("TCSnoHelp.fxml"));
 
         //Set Stage so we can retrieve it later
         Main.ps = primaryStage;
@@ -67,6 +69,10 @@ public class Main extends Application {
 
     public static Parent getMenu() {
         return menu;
+    }
+
+    public static Parent getTcsNoHelp() {
+        return tcsNoHelp;
     }
 
     public static Parent getTCS() {

@@ -34,6 +34,7 @@ public class ReadingController {
 
     @FXML
     private ToggleButton helpToggle;
+    //todo Fix Helper
 
     @FXML
     private Text selection;
@@ -61,19 +62,31 @@ public class ReadingController {
     @FXML
     public void getReading() {
         Timeline fadeAni = new Timeline();
-        KeyFrame f1 = new KeyFrame(Duration.millis(75), new KeyValue(Main.getStage().opacityProperty(), 0.0f));
-        KeyFrame f2 = new KeyFrame(Duration.millis(775), new KeyValue(Main.getStage().opacityProperty(), 1.0f));
+        KeyFrame f1 = new KeyFrame(Duration.millis(225), new KeyValue(Main.getStage().opacityProperty(), 0.0f));
+        KeyFrame f2 = new KeyFrame(Duration.millis(1450), new KeyValue(Main.getStage().opacityProperty(), 1.0f));
         fadeAni.getKeyFrames().addAll(f1, f2);
 
-        Parent p = Main.getTCS();
-        Main.getStage().setOpacity(0f);
-        Main.getStage().getScene().setRoot(p);
-        TCSController.invert = invertCards;
-        Main.getStage().getScene().setFill(Color.BLACK);
-        Main.getStage().setWidth(778.0);
-        Main.getStage().setHeight(727.0);
-        Main.getStage().centerOnScreen();
-        fadeAni.play();
+        if (wantsHelp) {
+            Parent p = Main.getTCS();
+            Main.getStage().setOpacity(0f);
+            Main.getStage().getScene().setRoot(p);
+            TCSController.invert = invertCards;
+            Main.getStage().getScene().setFill(Color.BLACK);
+            Main.getStage().setWidth(778.0);
+            Main.getStage().setHeight(727.0);
+            Main.getStage().centerOnScreen();
+            fadeAni.play();
+        } else {
+            Parent p = Main.getTcsNoHelp();
+            Main.getStage().setOpacity(0f);
+            Main.getStage().getScene().setRoot(p);
+            TCSController.invert = invertCards;
+            Main.getStage().getScene().setFill(Color.BLACK);
+            Main.getStage().setWidth(775);
+            Main.getStage().setHeight(500);
+            Main.getStage().centerOnScreen();
+            fadeAni.play();
+        }
     }
 
     @FXML
@@ -96,6 +109,8 @@ public class ReadingController {
         helpToggle.setText(helpToggle.isSelected() ? disabled : enabled);
 
         setWantsHelp(helpToggle.isSelected() ? false : true);
+
+        TCSController.help = wantsHelp;
 
         flashSelection(helpToggle.getText());
 

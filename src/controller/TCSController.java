@@ -34,6 +34,9 @@ public class TCSController {
     private int presentc = r.nextInt(77);
     private int futurec = r.nextInt(77);
 
+    //Wants help
+    public static boolean help = true;
+
     private boolean pastIsShowing = false;
     private boolean presentIsShowing = false;
     private boolean futureIsShowing = false;
@@ -81,24 +84,30 @@ public class TCSController {
     @FXML
     public void showPresentMeaning() {
         if (presentIsShowing) {
-            meaningTitle.setText(CardData.getCardTitle(presentc));
-            meaningText.setText(CardData.getCardMeaning(presentc));
+            if (help) {
+                meaningTitle.setText(CardData.getCardTitle(presentc));
+                meaningText.setText(CardData.getCardMeaning(presentc));
+            }
         }
     }
 
     @FXML
     public void showPastMeaning() {
         if (pastIsShowing) {
-            meaningTitle.setText(CardData.getCardTitle(pastc));
-            meaningText.setText(CardData.getCardMeaning(pastc));
+            if (help) {
+                meaningTitle.setText(CardData.getCardTitle(pastc));
+                meaningText.setText(CardData.getCardMeaning(pastc));
+            }
         }
     }
 
     @FXML
     public void showFutureMeaning() {
         if (futureIsShowing) {
-            meaningTitle.setText(CardData.getCardTitle(futurec));
-            meaningText.setText(CardData.getCardMeaning(futurec));
+            if (help) {
+                meaningTitle.setText(CardData.getCardTitle(futurec));
+                meaningText.setText(CardData.getCardMeaning(futurec));
+            }
         }
     }
 
@@ -139,8 +148,10 @@ public class TCSController {
         presentIsShowing = false;
         futureIsShowing = false;
 
-        meaningText.setText(null);
-        meaningTitle.setText(null);
+        if (meaningText != null) {
+            meaningText.setText(null);
+            meaningTitle.setText(null);
+        }
 
     }
 
