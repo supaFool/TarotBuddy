@@ -61,8 +61,8 @@ public class ReadingController {
     @FXML
     public void getReading() {
         Timeline fadeAni = new Timeline();
-        KeyFrame f1 = new KeyFrame(Duration.millis(250), new KeyValue(Main.getStage().opacityProperty(), 0.0f));
-        KeyFrame f2 = new KeyFrame(Duration.millis(1700), new KeyValue(Main.getStage().opacityProperty(), 1.0f));
+        KeyFrame f1 = new KeyFrame(Duration.millis(75), new KeyValue(Main.getStage().opacityProperty(), 0.0f));
+        KeyFrame f2 = new KeyFrame(Duration.millis(775), new KeyValue(Main.getStage().opacityProperty(), 1.0f));
         fadeAni.getKeyFrames().addAll(f1, f2);
 
         Parent p = Main.getTCS();
@@ -99,7 +99,6 @@ public class ReadingController {
 
         flashSelection(helpToggle.getText());
 
-        System.out.println("Help = " + wantsHelp);
     }
 
     @FXML
@@ -117,7 +116,6 @@ public class ReadingController {
     public void invertSelected() {
         setInvert(invert.isSelected() ? true : false);
         flashSelection(invertCards ? "Inverted Cards On" : "Inverted Cards Off");
-        System.out.println("Inversion: " + invertCards);
         TCSController.invert = this.invertCards;
     }
 

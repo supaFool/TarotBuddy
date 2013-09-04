@@ -16,16 +16,19 @@ public class Main extends Application {
     /**
      * I guess you have to initialize all .fxml in menu class
      */
+
+    //Root for all the Scenes
     private static Parent reading;
     private static Parent studyCards;
     private static Parent quiz;
     private static Parent lookAt;
     private static Parent menu;
     private static Parent tcs;
+    //
 
     private static Stage ps;
 
-    private static double version = 1.5;
+    private static double version = 1.0;
     public static String ver = "Beta ver." + version;
 
     public static String TITLE = "Tarot-Buddy " + ver;
@@ -50,9 +53,8 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS)));
         primaryStage.setTitle("Tarot Buddy");
-        primaryStage.setScene(new Scene(menu, Color.BURLYWOOD));
+        primaryStage.setScene(new Scene(reading, Color.BURLYWOOD));
         primaryStage.show();
-        System.out.println(Color.BURLYWOOD);
     }
 
 

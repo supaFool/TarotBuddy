@@ -175,7 +175,7 @@ public class TCSController {
             KeyValue v1 = new KeyValue(past.opacityProperty(), 0);
             KeyValue v2 = new KeyValue(past.opacityProperty(), 1);
             KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
-            KeyFrame f2 = new KeyFrame(Duration.millis(650), v2);
+            KeyFrame f2 = new KeyFrame(Duration.millis(3000), v2);
             t.getKeyFrames().addAll(f1, f2);
             past.setImage(CardData.getImageView(pastc).getImage());
             meanings[counter] = CardData.getCardMeaning(pastc);

@@ -49,8 +49,8 @@ public class MenuController {
 
     @FXML
     public void setRequestedStage() {
-        System.out.println("Read " + wantsReading + ", Quiz " + wantsQuiz +
-                ", Study " + wantsStudy + ", Look At " + wantsLookAt);
+//        System.out.println("Read " + wantsReading + ", Quiz " + wantsQuiz +
+//                ", Study " + wantsStudy + ", Look At " + wantsLookAt);
 
         if (wantsReading) {
             System.out.println(wantsReading + " Wants Reading");
@@ -75,8 +75,8 @@ public class MenuController {
 //            s.show();
         }
         if (wantsStudy) {
-            Main.getStage().setWidth(674);
-            Main.getStage().setHeight(675);
+            Main.getStage().setWidth(675);
+            Main.getStage().setHeight(650);
             Main.getStage().getScene().setFill(Color.BURLYWOOD);
             Main.getStage().getScene().setRoot(Main.getStudyCards());
             Main.getStage().centerOnScreen();
