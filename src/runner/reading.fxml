@@ -59,6 +59,7 @@
                     </effect>
                     <items>
                         <MenuItem mnemonicParsing="false" onAction="#wants3Card" text="3 Card - Past-Present-Future"/>
+                        <MenuItem mnemonicParsing="false" onAction="#wantsSword" text="7 Card - Sword"/>
                         <MenuItem mnemonicParsing="false" text="More Coming Soon!!!"/>
                     </items>
                 </MenuButton>

@@ -21,7 +21,7 @@ import java.util.Random;
  * Date: 9/2/13
  * Time: 1:21 PM
  */
-public class TCSController {
+public class SpreadController {
     private Random r = new Random();
 
     private String pastPositionMeaning;
@@ -66,7 +66,7 @@ public class TCSController {
 
     public static boolean invert = false;
 
-    public TCSController() {
+    public SpreadController() {
 
 //        HashSet<ImageView> views = new HashSet<ImageView>();
 //        views.add(past);
@@ -241,4 +241,12 @@ public class TCSController {
         t.play();
 
     }
+
+    protected class SwordSpread {
+        @FXML
+        public void set() {
+
+        }
+    }
+
 }

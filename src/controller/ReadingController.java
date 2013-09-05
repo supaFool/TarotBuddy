@@ -24,11 +24,16 @@ import utils.Utils;
 
 public class ReadingController {
 
+    public enum SpreadType {
+        THREE_CARD_SPREAD, SWORD;
+    }
+
     @FXML
     private String enabled = "Reading Helper Enabled";
     @FXML
     private String disabled = "Reading Helper Disabled";
 
+    private SpreadType spread;
 
     private static Stage stage;
 
@@ -47,7 +52,6 @@ public class ReadingController {
     ///////////
     // boole's to keep track of what user wants
     private boolean wantsHelp = true;
-    private boolean wants3Card = false;
     private boolean invertCards = false;
 
 
@@ -60,38 +64,96 @@ public class ReadingController {
 
     @FXML
     public void getReading() {
+        System.out.println(spread);
+        Timeline fadeAni = getStageAni();
+
+        if (spread == SpreadType.THREE_CARD_SPREAD) {
+            set3CardStage(fadeAni);
+        }
+        if (spread == SpreadType.SWORD) {
+            getSwordSpread(fadeAni);
+        } else {
+            System.out.println("Please tell me what to do");
+        }
+
+
+    }
+
+
+    /**
+     * @return the fade animation for the stage fade effect
+     */
+    private Timeline getStageAni() {
         Timeline fadeAni = new Timeline();
         KeyFrame f1 = new KeyFrame(Duration.millis(225), new KeyValue(Main.getStage().opacityProperty(), 0.0f));
         KeyFrame f2 = new KeyFrame(Duration.millis(1450), new KeyValue(Main.getStage().opacityProperty(), 1.0f));
         fadeAni.getKeyFrames().addAll(f1, f2);
+        return fadeAni;
+    }
 
+    /**
+     * Sets the Parent of the current Scene to the SwordSpread.fxml
+     * Also plays the Animation
+     *
+     * @param fadeAni The Timeline to set the animation to
+     */
+    private void getSwordSpread(Timeline fadeAni) {
+        //todo make non help sword spread
+        Parent p = Main.getSwordSpread();
+        Main.getStage().setOpacity(0f);
+        Main.getStage().getScene().setRoot(p);
+        SpreadController.invert = invertCards;
+        Main.getStage().getScene().setFill(Utils.READING_COLOR);
+        Main.getStage().setWidth(778.0);
+        Main.getStage().setHeight(727.0);
+        Main.getStage().centerOnScreen();
+        fadeAni.play();
+    }
+
+    /**
+     * Sets the Parent of the current Scene to the TCS.fxml
+     * Also plays the Animation
+     *
+     * @param fadeAni The Timeline to set the animation to
+     */
+    private void set3CardStage(Timeline fadeAni) {
+        System.out.println(wantsHelp);
         if (wantsHelp) {
             Parent p = Main.getTCS();
             Main.getStage().setOpacity(0f);
             Main.getStage().getScene().setRoot(p);
-            TCSController.invert = invertCards;
+            SpreadController.invert = invertCards;
             Main.getStage().getScene().setFill(Utils.READING_COLOR);
             Main.getStage().setWidth(778.0);
             Main.getStage().setHeight(727.0);
             Main.getStage().centerOnScreen();
             fadeAni.play();
-        } else {
+        }
+        if (!wantsHelp) {
             Parent p = Main.getTcsNoHelp();
             Main.getStage().setOpacity(0f);
             Main.getStage().getScene().setRoot(p);
-            TCSController.invert = invertCards;
+            SpreadController.invert = invertCards;
             Main.getStage().getScene().setFill(Utils.READING_COLOR);
-            Main.getStage().setWidth(775);
-            Main.getStage().setHeight(500);
+            Main.getStage().setWidth(775.0);
+            Main.getStage().setHeight(500.0);
             Main.getStage().centerOnScreen();
             fadeAni.play();
         }
     }
 
+
     @FXML
     public void wants3Card() {
-        wants3Card = true;
+//        wants3Card = true;
+        spread = SpreadType.THREE_CARD_SPREAD;
         typeOfReading.setText(typeOfReading.getItems().get(0).getText());
+    }
+
+    @FXML
+    public void wantsSword() {
+        spread = SpreadType.SWORD;
+        typeOfReading.setText(typeOfReading.getItems().get(1).getText());
     }
 
     public static void setStage(Stage stage) {
@@ -109,7 +171,7 @@ public class ReadingController {
 
         setWantsHelp(helpToggle.isSelected() ? false : true);
 
-        TCSController.help = wantsHelp;
+        SpreadController.help = wantsHelp;
 
         flashSelection(helpToggle.getText());
 
@@ -130,7 +192,7 @@ public class ReadingController {
     public void invertSelected() {
         setInvert(invert.isSelected() ? true : false);
         flashSelection(invertCards ? "Inverted Cards On" : "Inverted Cards Off");
-        TCSController.invert = this.invertCards;
+        SpreadController.invert = this.invertCards;
     }
 
     @FXML

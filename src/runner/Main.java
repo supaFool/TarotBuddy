@@ -25,6 +25,7 @@ public class Main extends Application {
     private static Parent menu;
     private static Parent tcs;
     private static Parent tcsNoHelp;
+    private static Parent swordSpread;
     //
 
     private static Stage ps;
@@ -44,6 +45,7 @@ public class Main extends Application {
         tcs = FXMLLoader.load(getClass().getResource("TCS.fxml"));
         lookAt = FXMLLoader.load(getClass().getResource("lookAtDeck.fxml"));
         tcsNoHelp = FXMLLoader.load(getClass().getResource("TCSnoHelp.fxml"));
+        swordSpread = FXMLLoader.load(getClass().getResource("SwordSpread.fxml"));
 
         //Set Stage so we can retrieve it later
         Main.ps = primaryStage;
@@ -69,6 +71,10 @@ public class Main extends Application {
 
     public static Parent getMenu() {
         return menu;
+    }
+
+    public static Parent getSwordSpread() {
+        return swordSpread;
     }
 
     public static Parent getTcsNoHelp() {

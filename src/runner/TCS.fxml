@@ -12,7 +12,7 @@
 <?import javafx.scene.text.*?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="727.0" prefWidth="778.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.TCSController">
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.SpreadController">
     <children>
         <HBox id="HBox" alignment="CENTER" layoutX="74.0" layoutY="32.0" spacing="15.0">
             <children>
