@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Text?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="500.0" prefWidth="775.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.TCSController">
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.SpreadController">
     <children>
         <VBox id="VBox" alignment="CENTER" layoutX="73.0" layoutY="25.0" spacing="55.0">
             <children>
