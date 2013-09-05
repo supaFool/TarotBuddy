@@ -3,9 +3,9 @@ package controller;
 import card.CardData;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import runner.Main;
+import utils.Utils;
 
 /**
  * Created with IntelliJ IDEA.
@@ -46,7 +46,7 @@ public class LookAtController {
     @FXML
     public void home() {
         Main.getStage().getScene().setRoot(Main.getMenu());
-        Main.getStage().getScene().setFill(Color.BURLYWOOD);
+        Main.getStage().getScene().setFill(Utils.BG_COLOR);
         Main.getStage().setWidth(540.0);
         Main.getStage().setHeight(160.0);
     }

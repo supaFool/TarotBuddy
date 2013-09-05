@@ -55,7 +55,7 @@ public class Main extends Application {
         primaryStage.setResizable(false);
         primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS)));
         primaryStage.setTitle("Tarot Buddy");
-        primaryStage.setScene(new Scene(reading, Color.BURLYWOOD));
+        primaryStage.setScene(new Scene(menu, Color.DARKCYAN));
         primaryStage.show();
     }
 

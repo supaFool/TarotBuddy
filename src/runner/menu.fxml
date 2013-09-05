@@ -84,9 +84,9 @@
                                 <MenuItem mnemonicParsing="false" onAction="#close" text="Close"/>
                             </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Options">
+                        <Menu mnemonicParsing="false" text="Personalize">
                             <items>
-                                <MenuItem mnemonicParsing="false" text="Delete"/>
+                                <MenuItem mnemonicParsing="false" text="Set Colors"/>
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Help">

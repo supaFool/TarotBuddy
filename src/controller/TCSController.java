@@ -6,11 +6,11 @@ import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import logic.DealingLogic;
 import runner.Main;
+import utils.Utils;
 
 import java.util.Random;
 
@@ -118,7 +118,7 @@ public class TCSController {
         Main.getStage().setHeight(132);
         Main.getStage().setWidth(600);
         Main.getStage().centerOnScreen();
-        Main.getStage().getScene().setFill(Color.BURLYWOOD);
+        Main.getStage().getScene().setFill(Utils.BG_COLOR);
 
         //Reset everything for next time;
         past.setImage(null);

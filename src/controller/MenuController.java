@@ -3,8 +3,8 @@ package controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
-import javafx.scene.paint.Color;
 import runner.Main;
+import utils.Utils;
 
 /**
  * Created with IntelliJ IDEA.
@@ -42,8 +42,11 @@ public class MenuController {
 
         wantsQuiz = false;
         wantsLookAt = false;
+    }
 
-
+    @FXML
+    public void setColor() {
+        //todo set color
     }
 
 
@@ -55,15 +58,16 @@ public class MenuController {
         if (wantsReading) {
             System.out.println(wantsReading + " Wants Reading");
             Main.getStage().getScene().setRoot(Main.getReading());
-
+//            Clip.getButtonClick_a().play();
 
         }
         if (wantsLookAt) {
             Main.getStage().setWidth(674);
             Main.getStage().setHeight(405);
-            Main.getStage().getScene().setFill(Color.BLACK);
+            Main.getStage().getScene().setFill(Utils.READING_COLOR);
             Main.getStage().getScene().setRoot(Main.getLookAt());
             Main.getStage().centerOnScreen();
+//            Clip.getButtonClick_a().play();
         }
         if (wantsQuiz) {
             //Set 3 Card Stage
@@ -77,11 +81,12 @@ public class MenuController {
         if (wantsStudy) {
             Main.getStage().setWidth(675);
             Main.getStage().setHeight(650);
-            Main.getStage().getScene().setFill(Color.BURLYWOOD);
+            Main.getStage().getScene().setFill(Utils.BG_COLOR);
             Main.getStage().getScene().setRoot(Main.getStudyCards());
             Main.getStage().centerOnScreen();
-
+//            Clip.getButtonClick_a().play();
         }
+//        Clip.getButtonClick_a().play();
     }
 
     @FXML
@@ -113,6 +118,7 @@ public class MenuController {
 
     @FXML
     public void close() {
+//        Clip.getButtonClick_a().play();
         Platform.exit();
     }
 

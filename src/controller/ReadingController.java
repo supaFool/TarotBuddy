@@ -9,11 +9,11 @@ import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.ToggleButton;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import runner.Main;
+import utils.Utils;
 
 /**
  * Created with Intellij IDEA.
@@ -34,7 +34,6 @@ public class ReadingController {
 
     @FXML
     private ToggleButton helpToggle;
-    //todo Fix Helper
 
     @FXML
     private Text selection;
@@ -71,7 +70,7 @@ public class ReadingController {
             Main.getStage().setOpacity(0f);
             Main.getStage().getScene().setRoot(p);
             TCSController.invert = invertCards;
-            Main.getStage().getScene().setFill(Color.BLACK);
+            Main.getStage().getScene().setFill(Utils.READING_COLOR);
             Main.getStage().setWidth(778.0);
             Main.getStage().setHeight(727.0);
             Main.getStage().centerOnScreen();
@@ -81,7 +80,7 @@ public class ReadingController {
             Main.getStage().setOpacity(0f);
             Main.getStage().getScene().setRoot(p);
             TCSController.invert = invertCards;
-            Main.getStage().getScene().setFill(Color.BLACK);
+            Main.getStage().getScene().setFill(Utils.READING_COLOR);
             Main.getStage().setWidth(775);
             Main.getStage().setHeight(500);
             Main.getStage().centerOnScreen();
