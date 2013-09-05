@@ -77,7 +77,7 @@
                         <Font name="SimHei" size="10.0"/>
                     </font>
                 </Text>
-                <MenuBar>
+                <MenuBar opacity="0.83">
                     <menus>
                         <Menu mnemonicParsing="false" text="File">
                             <items>
@@ -99,7 +99,7 @@
             </children>
         </HBox>
         <ImageView depthTest="INHERIT" fitHeight="138.59999333677553" fitWidth="83.99999237060547" layoutX="14.0"
-                   layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                   layoutY="11.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../card/image/2.gif"/>
             </image>
