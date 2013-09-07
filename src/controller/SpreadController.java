@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import logic.DealingLogic;
 import runner.Main;
 import utils.Utils;
 
@@ -28,6 +27,8 @@ public class SpreadController {
     private String presentPositionMeaning;
     private String futurePositionMeaning;
 
+
+
     private String[] meanings = new String[3];
 
     private int pastc = r.nextInt(77);
@@ -45,7 +46,6 @@ public class SpreadController {
     private boolean c2inverted = false;
     private boolean c3inverted = false;
 
-    private DealingLogic logic;
     @FXML
     private ImageView past;
 

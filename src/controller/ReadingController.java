@@ -33,7 +33,7 @@ public class ReadingController {
     @FXML
     private String disabled = "Reading Helper Disabled";
 
-    private SpreadType spread;
+    public static SpreadType spread;
 
     private static Stage stage;
 

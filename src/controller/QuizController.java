@@ -11,6 +11,8 @@ import javafx.scene.text.Text;
  */
 public class QuizController {
 
+    private int questionNumber = 0;
+
     /**
      * Goes Home
      */
