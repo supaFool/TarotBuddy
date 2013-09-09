@@ -35,7 +35,7 @@ public class LookAtController {
         if (currentCard > 77) {
             currentCard = 0;
         }
-        view.setImage(CardData.getImageView(currentCard).getImage());
+        view.setImage(CardData.getImageView(currentCard, CardData.MERC_DECK).getImage());
         //Change meaning if we are studying
         if (Main.getStage().getScene().getRoot() == Main.getStudyCards()) {
             cardTitle.setText(CardData.getCardTitle(currentCard));
@@ -57,7 +57,7 @@ public class LookAtController {
         if (currentCard < 0) {
             currentCard = 77;
         }
-        view.setImage(CardData.getImageView(currentCard).getImage());
+        view.setImage(CardData.getImageView(currentCard, CardData.MERC_DECK).getImage());
         //Change meaning if we are studying
         if (Main.getStage().getScene().getRoot() == Main.getStudyCards()) {
             cardTitle.setText(CardData.getCardTitle(currentCard));

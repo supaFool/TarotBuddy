@@ -36,7 +36,7 @@ public class TarotCard {
     }
 
     public Image getImage() {
-        return CardData.getImageView(cardNumber).getImage();
+        return CardData.getImageView(cardNumber, CardData.MERC_DECK).getImage();
     }
 
     public void show() {
@@ -57,7 +57,7 @@ public class TarotCard {
 
     private void initCard() {
         //init card
-        view.setImage(CardData.getImageView(cardNumber).getImage());
+        view.setImage(CardData.getImageView(cardNumber, CardData.MERC_DECK).getImage());
         this.cardTitle = CardData.getCardTitle(cardNumber);
         this.cardMeaning = CardData.getCardMeaning(cardNumber);
 

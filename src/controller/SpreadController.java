@@ -28,7 +28,6 @@ public class SpreadController {
     private String futurePositionMeaning;
 
 
-
     private String[] meanings = new String[3];
 
     private int pastc = r.nextInt(77);
@@ -188,7 +187,7 @@ public class SpreadController {
             KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
             KeyFrame f2 = new KeyFrame(Duration.millis(3000), v2);
             t.getKeyFrames().addAll(f1, f2);
-            past.setImage(CardData.getImageView(pastc).getImage());
+            past.setImage(CardData.getImageView(pastc, CardData.MERC_DECK).getImage());
             meanings[counter] = CardData.getCardMeaning(pastc);
             c1inverted = r.nextBoolean();
             if (invert && c1inverted) {
@@ -208,7 +207,7 @@ public class SpreadController {
             KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
             KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
             t.getKeyFrames().addAll(f1, f2);
-            present.setImage(CardData.getImageView(presentc).getImage());
+            present.setImage(CardData.getImageView(presentc, CardData.MERC_DECK).getImage());
             meanings[counter] = CardData.getCardMeaning(presentc);
             c2inverted = r.nextBoolean();
             if (invert && c2inverted) {
@@ -225,7 +224,7 @@ public class SpreadController {
             KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
             KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
             t.getKeyFrames().addAll(f1, f2);
-            future.setImage(CardData.getImageView(futurec).getImage());
+            future.setImage(CardData.getImageView(futurec, CardData.MERC_DECK).getImage());
             meanings[counter] = CardData.getCardMeaning(futurec);
 
 

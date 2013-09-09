@@ -22,7 +22,7 @@ public class Coins extends MinorArcana {
         }
 
         public static Image getCardImage() {
-            return cardImage[ACE_OF_PENTACLES].getImage();
+            return MERC[ACE_OF_PENTACLES].getImage();
         }
 
         public static String getId() {
@@ -44,7 +44,7 @@ public class Coins extends MinorArcana {
 
         @Override
         public Image getCardImage() {
-            return cardImage[TWO_OF_PENTACLES].getImage();
+            return MERC[TWO_OF_PENTACLES].getImage();
         }
 
         @Override
@@ -67,7 +67,7 @@ public class Coins extends MinorArcana {
 
         @Override
         public Image getCardImage() {
-            return cardImage[THREE_OF_PENTACLES].getImage();
+            return MERC[THREE_OF_PENTACLES].getImage();
         }
 
         @Override
@@ -90,7 +90,7 @@ public class Coins extends MinorArcana {
 
         @Override
         public Image getCardImage() {
-            return cardImage[FOUR_OF_PENTACLES].getImage();
+            return MERC[FOUR_OF_PENTACLES].getImage();
         }
 
         @Override
@@ -113,7 +113,7 @@ public class Coins extends MinorArcana {
 
         @Override
         public Image getCardImage() {
-            return cardImage[FIVE_OF_PENTACLES].getImage();
+            return MERC[FIVE_OF_PENTACLES].getImage();
         }
 
         @Override
@@ -136,7 +136,7 @@ public class Coins extends MinorArcana {
 
         @Override
         public Image getCardImage() {
-            return cardImage[SIX_OF_PENTACLES].getImage();
+            return MERC[SIX_OF_PENTACLES].getImage();
         }
 
         @Override

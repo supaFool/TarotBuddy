@@ -55,7 +55,7 @@ public class Main extends Application {
         //set stage props
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setResizable(false);
-        primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS)));
+        primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS, CardData.MERC_DECK)));
         primaryStage.setTitle("Tarot Buddy");
         primaryStage.setScene(new Scene(menu, Color.DARKCYAN));
         primaryStage.show();

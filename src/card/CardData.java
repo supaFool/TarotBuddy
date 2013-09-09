@@ -4,13 +4,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 /**
- * Created with IntelliJ IDEA.
  * User: Erick
  * Date: 8/30/13
  * Time: 3:09 AM
  */
 public class CardData {
 
+    public static int WIADEC = 1910;
+
+    public static int MERC_DECK = 5244;
 
     /**
      * Card Numbers used to get cards from []
@@ -276,89 +278,177 @@ public class CardData {
      * Card Images
      */
 
-    static final ImageView[] cardImage = new ImageView[]{
-            new ImageView(new Image(getImageFile(THE_FOOL))),
-            new ImageView(new Image(getImageFile(THE_MAGUS))),
-            new ImageView(new Image(getImageFile(THE_HIGH_PRIESTESS))),
-            new ImageView(new Image(getImageFile(THE_EMPRESS))),
-            new ImageView(new Image(getImageFile(THE_EMPEROR))),
-            new ImageView(new Image(getImageFile(THE_HEIROPHANT))),
-            new ImageView(new Image(getImageFile(THE_LOVER))),
-            new ImageView(new Image(getImageFile(THE_CHARIOT))),
-            new ImageView(new Image(getImageFile(STRENGTH))),
-            new ImageView(new Image(getImageFile(THE_HERMIT))),
-            new ImageView(new Image(getImageFile(WHEEL_OF_FORTUNE))),
-            new ImageView(new Image(getImageFile(JUSTICE))),
-            new ImageView(new Image(getImageFile(THE_HANGED_MAN))),
-            new ImageView(new Image(getImageFile(DEATH))),
-            new ImageView(new Image(getImageFile(TEMPERANCE))),
-            new ImageView(new Image(getImageFile(THE_DEVIL))),
-            new ImageView(new Image(getImageFile(THE_TOWER))),
-            new ImageView(new Image(getImageFile(THE_STAR))),
-            new ImageView(new Image(getImageFile(THE_MOON))),
-            new ImageView(new Image(getImageFile(THE_SUN))),
-            new ImageView(new Image(getImageFile(JUDGEMENT))),
-            new ImageView(new Image(getImageFile(THE_WORLD))),
+    static final ImageView[] MERC = new ImageView[]{
+            new ImageView(new Image(getImageFile(THE_FOOL, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_MAGUS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_HIGH_PRIESTESS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_EMPRESS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_EMPEROR, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_HEIROPHANT, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_LOVER, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_CHARIOT, MERC_DECK))),
+            new ImageView(new Image(getImageFile(STRENGTH, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_HERMIT, MERC_DECK))),
+            new ImageView(new Image(getImageFile(WHEEL_OF_FORTUNE, MERC_DECK))),
+            new ImageView(new Image(getImageFile(JUSTICE, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_HANGED_MAN, MERC_DECK))),
+            new ImageView(new Image(getImageFile(DEATH, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TEMPERANCE, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_DEVIL, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_TOWER, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_STAR, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_MOON, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_SUN, MERC_DECK))),
+            new ImageView(new Image(getImageFile(JUDGEMENT, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THE_WORLD, MERC_DECK))),
             //Sword Images
-            new ImageView(new Image(getImageFile(ACE_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(TWO_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(THREE_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(FOUR_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(FIVE_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(SIX_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(SEVEN_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(EIGHT_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(NINE_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(TEN_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(PAGE_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(KNIGHT_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(KING_OF_SWORDS))),
-            new ImageView(new Image(getImageFile(QUEEN_OF_SWORDS))),
+            new ImageView(new Image(getImageFile(ACE_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TWO_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THREE_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(FOUR_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(FIVE_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(SIX_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(NINE_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TEN_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(PAGE_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(KING_OF_SWORDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_SWORDS, MERC_DECK))),
             //Wand Images
-            new ImageView(new Image(getImageFile(ACE_OF_WANDS))),
-            new ImageView(new Image(getImageFile(TWO_OF_WANDS))),
-            new ImageView(new Image(getImageFile(THREE_OF_WANDS))),
-            new ImageView(new Image(getImageFile(FOUR_OF_WANDS))),
-            new ImageView(new Image(getImageFile(FIVE_OF_WANDS))),
-            new ImageView(new Image(getImageFile(SIX_OF_WANDS))),
-            new ImageView(new Image(getImageFile(SEVEN_OF_WANDS))),
-            new ImageView(new Image(getImageFile(EIGHT_OF_WANDS))),
-            new ImageView(new Image(getImageFile(NINE_OF_WANDS))),
-            new ImageView(new Image(getImageFile(TEN_OF_WANDS))),
-            new ImageView(new Image(getImageFile(PAGE_OF_WANDS))),
-            new ImageView(new Image(getImageFile(KNIGHT_OF_WANDS))),
-            new ImageView(new Image(getImageFile(KING_OF_WANDS))),
-            new ImageView(new Image(getImageFile(QUEEN_OF_WANDS))),
+            new ImageView(new Image(getImageFile(ACE_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TWO_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THREE_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(FOUR_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(FIVE_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(SIX_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(NINE_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TEN_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(PAGE_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(KING_OF_WANDS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_WANDS, MERC_DECK))),
             //Cups Images
-            new ImageView(new Image(getImageFile(ACE_OF_CUPS))),
-            new ImageView(new Image(getImageFile(TWO_OF_CUPS))),
-            new ImageView(new Image(getImageFile(THREE_OF_CUPS))),
-            new ImageView(new Image(getImageFile(FOUR_OF_CUPS))),
-            new ImageView(new Image(getImageFile(FIVE_OF_CUPS))),
-            new ImageView(new Image(getImageFile(SIX_OF_CUPS))),
-            new ImageView(new Image(getImageFile(SEVEN_OF_CUPS))),
-            new ImageView(new Image(getImageFile(EIGHT_OF_CUPS))),
-            new ImageView(new Image(getImageFile(NINE_OF_CUPS))),
-            new ImageView(new Image(getImageFile(TEN_OF_CUPS))),
-            new ImageView(new Image(getImageFile(PAGE_OF_CUPS))),
-            new ImageView(new Image(getImageFile(KNIGHT_OF_CUPS))),
-            new ImageView(new Image(getImageFile(KING_OF_CUPS))),
-            new ImageView(new Image(getImageFile(QUEEN_OF_CUPS))),
+            new ImageView(new Image(getImageFile(ACE_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TWO_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THREE_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(FOUR_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(FIVE_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(SIX_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(NINE_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TEN_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(PAGE_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(KING_OF_CUPS, MERC_DECK))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_CUPS, MERC_DECK))),
             //pent Images
-            new ImageView(new Image(getImageFile(ACE_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(TWO_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(THREE_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(FOUR_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(FIVE_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(SIX_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(SEVEN_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(EIGHT_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(NINE_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(TEN_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(PAGE_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(KNIGHT_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(KING_OF_PENTACLES))),
-            new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES))),
+            new ImageView(new Image(getImageFile(ACE_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TWO_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(THREE_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(FOUR_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(FIVE_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(SIX_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(NINE_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(TEN_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(PAGE_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(KING_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES, MERC_DECK))),
+            new ImageView(new Image("/card/image/ZSpBack.gif"))};
+    /**
+     * Card Images
+     */
+
+    static final ImageView[] WD = new ImageView[]{
+            new ImageView(new Image(getImageFile(THE_FOOL, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_MAGUS, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_HIGH_PRIESTESS, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_EMPRESS, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_EMPEROR, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_HEIROPHANT, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_LOVER, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_CHARIOT, WIADEC))),
+            new ImageView(new Image(getImageFile(STRENGTH, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_HERMIT, WIADEC))),
+            new ImageView(new Image(getImageFile(WHEEL_OF_FORTUNE, WIADEC))),
+            new ImageView(new Image(getImageFile(JUSTICE, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_HANGED_MAN, WIADEC))),
+            new ImageView(new Image(getImageFile(DEATH, WIADEC))),
+            new ImageView(new Image(getImageFile(TEMPERANCE, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_DEVIL, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_TOWER, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_STAR, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_MOON, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_SUN, WIADEC))),
+            new ImageView(new Image(getImageFile(JUDGEMENT, WIADEC))),
+            new ImageView(new Image(getImageFile(THE_WORLD, WIADEC))),
+            //Sword Images
+            new ImageView(new Image(getImageFile(ACE_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(TWO_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(THREE_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(FOUR_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(FIVE_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(SIX_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(NINE_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(TEN_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(PAGE_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(KING_OF_SWORDS, WIADEC))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_SWORDS, WIADEC))),
+            //Wand Images
+            new ImageView(new Image(getImageFile(ACE_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(TWO_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(THREE_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(FOUR_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(FIVE_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(SIX_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(NINE_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(TEN_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(PAGE_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(KING_OF_WANDS, WIADEC))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_WANDS, WIADEC))),
+            //Cups Images
+            new ImageView(new Image(getImageFile(ACE_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(TWO_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(THREE_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(FOUR_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(FIVE_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(SIX_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(NINE_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(TEN_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(PAGE_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(KING_OF_CUPS, WIADEC))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_CUPS, WIADEC))),
+            //pent Images
+            new ImageView(new Image(getImageFile(ACE_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(TWO_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(THREE_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(FOUR_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(FIVE_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(SIX_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(NINE_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(TEN_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(PAGE_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(KING_OF_PENTACLES, WIADEC))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES, WIADEC))),
             new ImageView(new Image("/card/image/ZSpBack.gif"))};
 
     //Keep track of which way the card is facing, prob going to use this in DealingLogic.initAnimation
@@ -375,16 +465,31 @@ public class CardData {
      * @param card card requested
      * @return the URL of requested card Image
      */
-    public static String getImageFile(int card) {
-        return "/card/image/" + card + ".gif";
+    public static String getImageFile(int card, int deck) {
+        if (deck == WIADEC) {
+            return "/card/image/decks/wiate/" + card + ".gif";
+        }
+
+        if (deck == MERC_DECK) {
+            return "/card/image/decks/merc/" + card + ".jpg";
+        } else {
+            return null;
+        }
     }
 
     /**
      * @param card card Number
      * @return the Image View of requested card
      */
-    public static ImageView getImageView(int card) {
-        return cardImage[card];
+    public static ImageView getImageView(int card, int deck) {
+        if (deck == MERC_DECK) {
+            return MERC[card];
+        }
+        if (deck == WIADEC) {
+            return WD[card];
+        } else {
+            return null;
+        }
     }
 
     /**

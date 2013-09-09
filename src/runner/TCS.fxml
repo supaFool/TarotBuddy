@@ -14,9 +14,10 @@
             prefHeight="727.0" prefWidth="778.0" xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.SpreadController">
     <children>
-        <HBox id="HBox" alignment="CENTER" layoutX="74.0" layoutY="32.0" spacing="15.0">
+        <HBox id="HBox" alignment="CENTER" layoutX="74.0" layoutY="32.0" minHeight="-Infinity" minWidth="-Infinity"
+              prefHeight="375.0" prefWidth="630.0" spacing="15.0">
             <children>
-                <VBox id="VBox" alignment="CENTER" spacing="5.0">
+                <VBox id="VBox" alignment="CENTER" minWidth="-Infinity" prefWidth="200.0" spacing="5.0">
                     <children>
                         <ImageView fx:id="past" fitHeight="330.0" fitWidth="200.0" onMouseClicked="#showPastMeaning"
                                    pickOnBounds="true" preserveRatio="true">
@@ -43,7 +44,7 @@
                         </Text>
                     </children>
                 </VBox>
-                <VBox id="VBox" alignment="CENTER" spacing="5.0">
+                <VBox id="VBox" alignment="CENTER" minWidth="-Infinity" prefWidth="200.0" spacing="5.0">
                     <children>
                         <ImageView fx:id="present" fitHeight="330.0" fitWidth="200.0"
                                    onMouseClicked="#showPresentMeaning" pickOnBounds="true" preserveRatio="true">
@@ -69,7 +70,7 @@
                         </Text>
                     </children>
                 </VBox>
-                <VBox id="VBox" alignment="CENTER" spacing="5.0">
+                <VBox id="VBox" alignment="CENTER" minWidth="-Infinity" prefWidth="200.0" spacing="5.0">
                     <children>
                         <ImageView fx:id="future" fitHeight="330.0" fitWidth="200.0" onMouseClicked="#showFutureMeaning"
                                    pickOnBounds="true" preserveRatio="true">
@@ -147,7 +148,7 @@
                 </ScrollPane>
             </children>
             <effect>
-                <InnerShadow choke="0.5714285714285715" height="212.62698412698413" radius="116.40674603174602"
+                <InnerShadow choke="0.5714285714285715" height="244.40674603174602" radius="124.3516865079365"
                              width="255.0">
                     <input>
                         <SepiaTone/>
