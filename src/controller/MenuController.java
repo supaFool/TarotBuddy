@@ -57,6 +57,8 @@ public class MenuController {
 
         if (wantsReading) {
             System.out.println(wantsReading + " Wants Reading");
+            Main.getStage().setWidth(601);
+            Main.getStage().setHeight(161);
             Main.getStage().getScene().setRoot(Main.getReading());
 //            Clip.getButtonClick_a().play();
 
