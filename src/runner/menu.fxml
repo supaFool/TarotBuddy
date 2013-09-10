@@ -101,7 +101,7 @@
         <ImageView depthTest="INHERIT" fitHeight="138.59999333677553" fitWidth="83.99999237060547" layoutX="14.0"
                    layoutY="11.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../card/image/decks/mantegna/08.JPG"/>
+                <Image url="@../card/image/decks/mantegna/8.JPG"/>
             </image>
         </ImageView>
     </children>

@@ -77,6 +77,8 @@ public class ReadingController {
         flashSelection("1910 Deck Selected");
         helpToggle.setSelected(false);
         helpToggle.setText(helpToggle.isSelected() ? disabled : enabled);
+        setWantsHelp(helpToggle.isSelected() ? false : true);
+        SpreadController.help = false;
     }
 
     @FXML
@@ -84,6 +86,7 @@ public class ReadingController {
         flashSelection("Marseilles Deck Selected");
         helpToggle.setSelected(true);
         helpToggle.setText("Help not available for selected deck");
+        setWantsHelp(false);
     }
 
     @FXML
@@ -120,6 +123,9 @@ public class ReadingController {
                 getSwordSpread(fadeAni);
 
                 break;
+            }
+            default: {
+                set3CardStage(fadeAni);
             }
 
         }
@@ -175,7 +181,7 @@ public class ReadingController {
      */
     private void set3CardStage(Timeline fadeAni) {
         System.out.println(wantsHelp);
-        if (wantsHelp) {
+        if (wantsHelp && (SpreadController.deck == DeckType.WIATE || SpreadController.deck == DeckType.WIA_ART)) {
             Parent p = Main.getTCS();
             Main.getStage().setOpacity(0f);
             Main.getStage().getScene().setRoot(p);
@@ -186,6 +192,7 @@ public class ReadingController {
             Main.getStage().centerOnScreen();
             fadeAni.play();
         }
+
         if (!wantsHelp) {
             Parent p = Main.getTcsNoHelp();
             Main.getStage().setOpacity(0f);
