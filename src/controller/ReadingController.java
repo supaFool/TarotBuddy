@@ -79,11 +79,15 @@ public class ReadingController {
     @FXML
     public void flash1910() {
         flashSelection("1910 Deck Selected");
+        helpToggle.setSelected(false);
+        helpToggle.setText(helpToggle.isSelected() ? disabled : enabled);
     }
 
     @FXML
     public void flashMerc() {
         flashSelection("Marseilles Deck Selected");
+        helpToggle.setSelected(true);
+        helpToggle.setText("Help not available for selected deck");
     }
 
     @FXML
@@ -102,6 +106,7 @@ public class ReadingController {
 
         if (mercChoose.isSelected()) {
             SpreadController.deck = DeckType.MARC;
+
         }
 
         if (wiaArtChoose.isSelected()) {
