@@ -10,10 +10,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="132.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ReadingController">
+            prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="controller.ReadingController">
     <children>
-        <HBox id="HBox" alignment="CENTER" layoutX="374.0" layoutY="101.0" spacing="5.0">
+        <HBox id="HBox" alignment="CENTER" layoutX="374.0" layoutY="125.0" spacing="5.0">
             <children>
                 <Button mnemonicParsing="false" onAction="#close" text="Home">
                     <effect>
@@ -67,6 +67,9 @@
                     <children>
                         <ToggleButton fx:id="helpToggle" font="$x2" mnemonicParsing="false" onAction="#setHelp"
                                       text="Reading Helper Enabled">
+                            <effect>
+                                <Reflection/>
+                            </effect>
                             <tooltip>
                                 <Tooltip text="Enable to show guides for reading the spread and the cards"/>
                             </tooltip>
@@ -75,8 +78,49 @@
                 </HBox>
             </children>
         </VBox>
-        <Text fx:id="selection" fontSmoothingType="LCD" layoutX="356.0" layoutY="19.0" strokeType="OUTSIDE"
+        <Text fx:id="selection" fontSmoothingType="LCD" layoutX="134.0" layoutY="140.0" strokeType="OUTSIDE"
               strokeWidth="0.0" text="">
+            <effect>
+                <Reflection/>
+            </effect>
+        </Text>
+        <GridPane layoutX="316.0" layoutY="35.0" prefHeight="76.0" prefWidth="270.0">
+            <children>
+                <RadioButton fx:id="wiaChoose" mnemonicParsing="false" onAction="#flash1910" selected="true"
+                             text="1910 Deck" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                    <effect>
+                        <Reflection/>
+                    </effect>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="deck"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="mercChoose" mnemonicParsing="false" onAction="#flashMerc" selected="false"
+                             text="Marseilles Deck" toggleGroup="$deck" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <effect>
+                        <Reflection/>
+                    </effect>
+                </RadioButton>
+                <RadioButton fx:id="wiaArtChoose" mnemonicParsing="false" onAction="#flash1910Art" selected="false"
+                             text="1910 Art Variation" toggleGroup="$deck" GridPane.columnIndex="0"
+                             GridPane.rowIndex="2">
+                    <effect>
+                        <Reflection/>
+                    </effect>
+                </RadioButton>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+        </GridPane>
+        <Text layoutX="440.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deck Type"
+              textAlignment="CENTER">
             <effect>
                 <Reflection/>
             </effect>
@@ -85,4 +129,7 @@
     <effect>
         <SepiaTone/>
     </effect>
+    <padding>
+        <Insets right="15.0" top="15.0"/>
+    </padding>
 </AnchorPane>
