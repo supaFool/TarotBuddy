@@ -36,6 +36,7 @@ public class SpreadController {
 
     //Wants help
     public static boolean help = true;
+    public static ReadingController.DeckType deck;
 
     private boolean pastIsShowing = false;
     private boolean presentIsShowing = false;
@@ -187,27 +188,38 @@ public class SpreadController {
             KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
             KeyFrame f2 = new KeyFrame(Duration.millis(3000), v2);
             t.getKeyFrames().addAll(f1, f2);
-            past.setImage(CardData.getImageView(pastc, CardData.MERC_DECK).getImage());
-            meanings[counter] = CardData.getCardMeaning(pastc);
-            c1inverted = r.nextBoolean();
-            if (invert && c1inverted) {
-                past.setRotate(180);
+            if (deck == ReadingController.DeckType.WIATE) {
+                past.setImage(CardData.getImageView(pastc, CardData.WIADEC).getImage());
             }
-            pastIsShowing = true;
-
-            System.out.println("Past card inverted: " + c3inverted);
-
-
+            if (deck == ReadingController.DeckType.MARC) {
+                past.setImage(CardData.getImageView(pastc, CardData.MERC_DECK).getImage());
+            }
         }
+        meanings[counter] = CardData.getCardMeaning(pastc);
+        c1inverted = r.nextBoolean();
+        if (invert && c1inverted) {
+            past.setRotate(180);
+        }
+        pastIsShowing = true;
+
+        System.out.println("Past card inverted: " + c3inverted);
+
 
         if (counter == 0) {
 
+            if (deck == ReadingController.DeckType.WIATE) {
+                present.setImage(CardData.getImageView(presentc, CardData.WIADEC).getImage());
+
+            }
+            if (deck == ReadingController.DeckType.MARC) {
+                present.setImage(CardData.getImageView(presentc, CardData.MERC_DECK).getImage());
+
+            }
             KeyValue v1 = new KeyValue(present.opacityProperty(), 0);
             KeyValue v2 = new KeyValue(present.opacityProperty(), 1);
             KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
             KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
             t.getKeyFrames().addAll(f1, f2);
-            present.setImage(CardData.getImageView(presentc, CardData.MERC_DECK).getImage());
             meanings[counter] = CardData.getCardMeaning(presentc);
             c2inverted = r.nextBoolean();
             if (invert && c2inverted) {
@@ -218,34 +230,37 @@ public class SpreadController {
         }
 
         if (counter == 2) {
-
-            KeyValue v1 = new KeyValue(future.opacityProperty(), 0);
-            KeyValue v2 = new KeyValue(future.opacityProperty(), 1);
-            KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
-            KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
-            t.getKeyFrames().addAll(f1, f2);
-            future.setImage(CardData.getImageView(futurec, CardData.MERC_DECK).getImage());
-            meanings[counter] = CardData.getCardMeaning(futurec);
-
-
-            c3inverted = r.nextBoolean();
-            if (invert && c3inverted) {
-                future.setRotate(180);
+            if (deck == ReadingController.DeckType.WIATE) {
+                future.setImage(CardData.getImageView(futurec, CardData.WIADEC).getImage());
             }
-
-            futureIsShowing = true;
-            System.out.println("Future card inverted" + c3inverted);
+            if (deck == ReadingController.DeckType.MARC) {
+                future.setImage(CardData.getImageView(futurec, CardData.MERC_DECK).getImage());
+            }
         }
+
+        KeyValue v1 = new KeyValue(future.opacityProperty(), 0);
+        KeyValue v2 = new KeyValue(future.opacityProperty(), 1);
+        KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
+        KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
+        t.getKeyFrames().addAll(f1, f2);
+        meanings[counter] = CardData.getCardMeaning(futurec);
+
+
+        c3inverted = r.nextBoolean();
+        if (invert && c3inverted) {
+            future.setRotate(180);
+        }
+
+        futureIsShowing = true;
+        System.out.println("Future card inverted" + c3inverted);
+
         counter++;
         t.play();
 
     }
-
-    protected class SwordSpread {
-        @FXML
-        public void set() {
-
-        }
-    }
-
 }
+
+
+
+
+

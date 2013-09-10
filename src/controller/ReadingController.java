@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.MenuButton;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -25,7 +26,11 @@ import utils.Utils;
 public class ReadingController {
 
     public enum SpreadType {
-        THREE_CARD_SPREAD, SWORD;
+        THREE_CARD_SPREAD, SWORD
+    }
+
+    public enum DeckType {
+        WIATE, MARC, WIA_ART, NONE
     }
 
     @FXML
@@ -47,6 +52,15 @@ public class ReadingController {
     private MenuButton typeOfReading;
 
     @FXML
+    private RadioButton wiaChoose;
+
+    @FXML
+    private RadioButton mercChoose;
+
+    @FXML
+    private RadioButton wiaArtChoose;
+
+    @FXML
     private CheckBox invert;
 
     ///////////
@@ -63,18 +77,60 @@ public class ReadingController {
     }
 
     @FXML
+    public void flash1910() {
+        flashSelection("1910 Deck Selected");
+    }
+
+    @FXML
+    public void flashMerc() {
+        flashSelection("Marseilles Deck Selected");
+    }
+
+    @FXML
+    public void flash1910Art() {
+        flashSelection("1910 Art Variation Selected");
+    }
+
+    @FXML
     public void getReading() {
         System.out.println(spread);
         Timeline fadeAni = getStageAni();
 
-        if (spread == SpreadType.THREE_CARD_SPREAD) {
-            set3CardStage(fadeAni);
+        if (wiaChoose.isSelected()) {
+            SpreadController.deck = DeckType.WIATE;
         }
-        if (spread == SpreadType.SWORD) {
-            getSwordSpread(fadeAni);
-        } else {
-            System.out.println("Please tell me what to do");
+
+        if (mercChoose.isSelected()) {
+            SpreadController.deck = DeckType.MARC;
         }
+
+        if (wiaArtChoose.isSelected()) {
+            flashSelection("1910 Art Variation Deck Coming Soon");
+        }
+
+        switch (spread) {
+            case THREE_CARD_SPREAD: {
+
+                set3CardStage(fadeAni);
+            }
+            break;
+
+            case SWORD: {
+                getSwordSpread(fadeAni);
+
+                break;
+            }
+
+        }
+
+//        if (spread == SpreadType.THREE_CARD_SPREAD) {
+//            set3CardStage(fadeAni);
+//        }
+//        if (spread == SpreadType.SWORD) {
+//            getSwordSpread(fadeAni);
+//        } else {
+//            System.out.println("Please tell me what to do");
+//        }
 
 
     }

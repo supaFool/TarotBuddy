@@ -86,8 +86,8 @@
         </Text>
         <GridPane layoutX="316.0" layoutY="35.0" prefHeight="76.0" prefWidth="270.0">
             <children>
-                <RadioButton mnemonicParsing="false" selected="false" text="1910 Deck" GridPane.columnIndex="0"
-                             GridPane.rowIndex="0">
+                <RadioButton fx:id="wiaChoose" mnemonicParsing="false" onAction="#flash1910" selected="true"
+                             text="1910 Deck" GridPane.columnIndex="0" GridPane.rowIndex="0">
                     <effect>
                         <Reflection/>
                     </effect>
@@ -95,14 +95,15 @@
                         <ToggleGroup fx:id="deck"/>
                     </toggleGroup>
                 </RadioButton>
-                <RadioButton mnemonicParsing="false" selected="false" text="Mersilles" toggleGroup="$deck"
-                             GridPane.columnIndex="0" GridPane.rowIndex="1">
+                <RadioButton fx:id="mercChoose" mnemonicParsing="false" onAction="#flashMerc" selected="false"
+                             text="Marseilles Deck" toggleGroup="$deck" GridPane.columnIndex="0" GridPane.rowIndex="1">
                     <effect>
                         <Reflection/>
                     </effect>
                 </RadioButton>
-                <RadioButton mnemonicParsing="false" selected="false" text="1910 Art Variation" toggleGroup="$deck"
-                             GridPane.columnIndex="0" GridPane.rowIndex="2">
+                <RadioButton fx:id="wiaArtChoose" mnemonicParsing="false" onAction="#flash1910Art" selected="false"
+                             text="1910 Art Variation" toggleGroup="$deck" GridPane.columnIndex="0"
+                             GridPane.rowIndex="2">
                     <effect>
                         <Reflection/>
                     </effect>
