@@ -69,10 +69,6 @@ public class ReadingController {
     private boolean invertCards = false;
 
 
-    public static Stage getStage() {
-        return stage;
-    }
-
     public ReadingController() {
     }
 
