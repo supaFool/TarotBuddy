@@ -112,23 +112,25 @@ public class ReadingController {
             flashSelection("1910 Art Variation Deck Coming Soon");
         }
 
-        switch (spread) {
-            case THREE_CARD_SPREAD: {
+        try {
+            switch (spread) {
+                case THREE_CARD_SPREAD: {
 
-                set3CardStage(fadeAni);
-            }
-            break;
-
-            case SWORD: {
-                getSwordSpread(fadeAni);
-
+                    set3CardStage(fadeAni);
+                }
                 break;
-            }
-            default: {
-                set3CardStage(fadeAni);
-            }
 
-        }
+                case SWORD: {
+                    getSwordSpread(fadeAni);
+
+                    break;
+                }
+                default: {
+                    set3CardStage(fadeAni);
+                }
+
+
+            }
 
 //        if (spread == SpreadType.THREE_CARD_SPREAD) {
 //            set3CardStage(fadeAni);
@@ -140,6 +142,9 @@ public class ReadingController {
 //        }
 
 
+        } catch (NullPointerException e) {
+            flashSelection("Please Select a Spread");
+        }
     }
 
 
