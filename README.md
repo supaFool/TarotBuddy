@@ -14,6 +14,8 @@ Currently adding functionality.
 >* Navigate to -- TarotBuddy\out\artifacts\TarotBuddy_DEV  
 >* Place the .jar file anywhere you like and run it  
 
-#### Release Beta
+### Release Beta
+>#### Known Bugs
+>* Switching from Marc deck on the deck selection, Doesnt show help text when going back to 1910, without re-selecting it.
 
 

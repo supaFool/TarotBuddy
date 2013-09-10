@@ -79,6 +79,7 @@ public class ReadingController {
         helpToggle.setText(helpToggle.isSelected() ? disabled : enabled);
         setWantsHelp(helpToggle.isSelected() ? false : true);
         SpreadController.help = false;
+        wantsHelp = true;
     }
 
     @FXML
