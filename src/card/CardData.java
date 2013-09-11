@@ -558,7 +558,7 @@ public class CardData {
      */
     public static String getImageFile(int card, int deck) {
         if (deck == WIADEC) {
-            return "/card/image/decks/wiate/" + card + ".gif";
+            return "/card/image/decks/1910/" + card + ".jpg";
         }
 
         if (deck == MERC_DECK) {
