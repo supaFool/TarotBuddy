@@ -14,6 +14,8 @@ public class CardData {
 
     public static int MERC_DECK = 5244;
 
+    public static int WIA_ART_DECK = 191010;
+
     /**
      * Card Numbers used to get cards from []
      */
@@ -451,6 +453,95 @@ public class CardData {
             new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES, WIADEC))),
             new ImageView(new Image("/card/image/ZSpBack.gif"))};
 
+    /**
+     * Card Images
+     */
+
+    static final ImageView[] ART_DECK = new ImageView[]{
+            new ImageView(new Image(getImageFile(THE_FOOL, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_MAGUS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_HIGH_PRIESTESS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_EMPRESS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_EMPEROR, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_HEIROPHANT, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_LOVER, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_CHARIOT, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(STRENGTH, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_HERMIT, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(WHEEL_OF_FORTUNE, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(JUSTICE, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_HANGED_MAN, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(DEATH, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TEMPERANCE, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_DEVIL, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_TOWER, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_STAR, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_MOON, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_SUN, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(JUDGEMENT, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THE_WORLD, WIA_ART_DECK))),
+            //Sword Images
+            new ImageView(new Image(getImageFile(ACE_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TWO_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THREE_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(FOUR_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(FIVE_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(SIX_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(NINE_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TEN_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(PAGE_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(KING_OF_SWORDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_SWORDS, WIA_ART_DECK))),
+            //Wand Images
+            new ImageView(new Image(getImageFile(ACE_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TWO_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THREE_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(FOUR_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(FIVE_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(SIX_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(NINE_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TEN_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(PAGE_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(KING_OF_WANDS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_WANDS, WIA_ART_DECK))),
+            //Cups Images
+            new ImageView(new Image(getImageFile(ACE_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TWO_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THREE_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(FOUR_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(FIVE_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(SIX_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(NINE_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TEN_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(PAGE_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(KING_OF_CUPS, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_CUPS, WIA_ART_DECK))),
+            //pent Images
+            new ImageView(new Image(getImageFile(ACE_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TWO_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(THREE_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(FOUR_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(FIVE_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(SIX_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(SEVEN_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(EIGHT_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(NINE_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(TEN_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(PAGE_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(KNIGHT_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(KING_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES, WIA_ART_DECK))),
+            new ImageView(new Image("/card/image/ZSpBack.gif"))};
+
     //Keep track of which way the card is facing, prob going to use this in DealingLogic.initAnimation
     private boolean hasBeenFlipped = false;
 
@@ -472,6 +563,10 @@ public class CardData {
 
         if (deck == MERC_DECK) {
             return "/card/image/decks/merc/" + card + ".jpg";
+        }
+
+        if (deck == WIA_ART_DECK) {
+            return "/card/image/decks/artdeck/" + card + ".jpg";
         } else {
             return null;
         }
@@ -487,6 +582,9 @@ public class CardData {
         }
         if (deck == WIADEC) {
             return WD[card];
+        }
+        if (deck == WIA_ART_DECK) {
+            return ART_DECK[card];
         } else {
             return null;
         }

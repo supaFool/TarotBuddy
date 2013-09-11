@@ -8,7 +8,6 @@ import runner.Main;
 import utils.Utils;
 
 /**
- * Created with IntelliJ IDEA.
  * User: Erick
  * Date: 9/2/13
  * Time: 10:05 PM
@@ -29,13 +28,16 @@ public class LookAtController {
     @FXML
     private Text cardMeaning;
 
+    /**
+     * Show next card;
+     */
     @FXML
     public void next() {
         currentCard++;
         if (currentCard > 77) {
             currentCard = 0;
         }
-        view.setImage(CardData.getImageView(currentCard, CardData.MERC_DECK).getImage());
+        view.setImage(CardData.getImageView(currentCard, CardData.WIADEC).getImage());
         //Change meaning if we are studying
         if (Main.getStage().getScene().getRoot() == Main.getStudyCards()) {
             cardTitle.setText(CardData.getCardTitle(currentCard));
@@ -43,6 +45,9 @@ public class LookAtController {
         }
     }
 
+    /**
+     * Goes back to menu screen
+     */
     @FXML
     public void home() {
         Main.getStage().getScene().setRoot(Main.getMenu());
@@ -51,13 +56,16 @@ public class LookAtController {
         Main.getStage().setHeight(160.0);
     }
 
+    /**
+     * Show previous card
+     */
     @FXML
     public void prev() {
         currentCard--;
         if (currentCard < 0) {
             currentCard = 77;
         }
-        view.setImage(CardData.getImageView(currentCard, CardData.MERC_DECK).getImage());
+        view.setImage(CardData.getImageView(currentCard, CardData.WIADEC).getImage());
         //Change meaning if we are studying
         if (Main.getStage().getScene().getRoot() == Main.getStudyCards()) {
             cardTitle.setText(CardData.getCardTitle(currentCard));

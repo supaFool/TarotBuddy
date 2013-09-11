@@ -30,7 +30,7 @@ public class ReadingController {
     }
 
     public enum DeckType {
-        WIATE, MARC, WIA_ART, NONE
+        WIATE, MARC, WIA_ART, MANGTENGA
     }
 
     @FXML
@@ -93,6 +93,11 @@ public class ReadingController {
     @FXML
     public void flash1910Art() {
         flashSelection("1910 Art Variation Selected");
+        helpToggle.setSelected(false);
+        helpToggle.setText(helpToggle.isSelected() ? disabled : enabled);
+        setWantsHelp(helpToggle.isSelected() ? false : true);
+        SpreadController.help = false;
+        wantsHelp = true;
     }
 
     @FXML
@@ -110,7 +115,7 @@ public class ReadingController {
         }
 
         if (wiaArtChoose.isSelected()) {
-            flashSelection("1910 Art Variation Deck Coming Soon");
+            SpreadController.deck = DeckType.WIA_ART;
         }
 
         try {
