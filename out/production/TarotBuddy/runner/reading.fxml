@@ -108,6 +108,8 @@
                         <Reflection/>
                     </effect>
                 </RadioButton>
+                <RadioButton mnemonicParsing="false" text="Mantenga 50 Card" textAlignment="CENTER"
+                             GridPane.columnIndex="1" GridPane.rowIndex="0"/>
             </children>
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
