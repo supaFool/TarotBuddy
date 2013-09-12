@@ -53,7 +53,7 @@ public class Main extends Application {
         Platform.setImplicitExit(true);
 
         //set stage props
-        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.initStyle(StageStyle.UTILITY);
         primaryStage.setResizable(false);
         primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS, CardData.MERC_DECK)));
         primaryStage.setTitle("Tarot Buddy");

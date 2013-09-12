@@ -115,8 +115,8 @@ public class SpreadController {
     public void done() {
 
         Main.getStage().getScene().setRoot(Main.getReading());
-        Main.getStage().setWidth(601);
-        Main.getStage().setHeight(161);
+        Main.getStage().setWidth(601 + 25);
+        Main.getStage().setHeight(161 + 25);
         Main.getStage().centerOnScreen();
         Main.getStage().getScene().setFill(Utils.BG_COLOR);
 

@@ -178,8 +178,8 @@ public class ReadingController {
         Main.getStage().getScene().setRoot(p);
         SpreadController.invert = invertCards;
         Main.getStage().getScene().setFill(Utils.READING_COLOR);
-        Main.getStage().setWidth(778.0);
-        Main.getStage().setHeight(727.0);
+        Main.getStage().setWidth(778.0 + 25);
+        Main.getStage().setHeight(727.0 + 25);
         Main.getStage().centerOnScreen();
         fadeAni.play();
     }
@@ -198,8 +198,8 @@ public class ReadingController {
             Main.getStage().getScene().setRoot(p);
             SpreadController.invert = invertCards;
             Main.getStage().getScene().setFill(Utils.READING_COLOR);
-            Main.getStage().setWidth(778.0);
-            Main.getStage().setHeight(727.0);
+            Main.getStage().setWidth(778.0 + 25);
+            Main.getStage().setHeight(727.0 + 25);
             Main.getStage().centerOnScreen();
             fadeAni.play();
         }
@@ -210,8 +210,8 @@ public class ReadingController {
             Main.getStage().getScene().setRoot(p);
             SpreadController.invert = invertCards;
             Main.getStage().getScene().setFill(Utils.READING_COLOR);
-            Main.getStage().setWidth(775.0);
-            Main.getStage().setHeight(500.0);
+            Main.getStage().setWidth(775.0 + 25);
+            Main.getStage().setHeight(500.0 + 25);
             Main.getStage().centerOnScreen();
             fadeAni.play();
         }
@@ -255,8 +255,8 @@ public class ReadingController {
     @FXML
     public void close() {
         Main.getStage().getScene().setRoot(Main.getMenu());
-        Main.getStage().setWidth(540.0);
-        Main.getStage().setHeight(160.0);
+        Main.getStage().setWidth(540.0 + 25);
+        Main.getStage().setHeight(160.0 + 25);
     }
 
     public void setInvert(boolean b) {

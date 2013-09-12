@@ -57,15 +57,15 @@ public class MenuController {
 
         if (wantsReading) {
             System.out.println(wantsReading + " Wants Reading");
-            Main.getStage().setWidth(601);
-            Main.getStage().setHeight(161);
+            Main.getStage().setWidth(601 + 25);
+            Main.getStage().setHeight(161 + 25);
             Main.getStage().getScene().setRoot(Main.getReading());
 //            Clip.getButtonClick_a().play();
 
         }
         if (wantsLookAt) {
-            Main.getStage().setWidth(674);
-            Main.getStage().setHeight(405);
+            Main.getStage().setWidth(674 + 25);
+            Main.getStage().setHeight(405 + 25);
             Main.getStage().getScene().setFill(Utils.READING_COLOR);
             Main.getStage().getScene().setRoot(Main.getLookAt());
             Main.getStage().centerOnScreen();
@@ -81,8 +81,8 @@ public class MenuController {
 //            s.show();
         }
         if (wantsStudy) {
-            Main.getStage().setWidth(675);
-            Main.getStage().setHeight(650);
+            Main.getStage().setWidth(675 + 25);
+            Main.getStage().setHeight(650 + 25);
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
             Main.getStage().getScene().setRoot(Main.getStudyCards());
             Main.getStage().centerOnScreen();
