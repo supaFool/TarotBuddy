@@ -52,8 +52,8 @@ public class LookAtController {
     public void home() {
         Main.getStage().getScene().setRoot(Main.getMenu());
         Main.getStage().getScene().setFill(Utils.BG_COLOR);
-        Main.getStage().setWidth(540.0 + 25);
-        Main.getStage().setHeight(160.0 + 25);
+        Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
+        Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
         Main.getStage().centerOnScreen();
     }
 
