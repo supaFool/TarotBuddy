@@ -12,10 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
-
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.Properties;
+import utils.T_B_Props;
 
 public class Main extends Application {
 
@@ -34,7 +31,7 @@ public class Main extends Application {
     private static Parent swordSpread;
     //
 
-    private Properties props;
+    private T_B_Props props;
 
     private static Stage ps;
 
@@ -45,7 +42,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        props = new Properties();
+        props = new T_B_Props("Erick");
 
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
@@ -65,12 +62,7 @@ public class Main extends Application {
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent windowEvent) {
-                try {
-                    props.storeToXML(new FileOutputStream("profile.xml"), "String for save");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                    System.err.println(" Could Not Save Game");
-                }
+                props.saveInfo();
             }
         });
 

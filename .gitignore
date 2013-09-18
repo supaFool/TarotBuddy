@@ -8,6 +8,7 @@
 bin/
 tmp/
 .idea/
+*.tb
 *.tmp
 *.bak
 *.swp
