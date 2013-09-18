@@ -3,6 +3,7 @@ package runner;
 import card.CardData;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,6 +11,11 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.WindowEvent;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Properties;
 
 public class Main extends Application {
 
@@ -28,6 +34,8 @@ public class Main extends Application {
     private static Parent swordSpread;
     //
 
+    private Properties props;
+
     private static Stage ps;
 
     private static double version = 1.0;
@@ -37,6 +45,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+        props = new Properties();
+
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
         reading = FXMLLoader.load(getClass().getResource("reading.fxml"));
@@ -51,6 +61,18 @@ public class Main extends Application {
         Main.ps = primaryStage;
 
         Platform.setImplicitExit(true);
+
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent windowEvent) {
+                try {
+                    props.storeToXML(new FileOutputStream("profile.xml"), "String for save");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    System.err.println(" Could Not Save Game");
+                }
+            }
+        });
 
         //set stage props
         primaryStage.initStyle(StageStyle.UTILITY);

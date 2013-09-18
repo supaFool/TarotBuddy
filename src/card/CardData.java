@@ -3,6 +3,8 @@ package card;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.util.Random;
+
 /**
  * User: Erick
  * Date: 8/30/13
@@ -552,6 +554,7 @@ public class CardData {
     public void setHasBeenFlipped(boolean b) {
     }
 
+
     /**
      * @param card card requested
      * @return the URL of requested card Image
@@ -572,19 +575,34 @@ public class CardData {
         }
     }
 
+    static Random r = new Random();
+
     /**
      * @param card card Number
      * @return the Image View of requested card
      */
     public static ImageView getImageView(int card, int deck) {
+        ImageView v;
         if (deck == MERC_DECK) {
-            return MERC[card];
+            v = MERC[card];
+            if (r.nextBoolean()) {
+                v.setRotate(180);
+            }
+            return v;
         }
         if (deck == WIADEC) {
-            return WD[card];
+            v = WD[card];
+            if (r.nextBoolean()) {
+                v.getImage();
+            }
+            return v;
         }
         if (deck == WIA_ART_DECK) {
-            return ART_DECK[card];
+            v = ART_DECK[card];
+            if (r.nextBoolean()) {
+                v.setRotate(180);
+            }
+            return v;
         } else {
             return null;
         }

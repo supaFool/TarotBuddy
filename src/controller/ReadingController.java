@@ -265,9 +265,10 @@ public class ReadingController {
 
     @FXML
     public void invertSelected() {
-        setInvert(invert.isSelected() ? true : false);
-        flashSelection(invertCards ? "Inverted Cards On" : "Inverted Cards Off");
-        SpreadController.invert = this.invertCards;
+//        setInvert(invert.isSelected() ? true : false);
+//        flashSelection(invertCards ? "Inverted Cards On" : "Inverted Cards Off");
+//        SpreadController.invert = this.invertCards;
+        flashSelection("Reversals not Available");
     }
 
     @FXML

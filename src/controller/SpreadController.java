@@ -30,9 +30,9 @@ public class SpreadController {
 
     private String[] meanings = new String[3];
 
-    private int pastc = r.nextInt(77);
-    private int presentc = r.nextInt(77);
-    private int futurec = r.nextInt(77);
+    private int pastCardNumber = r.nextInt(77);
+    private int presentCardNumber = r.nextInt(77);
+    private int futureCardNumber = r.nextInt(77);
 
     //Wants help
     public static boolean help = true;
@@ -64,7 +64,7 @@ public class SpreadController {
 
     private int counter = 0;
 
-    public static boolean invert = false;
+    public static boolean invert = true;
 
     public SpreadController() {
 
@@ -85,8 +85,8 @@ public class SpreadController {
     public void showPresentMeaning() {
         if (presentIsShowing) {
             if (help) {
-                meaningTitle.setText(CardData.getCardTitle(presentc));
-                meaningText.setText(CardData.getCardMeaning(presentc));
+                meaningTitle.setText(CardData.getCardTitle(presentCardNumber));
+                meaningText.setText(CardData.getCardMeaning(presentCardNumber));
             }
         }
     }
@@ -95,8 +95,8 @@ public class SpreadController {
     public void showPastMeaning() {
         if (pastIsShowing) {
             if (help) {
-                meaningTitle.setText(CardData.getCardTitle(pastc));
-                meaningText.setText(CardData.getCardMeaning(pastc));
+                meaningTitle.setText(CardData.getCardTitle(pastCardNumber));
+                meaningText.setText(CardData.getCardMeaning(pastCardNumber));
             }
         }
     }
@@ -105,8 +105,8 @@ public class SpreadController {
     public void showFutureMeaning() {
         if (futureIsShowing) {
             if (help) {
-                meaningTitle.setText(CardData.getCardTitle(futurec));
-                meaningText.setText(CardData.getCardMeaning(futurec));
+                meaningTitle.setText(CardData.getCardTitle(futureCardNumber));
+                meaningText.setText(CardData.getCardMeaning(futureCardNumber));
             }
         }
     }
@@ -126,20 +126,19 @@ public class SpreadController {
         future.setImage(null);
 
         //init cards for next time
-        pastc = r.nextInt(77);
-        presentc = r.nextInt(77);
-        futurec = r.nextInt(77);
+        pastCardNumber = r.nextInt(77);
+        presentCardNumber = r.nextInt(77);
+        futureCardNumber = r.nextInt(77);
         counter = 0;
 
-        if (c1inverted && invert) {
-            past.setRotate(-180);
-        }
-        if (c2inverted && invert) {
-            present.setRotate(-180);
-        }
-        if (c3inverted && invert) {
-            future.setRotate(-180);
-        }
+
+        past.setRotate(0);
+
+
+        present.setRotate(-0);
+
+        future.setRotate(-0);
+
         c1inverted = false;
         c3inverted = false;
         c2inverted = false;
@@ -167,19 +166,19 @@ public class SpreadController {
 
 
         try {
-            if (pastc == presentc || pastc == futurec) {
+            if (pastCardNumber == presentCardNumber || pastCardNumber == futureCardNumber) {
                 System.out.println("Changing Past Card");
-                pastc = r.nextInt(77);
+                pastCardNumber = r.nextInt(77);
             }
 
-            if (pastc == presentc || presentc == futurec) {
+            if (pastCardNumber == presentCardNumber || presentCardNumber == futureCardNumber) {
                 System.out.println("Changing Present Card");
-                presentc = r.nextInt(77);
+                presentCardNumber = r.nextInt(77);
             }
 
-            if (futurec == presentc || pastc == futurec) {
+            if (futureCardNumber == presentCardNumber || pastCardNumber == futureCardNumber) {
                 System.out.println("Changing Future Card");
-                futurec = r.nextInt(77);
+                futureCardNumber = r.nextInt(77);
             }
 
             if (counter == 1) {
@@ -190,18 +189,19 @@ public class SpreadController {
                 KeyFrame f2 = new KeyFrame(Duration.millis(3000), v2);
                 t.getKeyFrames().addAll(f1, f2);
                 if (deck == ReadingController.DeckType.WIATE) {
-                    past.setImage(CardData.getImageView(pastc, CardData.WIADEC).getImage());
+                    past.setImage(CardData.getImageView(pastCardNumber, CardData.WIADEC).getImage());
+
                 }
                 if (deck == ReadingController.DeckType.MARC) {
-                    past.setImage(CardData.getImageView(pastc, CardData.MERC_DECK).getImage());
+                    past.setImage(CardData.getImageView(pastCardNumber, CardData.MERC_DECK).getImage());
                 }
                 if (deck == ReadingController.DeckType.WIA_ART) {
-                    past.setImage(CardData.getImageView(pastc, CardData.WIA_ART_DECK).getImage());
+                    past.setImage(CardData.getImageView(pastCardNumber, CardData.WIA_ART_DECK).getImage());
                 }
             }
-            meanings[counter] = CardData.getCardMeaning(pastc);
-            c1inverted = r.nextBoolean();
-            if (invert && c1inverted) {
+            meanings[counter] = CardData.getCardMeaning(pastCardNumber);
+
+            if (invert && r.nextBoolean()) {
                 past.setRotate(180);
             }
             pastIsShowing = true;
@@ -212,15 +212,17 @@ public class SpreadController {
             if (counter == 0) {
 
                 if (deck == ReadingController.DeckType.WIATE) {
-                    present.setImage(CardData.getImageView(presentc, CardData.WIADEC).getImage());
+                    present.setImage(CardData.getImageView(presentCardNumber, CardData.WIADEC).getImage());
 
                 }
                 if (deck == ReadingController.DeckType.MARC) {
-                    present.setImage(CardData.getImageView(presentc, CardData.MERC_DECK).getImage());
+
+                    present.setImage(CardData.getImageView(presentCardNumber, CardData.MERC_DECK).getImage());
 
                 }
                 if (deck == ReadingController.DeckType.WIA_ART) {
-                    present.setImage(CardData.getImageView(presentc, CardData.WIA_ART_DECK).getImage());
+
+                    present.setImage(CardData.getImageView(presentCardNumber, CardData.WIA_ART_DECK).getImage());
 
                 }
                 KeyValue v1 = new KeyValue(present.opacityProperty(), 0);
@@ -228,9 +230,8 @@ public class SpreadController {
                 KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
                 KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
                 t.getKeyFrames().addAll(f1, f2);
-                meanings[counter] = CardData.getCardMeaning(presentc);
-                c2inverted = r.nextBoolean();
-                if (invert && c2inverted) {
+                meanings[counter] = CardData.getCardMeaning(presentCardNumber);
+                if (invert && r.nextBoolean()) {
                     present.setRotate(180);
                 }
                 presentIsShowing = true;
@@ -239,13 +240,14 @@ public class SpreadController {
 
             if (counter == 2) {
                 if (deck == ReadingController.DeckType.WIATE) {
-                    future.setImage(CardData.getImageView(futurec, CardData.WIADEC).getImage());
+
+                    future.setImage(CardData.getImageView(futureCardNumber, CardData.WIADEC).getImage());
                 }
                 if (deck == ReadingController.DeckType.MARC) {
-                    future.setImage(CardData.getImageView(futurec, CardData.MERC_DECK).getImage());
+                    future.setImage(CardData.getImageView(futureCardNumber, CardData.MERC_DECK).getImage());
                 }
                 if (deck == ReadingController.DeckType.WIA_ART) {
-                    future.setImage(CardData.getImageView(futurec, CardData.WIA_ART_DECK).getImage());
+                    future.setImage(CardData.getImageView(futureCardNumber, CardData.WIA_ART_DECK).getImage());
                 }
             }
 
@@ -254,11 +256,10 @@ public class SpreadController {
             KeyFrame f1 = new KeyFrame(Duration.millis(0), v1);
             KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
             t.getKeyFrames().addAll(f1, f2);
-            meanings[counter] = CardData.getCardMeaning(futurec);
+            meanings[counter] = CardData.getCardMeaning(futureCardNumber);
 
 
-            c3inverted = r.nextBoolean();
-            if (invert && c3inverted) {
+            if (invert && r.nextBoolean()) {
                 future.setRotate(180);
             }
 

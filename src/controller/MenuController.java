@@ -130,4 +130,9 @@ public class MenuController {
         System.out.println("Progress");
     }
 
+    @FXML
+    public void setColorPref() {
+
+    }
+
 }
