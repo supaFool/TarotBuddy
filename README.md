@@ -7,6 +7,8 @@ Tarot Buddy Dev. Build - Fortune Telling Software
 >* In depth Meaning of each card
 >* More Tarot decks coming soon
 
+### Add *.tb to .gitignore
+
 Currently adding functionality.
 
 #### To Install

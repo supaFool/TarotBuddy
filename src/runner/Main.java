@@ -42,7 +42,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        props = new T_B_Props("Erick");
+        props = new T_B_Props();
 
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
@@ -62,7 +62,7 @@ public class Main extends Application {
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent windowEvent) {
-                props.saveInfo();
+                props.saveUserInfo("Erick");
             }
         });
 
