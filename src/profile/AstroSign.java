@@ -76,7 +76,7 @@ public class AstroSign {
     /**
      * int to get from arrays
      */
-    protected static int
+    public static int
             ARIES = 0,
             TAURUS = 1,
             GEMINI = 2,

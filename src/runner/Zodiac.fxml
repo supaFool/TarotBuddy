@@ -2,8 +2,8 @@
 
 <?scenebuilder-background-color 0x000000ff?>
 
-<?import javafx.scene.effect.Reflection?>
-<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.effect.Light.Point?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
@@ -23,7 +23,7 @@
                             <effect>
                                 <Reflection>
                                     <input>
-                                        <Shadow color="#661800" height="47.30952380952381" radius="22.648809523809522"
+                                        <Shadow color="#661800" height="46.297619047619044" radius="22.39583333333333"
                                                 width="45.28571428571428"/>
                                     </input>
                                 </Reflection>
@@ -32,8 +32,13 @@
                                 <Image url="file:/C:/Users/Erick/Documents/GitHub/TarotBuddy/src/profile/zodiacimages/Gemini.png"/>
                             </image>
                         </ImageView>
-                        <Text fx:id="centerText" fill="#080066" strokeType="OUTSIDE" strokeWidth="0.0" text=""
+                        <Text fx:id="centerText" fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE"
+                              strokeWidth="0.0"
+                              text="amet, consectetur adipiscing elit. Nullam malesuada tortor sed mi varius, at condimentum dolor vehicula. Etiam laoreet ultrices consequat. Vestibulum et ipsum sapien. Duis vel malesuada mauris. Maecenas egestas adipiscing lectus, in sagittis felis congue vitae. Suspendisse nec nisi eget magna sodales ultricies nec sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean rutrum sem ligula, a dictum felis volutpat ac. Nunc vitae sod"
                               textAlignment="CENTER" wrappingWidth="500.0">
+                            <effect>
+                                <Glow level="0.5974842767295597"/>
+                            </effect>
                             <font>
                                 <Font name="Traditional Arabic" size="24.0"/>
                             </font>
@@ -41,6 +46,36 @@
                     </children>
                 </StackPane>
             </center>
+            <top>
+                <HBox alignment="CENTER" prefHeight="114.0" prefWidth="800.0">
+                    <children>
+                        <Text fill="WHITE" stroke="#fff733" strokeType="OUTSIDE" strokeWidth="0.0" text="Gemini"
+                              textAlignment="CENTER">
+                            <effect>
+                                <Glow level="0.07358490566037734">
+                                    <input>
+                                        <Lighting diffuseConstant="0.5714285714285715"
+                                                  specularConstant="1.665079365079365"
+                                                  specularExponent="1.2698412698412709"
+                                                  surfaceScale="2.055555555555556">
+                                            <bumpInput>
+                                                <Shadow/>
+                                            </bumpInput>
+                                            <light>
+                                                <javafx.scene.effect.Light.Point color="#dfffae" x="100.0" y="100.0"
+                                                                                 z="-100.0"/>
+                                            </light>
+                                        </Lighting>
+                                    </input>
+                                </Glow>
+                            </effect>
+                            <font>
+                                <Font name="Segoe Marker" size="65.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+            </top>
         </BorderPane>
     </children>
 </AnchorPane>

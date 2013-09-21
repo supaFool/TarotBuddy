@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-background-color 0x99f3ffff?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="319.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ProfileController">
+    <children>
+        <Accordion prefHeight="600.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                   AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <expandedPane>
+                <TitledPane fx:id="x3" alignment="CENTER" animated="false" text="Astrology Profile"
+                            textAlignment="CENTER">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="552.0" prefWidth="315.0" spacing="15.0"
+                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+                                            <children>
+                                                <Label text="Select your Astrology sign">
+                                                    <effect>
+                                                        <Lighting diffuseConstant="1.5714285714285714"
+                                                                  specularConstant="1.2365079365079366"
+                                                                  specularExponent="19.047619047619047">
+                                                            <bumpInput>
+                                                                <Shadow/>
+                                                            </bumpInput>
+                                                            <light>
+                                                                <javafx.scene.effect.Light.Distant/>
+                                                            </light>
+                                                        </Lighting>
+                                                    </effect>
+                                                    <font>
+                                                        <Font name="Segoe Script Bold" size="20.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="15.0"/>
+                                            </padding>
+                                        </HBox>
+                                        <RadioButton fx:id="aries" alignment="CENTER" contentDisplay="TOP"
+                                                     mnemonicParsing="false" selected="false"
+                                                     text="Aries - March 21 to April 19">
+                                            <effect>
+                                                <Lighting diffuseConstant="1.1111111111111112"
+                                                          specularConstant="1.2047619047619047"
+                                                          specularExponent="33.01587301587301"
+                                                          surfaceScale="3.642857142857143" fx:id="x1">
+                                                    <bumpInput>
+                                                        <Shadow/>
+                                                    </bumpInput>
+                                                    <light>
+                                                        <javafx.scene.effect.Light.Distant/>
+                                                    </light>
+                                                </Lighting>
+                                            </effect>
+                                            <toggleGroup>
+                                                <ToggleGroup fx:id="astroSign"/>
+                                            </toggleGroup>
+                                        </RadioButton>
+                                        <RadioButton fx:id="taurus" alignment="CENTER" contentDisplay="TOP" effect="$x1"
+                                                     mnemonicParsing="false" selected="false"
+                                                     text="Taurus - April 20 to May 20" toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="gemini" alignment="CENTER" contentDisplay="TOP" effect="$x1"
+                                                     mnemonicParsing="false" selected="false"
+                                                     text="Gemini - May 21 to June 21" toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="cancer" alignment="CENTER" contentDisplay="TOP" effect="$x1"
+                                                     mnemonicParsing="false" selected="false"
+                                                     text="Cancer - June 22 to July 22" toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="leo" alignment="CENTER" contentDisplay="TOP" effect="$x1"
+                                                     mnemonicParsing="false" selected="false"
+                                                     text="Leo - July 23 to August 22" toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="virgo" alignment="CENTER" contentDisplay="TOP" effect="$x1"
+                                                     mnemonicParsing="false" selected="false"
+                                                     text="Virgo - August 23 to September 22" toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="libra" alignment="CENTER" contentDisplay="TOP" effect="$x1"
+                                                     mnemonicParsing="false" selected="false"
+                                                     text="Libra - September 23 to October 23"
+                                                     toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="scorpio" alignment="CENTER" contentDisplay="TOP"
+                                                     effect="$x1" mnemonicParsing="false" selected="false"
+                                                     text="Scorpio - October 24 to November 22"
+                                                     toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="sagittarius" alignment="CENTER" contentDisplay="TOP"
+                                                     effect="$x1" mnemonicParsing="false" selected="false"
+                                                     text="Sagittarius - November 23 to December 21"
+                                                     toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="capricorn" alignment="CENTER" contentDisplay="TOP"
+                                                     effect="$x1" mnemonicParsing="false" selected="false"
+                                                     text="Capricorn - December 22 to January 19"
+                                                     toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="aquarius" alignment="CENTER" contentDisplay="TOP"
+                                                     effect="$x1" mnemonicParsing="false" selected="false"
+                                                     text="Aquarius - January 20 to February 18"
+                                                     toggleGroup="$astroSign"/>
+                                        <RadioButton fx:id="pisces" alignment="CENTER" contentDisplay="TOP" effect="$x1"
+                                                     mnemonicParsing="false" selected="false"
+                                                     text="Pisces - February 19 to March 20" toggleGroup="$astroSign"/>
+                                        <HBox id="HBox" alignment="CENTER" spacing="30.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" text="Save">
+                                                    <effect>
+                                                        <Lighting diffuseConstant="1.1428571428571428"
+                                                                  specularConstant="1.2523809523809524"
+                                                                  specularExponent="19.365079365079364"
+                                                                  surfaceScale="2.373015873015873">
+                                                            <bumpInput>
+                                                                <Shadow/>
+                                                            </bumpInput>
+                                                            <light>
+                                                                <javafx.scene.effect.Light.Distant color="#ffe799"/>
+                                                            </light>
+                                                        </Lighting>
+                                                    </effect>
+                                                    <font>
+                                                        <Font name="Segoe Script" size="12.0" fx:id="x2"/>
+                                                    </font>
+                                                </Button>
+                                                <Button font="$x2" mnemonicParsing="false" text="Cancel">
+                                                    <effect>
+                                                        <Lighting diffuseConstant="1.1428571428571428"
+                                                                  specularConstant="1.2523809523809524"
+                                                                  specularExponent="19.365079365079364"
+                                                                  surfaceScale="2.373015873015873">
+                                                            <bumpInput>
+                                                                <Shadow/>
+                                                            </bumpInput>
+                                                            <light>
+                                                                <javafx.scene.effect.Light.Distant color="#ffe799"/>
+                                                            </light>
+                                                        </Lighting>
+                                                    </effect>
+                                                </Button>
+                                            </children>
+                                            <padding>
+                                                <Insets top="20.0"/>
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </TitledPane>
+            </expandedPane>
+            <panes>
+                <fx:reference source="x3"/>
+                <TitledPane animated="false" text="untitled">
+                    <content>
+                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </children>
+</AnchorPane>
