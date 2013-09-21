@@ -1,5 +1,7 @@
 package profile;
 
+import javafx.scene.image.Image;
+
 import java.util.GregorianCalendar;
 
 /**
@@ -144,6 +146,16 @@ public class AstroSign {
 
     public String getId(int sign) {
         return signsText[sign];
+    }
+
+    public Image getZodiacImage() {
+        Image i = new Image("profile/zodiacimages/" + signsText[sign] + ".png");
+        return i;
+    }
+
+    public Image getZodiacImage(int sign) {
+        Image i = new Image("profile/zodiacimages/" + signsText[sign] + ".png");
+        return i;
     }
 
     private String[] loveSigns = new String[]{

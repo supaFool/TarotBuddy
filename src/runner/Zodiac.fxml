@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-background-color 0x000000ff?>
+
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ZodController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <StackPane prefHeight="461.0" prefWidth="714.0">
+                    <children>
+                        <ImageView fx:id="bgLogo" fitHeight="275.11702802208816" fitWidth="284.1868133544922"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <effect>
+                                <Reflection>
+                                    <input>
+                                        <Shadow color="#661800" height="47.30952380952381" radius="22.648809523809522"
+                                                width="45.28571428571428"/>
+                                    </input>
+                                </Reflection>
+                            </effect>
+                            <image>
+                                <Image url="file:/C:/Users/Erick/Documents/GitHub/TarotBuddy/src/profile/zodiacimages/Gemini.png"/>
+                            </image>
+                        </ImageView>
+                        <Text fx:id="centerText" fill="#080066" strokeType="OUTSIDE" strokeWidth="0.0" text=""
+                              textAlignment="CENTER" wrappingWidth="500.0">
+                            <font>
+                                <Font name="Traditional Arabic" size="24.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </StackPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
