@@ -146,6 +146,21 @@ public class AstroSign {
         return signsText[sign];
     }
 
+    private String[] loveSigns = new String[]{
+            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces"
+    };
+
     /**
      * @return the String of the current quat
      */
@@ -165,6 +180,10 @@ public class AstroSign {
 
     public Quaternaries getQuat() {
         return quat;
+    }
+
+    public Element getElement() {
+        return element;
     }
 
     public String getBirthYearString() {
