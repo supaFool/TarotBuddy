@@ -12,6 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
+import profile.AstroSign;
 import utils.T_B_Props;
 
 public class Main extends Application {
@@ -31,9 +32,11 @@ public class Main extends Application {
     private static Parent swordSpread;
     //
 
-    private T_B_Props props;
+    private static T_B_Props props;
 
     private static Stage ps;
+
+    private static AstroSign sign;
 
     private static double version = 1.0;
     public static String ver = "Beta ver." + version;
@@ -43,6 +46,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         props = new T_B_Props();
+        sign = new AstroSign(100);
 
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
@@ -53,6 +57,7 @@ public class Main extends Application {
         lookAt = FXMLLoader.load(getClass().getResource("lookAtDeck.fxml"));
         tcsNoHelp = FXMLLoader.load(getClass().getResource("TCSnoHelp.fxml"));
         swordSpread = FXMLLoader.load(getClass().getResource("SwordSpread.fxml"));
+
 
         //Set Stage so we can retrieve it later
         Main.ps = primaryStage;
@@ -108,6 +113,14 @@ public class Main extends Application {
      */
     public static Parent getStudyCards() {
         return studyCards;
+    }
+
+    public static AstroSign getSign() {
+        return sign;
+    }
+
+    public static T_B_Props getProps() {
+        return props;
     }
 
     /**

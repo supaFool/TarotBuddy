@@ -7,11 +7,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ZodController">
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.0" minWidth="-1.0"
+            prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="controller.ZodController">
     <children>
         <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                     AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -23,7 +23,7 @@
                             <effect>
                                 <Reflection>
                                     <input>
-                                        <Shadow color="#661800" height="46.297619047619044" radius="22.39583333333333"
+                                        <Shadow color="#661800" height="45.41220238095237" radius="22.174479166666664"
                                                 width="45.28571428571428"/>
                                     </input>
                                 </Reflection>
@@ -32,40 +32,136 @@
                                 <Image url="file:/C:/Users/Erick/Documents/GitHub/TarotBuddy/src/profile/zodiacimages/Gemini.png"/>
                             </image>
                         </ImageView>
-                        <Text fx:id="centerText" fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE"
-                              strokeWidth="0.0"
-                              text="amet, consectetur adipiscing elit. Nullam malesuada tortor sed mi varius, at condimentum dolor vehicula. Etiam laoreet ultrices consequat. Vestibulum et ipsum sapien. Duis vel malesuada mauris. Maecenas egestas adipiscing lectus, in sagittis felis congue vitae. Suspendisse nec nisi eget magna sodales ultricies nec sit amet enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean rutrum sem ligula, a dictum felis volutpat ac. Nunc vitae sod"
-                              textAlignment="CENTER" wrappingWidth="500.0">
-                            <effect>
-                                <Glow level="0.5974842767295597"/>
-                            </effect>
-                            <font>
-                                <Font name="Traditional Arabic" size="24.0"/>
-                            </font>
-                        </Text>
+                        <VBox id="VBox" alignment="CENTER" spacing="25.0">
+                            <children>
+                                <HBox id="HBox" alignment="CENTER" spacing="25.0">
+                                    <children>
+                                        <Text fx:id="centerText" fontSmoothingType="GRAY" strokeType="OUTSIDE"
+                                              strokeWidth="0.0" text="Range:" textAlignment="LEFT" textOrigin="BASELINE"
+                                              wrappingWidth="0.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                            <fill>
+                                                <Color blue="0.000" green="0.600" red="0.047" fx:id="x2"/>
+                                            </fill>
+                                            <font>
+                                                <Font name="Traditional Arabic" size="24.0" fx:id="x1"/>
+                                            </font>
+                                        </Text>
+                                        <Text id="centerText" fx:id="rangeText" font="$x1" fontSmoothingType="GRAY"
+                                              strokeType="OUTSIDE" strokeWidth="0.0" text="May 21 to June 21"
+                                              textAlignment="LEFT" wrappingWidth="300.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                            <fill>
+                                                <Color blue="0.455" green="0.600" red="0.000" fx:id="x3"/>
+                                            </fill>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" spacing="25.0">
+                                    <children>
+                                        <Text id="centerText" fill="$x2" font="$x1" fontSmoothingType="GRAY"
+                                              strokeType="OUTSIDE" strokeWidth="0.0" text="Element:"
+                                              textAlignment="LEFT" textOrigin="BASELINE" wrappingWidth="0.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                        </Text>
+                                        <Text id="centerText" fx:id="elementText" fill="$x3" font="$x1"
+                                              fontSmoothingType="GRAY" strokeType="OUTSIDE" strokeWidth="0.0" text="Air"
+                                              textAlignment="LEFT" wrappingWidth="300.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" spacing="25.0">
+                                    <children>
+                                        <Text id="centerText" fill="$x2" font="$x1" fontSmoothingType="GRAY"
+                                              strokeType="OUTSIDE" strokeWidth="0.0" text="Quaternarie"
+                                              textAlignment="LEFT" textOrigin="BASELINE" wrappingWidth="0.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                        </Text>
+                                        <Text id="centerText" fx:id="quatText" fill="$x3" font="$x1"
+                                              fontSmoothingType="GRAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                              text="Mutable" textAlignment="LEFT" wrappingWidth="300.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" spacing="25.0">
+                                    <children>
+                                        <Text id="centerText" fill="$x2" font="$x1" fontSmoothingType="GRAY"
+                                              strokeType="OUTSIDE" strokeWidth="0.0" text="Love Signs"
+                                              textAlignment="LEFT" textOrigin="BASELINE" wrappingWidth="0.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                        </Text>
+                                        <Text id="centerText" fx:id="loveText" fill="$x3" font="$x1"
+                                              fontSmoothingType="GRAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                              text="Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius"
+                                              textAlignment="LEFT" wrappingWidth="300.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                                <HBox id="HBox" alignment="CENTER" spacing="25.0">
+                                    <children>
+                                        <Text id="centerText" fill="$x2" font="$x1" fontSmoothingType="GRAY"
+                                              strokeType="OUTSIDE" strokeWidth="0.0" text="Characteristics"
+                                              textAlignment="LEFT" textOrigin="BASELINE" wrappingWidth="0.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                        </Text>
+                                        <Text id="centerText" fx:id="charText" fill="$x3" font="$x1"
+                                              fontSmoothingType="GRAY" strokeType="OUTSIDE" strokeWidth="0.0"
+                                              text="Communicative, Versatile, Intellectual, Alert, Witty, Inconsistent, Nervous and Superficial"
+                                              textAlignment="LEFT" wrappingWidth="300.0">
+                                            <effect>
+                                                <Glow level="0.5974842767295597"/>
+                                            </effect>
+                                        </Text>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
                     </children>
                 </StackPane>
             </center>
             <top>
                 <HBox alignment="CENTER" prefHeight="114.0" prefWidth="800.0">
                     <children>
-                        <Text fill="WHITE" stroke="#fff733" strokeType="OUTSIDE" strokeWidth="0.0" text="Gemini"
-                              textAlignment="CENTER">
+                        <Text fx:id="titleText" fill="WHITE" stroke="#fff733" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Gemini" textAlignment="CENTER">
                             <effect>
-                                <Glow level="0.07358490566037734">
+                                <Glow level="0.3566037735849057">
                                     <input>
-                                        <Lighting diffuseConstant="0.5714285714285715"
-                                                  specularConstant="1.665079365079365"
-                                                  specularExponent="1.2698412698412709"
-                                                  surfaceScale="2.055555555555556">
-                                            <bumpInput>
-                                                <Shadow/>
-                                            </bumpInput>
-                                            <light>
-                                                <javafx.scene.effect.Light.Point color="#dfffae" x="100.0" y="100.0"
-                                                                                 z="-100.0"/>
-                                            </light>
-                                        </Lighting>
+                                        <Reflection topOffset="-15.0" topOpacity="0.19841269841269843">
+                                            <input>
+                                                <Lighting specularConstant="2.0" specularExponent="0.9523809523809534"
+                                                          surfaceScale="2.2142857142857144">
+                                                    <bumpInput>
+                                                        <Shadow/>
+                                                    </bumpInput>
+                                                    <light>
+                                                        <javafx.scene.effect.Light.Point color="#b3d39c" x="100.0"
+                                                                                         y="100.0" z="-100.0"/>
+                                                    </light>
+                                                </Lighting>
+                                            </input>
+                                        </Reflection>
                                     </input>
                                 </Glow>
                             </effect>

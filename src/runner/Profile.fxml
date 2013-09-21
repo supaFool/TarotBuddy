@@ -108,7 +108,7 @@
                                                      text="Pisces - February 19 to March 20" toggleGroup="$astroSign"/>
                                         <HBox id="HBox" alignment="CENTER" spacing="30.0">
                                             <children>
-                                                <Button mnemonicParsing="false" text="Save">
+                                                <Button mnemonicParsing="false" onAction="#setSign" text="Save">
                                                     <effect>
                                                         <Lighting diffuseConstant="1.1428571428571428"
                                                                   specularConstant="1.2523809523809524"
@@ -126,7 +126,8 @@
                                                         <Font name="Segoe Script" size="12.0" fx:id="x2"/>
                                                     </font>
                                                 </Button>
-                                                <Button font="$x2" mnemonicParsing="false" text="Cancel">
+                                                <Button font="$x2" mnemonicParsing="false" onAction="#cancel"
+                                                        text="Cancel">
                                                     <effect>
                                                         <Lighting diffuseConstant="1.1428571428571428"
                                                                   specularConstant="1.2523809523809524"

@@ -16,7 +16,20 @@ public class ZodController {
     private ImageView bgLogo;
 
     @FXML
-    private Text centerText;
+    private Text rangeText;
 
+    @FXML
+    private Text elementText;
 
+    @FXML
+    private Text titleText;
+
+    @FXML
+    private Text quatText;
+
+    @FXML
+    private Text loveText;
+
+    @FXML
+    private Text charText;
 }

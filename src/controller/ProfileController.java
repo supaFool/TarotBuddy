@@ -12,7 +12,7 @@ import profile.AstroSign;
 public class ProfileController {
     private AstroSign sign;
 
-    private boolean isSignSelected = false;
+    private static boolean isSignSelected = false;
 
     private static AstroSign aSign;
 
@@ -104,10 +104,13 @@ public class ProfileController {
         }
 
         aSign = new AstroSign(sign);
-        isSignSelected = true;
+        if (sign != 100) {
+            isSignSelected = true;
+        }
     }
 
-    public boolean isSignSelected() {
+
+    public static boolean isSignSelected() {
         return isSignSelected;
     }
 

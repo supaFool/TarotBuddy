@@ -25,6 +25,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#studyCards" text="Study Tarot Cards"/>
                         <MenuItem mnemonicParsing="false" onAction="#takeQuiz" text="Take A Quiz"/>
                         <MenuItem mnemonicParsing="false" onAction="#lookAtTarotDeck" text="Look At Tarot Cards"/>
+                        <MenuItem mnemonicParsing="false" onAction="#wantsAstrology" text="Astrology"/>
                     </items>
                 </MenuButton>
                 <Button mnemonicParsing="false" onAction="#setRequestedStage" prefWidth="61.0" text="GO">

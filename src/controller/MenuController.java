@@ -18,6 +18,7 @@ public class MenuController {
     private boolean wantsReading = false;
     private boolean wantsQuiz = false;
     private boolean wantsLookAt = false;
+    private boolean wantsAstrology = false;
 
 
     @FXML
@@ -39,9 +40,9 @@ public class MenuController {
 
         wantsStudy = false;
         wantsReading = true;
-
         wantsQuiz = false;
         wantsLookAt = false;
+        wantsAstrology = false;
     }
 
     @FXML
@@ -88,7 +89,16 @@ public class MenuController {
             Main.getStage().centerOnScreen();
 //            Clip.getButtonClick_a().play();
         }
-//        Clip.getButtonClick_a().play();
+        if (wantsAstrology) {
+            //todo set this right
+            Main.getStage().setWidth(675 + Utils.FRAME_OFFSET);
+            Main.getStage().setHeight(650 + Utils.FRAME_OFFSET);
+            Main.getStage().getScene().setFill(Utils.BG_COLOR);
+            Main.getStage().getScene().setRoot(Main.getStudyCards());
+            Main.getStage().centerOnScreen();
+
+        }
+
     }
 
     @FXML
@@ -98,6 +108,7 @@ public class MenuController {
         wantsReading = false;
         wantsQuiz = false;
         wantsLookAt = false;
+        wantsAstrology = false;
     }
 
     @FXML
@@ -107,6 +118,7 @@ public class MenuController {
         wantsReading = false;
         wantsQuiz = true;
         wantsLookAt = false;
+        wantsAstrology = false;
     }
 
     @FXML
@@ -116,6 +128,26 @@ public class MenuController {
         wantsReading = false;
         wantsQuiz = false;
         wantsLookAt = true;
+        wantsAstrology = false;
+    }
+
+    @FXML
+    public void wantsAstrology() {
+        if (ProfileController.isSignSelected()) {
+            todo.setText(todo.getItems().get(4).getText());
+            wantsStudy = false;
+            wantsReading = false;
+            wantsQuiz = false;
+            wantsLookAt = false;
+            wantsAstrology = true;
+        } else {
+            todo.setText("No Astrology Profile Found");
+            wantsStudy = false;
+            wantsReading = false;
+            wantsQuiz = false;
+            wantsLookAt = false;
+            wantsAstrology = false;
+        }
     }
 
     @FXML

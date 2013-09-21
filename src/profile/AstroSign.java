@@ -97,18 +97,15 @@ public class AstroSign {
 
     public AstroSign(int sign) {
         this.sign = sign;
+        setQuat(sign);
+        setElement(sign);
+    }
 
-        //Categorize Quats
-        if (sign == ARIES || sign == CANCER || sign == CAPRICORN || sign == LIBRA) {
-            quat = Quaternaries.CARDINAL;
-        }
-        if (sign == TAURUS || sign == LEO || sign == SCORPIO || sign == AQUARIUS) {
-            quat = Quaternaries.FIXED;
-        }
-        if (sign == GEMINI || sign == VIRGO || sign == SAGITTARIUS || sign == PISCES) {
-            quat = Quaternaries.MUTABLE;
-        }
+    public void setSign(int sign) {
+        this.sign = sign;
+    }
 
+    private void setElement(int sign) {
         //Categorize Elements
         if (sign == ARIES || sign == LEO || sign == SAGITTARIUS) {
             element = Element.FIRE;
@@ -125,7 +122,19 @@ public class AstroSign {
         if (sign == CANCER || sign == SCORPIO || sign == PISCES) {
             element = Element.WATER;
         }
+    }
 
+    private void setQuat(int sign) {
+        //Categorize Quats
+        if (sign == ARIES || sign == CANCER || sign == CAPRICORN || sign == LIBRA) {
+            quat = Quaternaries.CARDINAL;
+        }
+        if (sign == TAURUS || sign == LEO || sign == SCORPIO || sign == AQUARIUS) {
+            quat = Quaternaries.FIXED;
+        }
+        if (sign == GEMINI || sign == VIRGO || sign == SAGITTARIUS || sign == PISCES) {
+            quat = Quaternaries.MUTABLE;
+        }
     }
 
     public String getCharacteristics() {
