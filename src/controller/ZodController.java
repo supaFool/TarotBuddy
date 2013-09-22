@@ -32,4 +32,22 @@ public class ZodController {
 
     @FXML
     private Text charText;
+
+    @FXML
+    private Text home;
+
+    @FXML
+    public void homeHover() {
+        home.setOpacity(1);
+    }
+
+    @FXML
+    public void homeUnHover() {
+        home.setOpacity(.41);
+    }
+
+    @FXML
+    public void goHome() {
+        System.out.println("Connected");
+    }
 }

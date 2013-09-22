@@ -1,112 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?scenebuilder-background-color 0xffd466ff?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
-<AnchorPane minHeight="98.0" prefHeight="160.0" prefWidth="540.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MenuController">
-  <children>
-    <HBox alignment="CENTER" layoutX="117.0" layoutY="51.0" prefHeight="38.0" prefWidth="423.0" spacing="10.0">
-      <children>
-        <MenuButton fx:id="todo" mnemonicParsing="false" prefWidth="300.0" text="What Do You Want To Do?">
-          <effect>
-            <Reflection />
-          </effect>
-          <items>
-            <MenuItem mnemonicParsing="false" onAction="#getReading" text="Get A Personalized Reading" />
-            <MenuItem mnemonicParsing="false" onAction="#studyCards" text="Study Tarot Cards" />
-            <MenuItem mnemonicParsing="false" onAction="#takeQuiz" text="Take A Quiz" />
-            <MenuItem mnemonicParsing="false" onAction="#lookAtTarotDeck" text="Look At Tarot Cards" />
-            <MenuItem mnemonicParsing="false" onAction="#wantsAstrology" text="Astrology" />
-          </items>
-        </MenuButton>
-        <Button mnemonicParsing="false" onAction="#setRequestedStage" prefWidth="61.0" text="GO">
-          <effect>
-            <Reflection fraction="0.7658730158730158" topOffset="-25.0">
-              <input>
-                <DropShadow color="#646464" offsetX="5.0" offsetY="5.0" />
-              </input>
-            </Reflection>
-          </effect>
-        </Button>
-      </children>
-    </HBox>
-    <HBox id="HBox" alignment="CENTER" layoutX="88.0" layoutY="108.0" spacing="0.0">
-      <children>
-        <VBox alignment="BOTTOM_CENTER" prefHeight="44.0" prefWidth="389.30303955078125" spacing="2.0">
-          <children>
-            <ProgressBar fx:id="progress" onMouseClicked="#showProgress" prefWidth="350.0" progress="0.0">
-              <effect>
-                <Lighting diffuseConstant="0.9841269841269842" specularConstant="0.0" specularExponent="10.793650793650794" surfaceScale="1.8253968253968256">
-                  <bumpInput>
-                    <Shadow />
-                  </bumpInput>
-                  <light>
-                    <javafx.scene.effect.Light.Distant azimuth="-135.0" color="#fffdcc" />
-                  </light>
-                </Lighting>
-              </effect>
-            </ProgressBar>
-            <Label text="Card Progress" />
-          </children>
-          <padding>
-            <Insets bottom="10.0" />
-          </padding>
-        </VBox>
-        <Button mnemonicParsing="false" onAction="#close" text="Exit">
-          <effect>
-            <ColorAdjust brightness="-0.10687022900763354" contrast="-0.18320610687022898" hue="0.26717557251908386" saturation="0.35114503816793885" />
-          </effect>
-        </Button>
-      </children>
-    </HBox>
-    <HBox id="HBox" alignment="CENTER" layoutX="221.0" layoutY="0.0" prefWidth="310.0" spacing="60.0">
-      <children>
-        <Text fx:id="title" fontSmoothingType="LCD" scaleX="1.0" scaleY="0.8767203553082191" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarot-Buddy">
-          <font>
-            <Font name="SimHei" size="10.0" />
-          </font>
-        </Text>
-        <MenuBar opacity="0.83">
-          <menus>
-            <Menu mnemonicParsing="false" text="File">
-              <items>
-                <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Personalize">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Set Colors" />
-                <MenuItem mnemonicParsing="false" text="Create/Edit Profile" />
-              </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Help">
-              <items>
-                <MenuItem mnemonicParsing="false" text="About" />
-              </items>
-            </Menu>
-          </menus>
-        </MenuBar>
-      </children>
-    </HBox>
-    <ImageView depthTest="INHERIT" fitHeight="138.59999333677553" fitWidth="83.99999237060547" layoutX="14.0" layoutY="11.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
-      <image>
-        <Image url="@../card/image/decks/mantegna/8.JPG" />
-      </image>
-    </ImageView>
-  </children>
-  <effect>
-    <SepiaTone />
-  </effect>
+<AnchorPane minHeight="98.0" prefHeight="160.0" prefWidth="540.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MenuController">
+    <children>
+        <HBox alignment="CENTER" layoutX="117.0" layoutY="51.0" prefHeight="38.0" prefWidth="423.0" spacing="10.0">
+            <children>
+                <MenuButton fx:id="todo" mnemonicParsing="false" prefWidth="300.0" text="What Do You Want To Do?">
+                    <effect>
+                        <Reflection/>
+                    </effect>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#getReading" text="Get A Personalized Reading"/>
+                        <MenuItem mnemonicParsing="false" onAction="#studyCards" text="Study Tarot Cards"/>
+                        <MenuItem mnemonicParsing="false" onAction="#takeQuiz" text="Take A Quiz"/>
+                        <MenuItem mnemonicParsing="false" onAction="#lookAtTarotDeck" text="Look At Tarot Cards"/>
+                        <MenuItem mnemonicParsing="false" onAction="#wantsAstrology" text="Astrology"/>
+                    </items>
+                </MenuButton>
+                <Button mnemonicParsing="false" onAction="#setRequestedStage" prefWidth="61.0" text="GO">
+                    <effect>
+                        <Reflection fraction="0.7658730158730158" topOffset="-25.0">
+                            <input>
+                                <DropShadow color="#646464" offsetX="5.0" offsetY="5.0"/>
+                            </input>
+                        </Reflection>
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutX="88.0" layoutY="108.0" spacing="0.0">
+            <children>
+                <VBox alignment="BOTTOM_CENTER" prefHeight="44.0" prefWidth="389.30303955078125" spacing="2.0">
+                    <children>
+                        <ProgressBar fx:id="progress" onMouseClicked="#showProgress" prefWidth="350.0" progress="0.0">
+                            <effect>
+                                <Lighting diffuseConstant="0.9841269841269842" specularConstant="0.0"
+                                          specularExponent="10.793650793650794" surfaceScale="1.8253968253968256">
+                                    <bumpInput>
+                                        <Shadow/>
+                                    </bumpInput>
+                                    <light>
+                                        <javafx.scene.effect.Light.Distant azimuth="-135.0" color="#fffdcc"/>
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </ProgressBar>
+                        <Label text="Card Progress"/>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0"/>
+                    </padding>
+                </VBox>
+                <Button mnemonicParsing="false" onAction="#close" text="Exit">
+                    <effect>
+                        <ColorAdjust brightness="-0.10687022900763354" contrast="-0.18320610687022898"
+                                     hue="0.26717557251908386" saturation="0.35114503816793885"/>
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+        <HBox id="HBox" alignment="CENTER" layoutX="221.0" layoutY="0.0" prefWidth="310.0" spacing="60.0">
+            <children>
+                <Text fx:id="title" fontSmoothingType="LCD" scaleX="1.0" scaleY="0.8767203553082191"
+                      strokeType="OUTSIDE" strokeWidth="0.0" text="Tarot-Buddy">
+                    <font>
+                        <Font name="SimHei" size="10.0"/>
+                    </font>
+                </Text>
+                <MenuBar opacity="0.83">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#close" text="Close"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Personalize">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Set Colors"/>
+                                <MenuItem mnemonicParsing="false" onAction="#openProfile" text="Create/Edit Profile"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="About"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </HBox>
+        <ImageView depthTest="INHERIT" fitHeight="138.59999333677553" fitWidth="83.99999237060547" layoutX="14.0"
+                   layoutY="11.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../card/image/decks/mantegna/8.JPG"/>
+            </image>
+        </ImageView>
+    </children>
+    <effect>
+        <SepiaTone/>
+    </effect>
 </AnchorPane>

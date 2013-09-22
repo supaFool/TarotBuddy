@@ -10,7 +10,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.*?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
+            onKeyPressed="#goHome" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ZodController">
     <children>
         <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
@@ -23,7 +23,7 @@
                             <effect>
                                 <Reflection>
                                     <input>
-                                        <Shadow color="#661800" height="45.34895833333333" radius="22.1586681547619"
+                                        <Shadow color="#661800" height="45.3173363095238" radius="22.15076264880952"
                                                 width="45.28571428571428"/>
                                     </input>
                                 </Reflection>
@@ -32,7 +32,7 @@
                                 <Image url="@../profile/zodiacimages/Gemini.png"/>
                             </image>
                         </ImageView>
-                        <VBox id="VBox" alignment="CENTER" spacing="25.0">
+                        <VBox id="VBox" alignment="CENTER" opacity="0.84" spacing="25.0">
                             <children>
                                 <HBox id="HBox" alignment="CENTER" spacing="25.0">
                                     <children>

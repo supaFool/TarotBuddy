@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
 import profile.AstroSign;
 import runner.Main;
+import utils.Utils;
 
 /**
  * User: Erick
@@ -15,6 +16,8 @@ public class ProfileController {
     private static boolean isSignSelected = false;
 
     private static AstroSign aSign = Main.getSign();
+
+    private int signInt = 100;
 
     @FXML
     private RadioButton aries;
@@ -54,59 +57,65 @@ public class ProfileController {
 
     @FXML
     public void setSign() {
-        int sign = 100;
         if (aries.isSelected()) {
-            sign = AstroSign.ARIES;
+            signInt = AstroSign.ARIES;
         }
 
         if (taurus.isSelected()) {
-            sign = AstroSign.TAURUS;
+            signInt = AstroSign.TAURUS;
         }
 
         if (gemini.isSelected()) {
-            sign = AstroSign.GEMINI;
+            signInt = AstroSign.GEMINI;
         }
 
         if (cancer.isSelected()) {
-            sign = AstroSign.CANCER;
+            signInt = AstroSign.CANCER;
         }
 
         if (leo.isSelected()) {
-            sign = AstroSign.LEO;
+            signInt = AstroSign.LEO;
         }
 
         if (virgo.isSelected()) {
-            sign = AstroSign.VIRGO;
+            signInt = AstroSign.VIRGO;
         }
 
         if (libra.isSelected()) {
-            sign = AstroSign.LIBRA;
+            signInt = AstroSign.LIBRA;
         }
 
         if (scorpio.isSelected()) {
-            sign = AstroSign.SCORPIO;
+            signInt = AstroSign.SCORPIO;
         }
 
         if (sagittarius.isSelected()) {
-            sign = AstroSign.SAGITTARIUS;
+            signInt = AstroSign.SAGITTARIUS;
         }
 
         if (capricorn.isSelected()) {
-            sign = AstroSign.CAPRICORN;
+            signInt = AstroSign.CAPRICORN;
         }
 
         if (aquarius.isSelected()) {
-            sign = AstroSign.AQUARIUS;
+            signInt = AstroSign.AQUARIUS;
         }
 
         if (pisces.isSelected()) {
-            sign = AstroSign.PISCES;
+            signInt = AstroSign.PISCES;
         }
 
-        aSign.setSign(sign);
-        if (sign != 100) {
+        aSign.setSign(signInt);
+        if (signInt != 100) {
             isSignSelected = true;
         }
+
+        System.out.println(aSign.getId());
+
+        Main.getStage().getScene().setRoot(Main.getMenu());
+        Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
+        Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
+        Main.getStage().centerOnScreen();
 
     }
 
@@ -117,7 +126,10 @@ public class ProfileController {
 
     @FXML
     public void cancel() {
-
+        Main.getStage().getScene().setRoot(Main.getMenu());
+        Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
+        Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
+        Main.getStage().centerOnScreen();
     }
 
     public static AstroSign getSign() {
@@ -127,5 +139,6 @@ public class ProfileController {
             throw new NullPointerException("..No sign has been saved..");
         }
     }
+
 
 }

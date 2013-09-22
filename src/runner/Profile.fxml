@@ -7,6 +7,7 @@
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="600.0" prefWidth="319.0" xmlns:fx="http://javafx.com/fxml/1"
@@ -49,7 +50,7 @@
                                             </padding>
                                         </HBox>
                                         <RadioButton fx:id="aries" alignment="CENTER" contentDisplay="TOP"
-                                                     mnemonicParsing="false" selected="false"
+                                                     mnemonicParsing="false" selected="true"
                                                      text="Aries - March 21 to April 19">
                                             <effect>
                                                 <Lighting diffuseConstant="1.1111111111111112"
@@ -118,7 +119,12 @@
                                                                 <Shadow/>
                                                             </bumpInput>
                                                             <light>
-                                                                <javafx.scene.effect.Light.Distant color="#ffe799"/>
+                                                                <javafx.scene.effect.Light.Distant>
+                                                                    <color>
+                                                                        <Color blue="0.600" green="0.906" red="1.000"
+                                                                               fx:id="x4"/>
+                                                                    </color>
+                                                                </javafx.scene.effect.Light.Distant>
                                                             </light>
                                                         </Lighting>
                                                     </effect>
@@ -137,7 +143,7 @@
                                                                 <Shadow/>
                                                             </bumpInput>
                                                             <light>
-                                                                <javafx.scene.effect.Light.Distant color="#ffe799"/>
+                                                                <javafx.scene.effect.Light.Distant color="$x4"/>
                                                             </light>
                                                         </Lighting>
                                                     </effect>

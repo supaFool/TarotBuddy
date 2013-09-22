@@ -171,4 +171,13 @@ public class MenuController {
 
     }
 
+    @FXML
+    public void openProfile() {
+        Main.getStage().setWidth(319 + Utils.FRAME_OFFSET);
+        Main.getStage().setHeight(600 + Utils.FRAME_OFFSET);
+        Main.getStage().getScene().setFill(Utils.BG_COLOR);
+        Main.getStage().getScene().setRoot(Main.getProfile());
+        Main.getStage().centerOnScreen();
+    }
+
 }
