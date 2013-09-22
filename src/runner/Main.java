@@ -30,6 +30,8 @@ public class Main extends Application {
     private static Parent tcs;
     private static Parent tcsNoHelp;
     private static Parent swordSpread;
+    private static Parent profile;
+    private static Parent zodiac;
     //
 
     private static T_B_Props props;
@@ -57,6 +59,8 @@ public class Main extends Application {
         lookAt = FXMLLoader.load(getClass().getResource("lookAtDeck.fxml"));
         tcsNoHelp = FXMLLoader.load(getClass().getResource("TCSnoHelp.fxml"));
         swordSpread = FXMLLoader.load(getClass().getResource("SwordSpread.fxml"));
+        profile = FXMLLoader.load(getClass().getResource("Profile.fxml"));
+        zodiac = FXMLLoader.load(getClass().getResource("Zodiac.fxml"));
 
 
         //Set Stage so we can retrieve it later
@@ -88,6 +92,10 @@ public class Main extends Application {
         return reading;
     }
 
+    public static Parent getZodiac() {
+        return zodiac;
+    }
+
     public static Parent getMenu() {
         return menu;
     }
@@ -102,6 +110,10 @@ public class Main extends Application {
 
     public static Parent getTCS() {
         return tcs;
+    }
+
+    public static Parent getProfile() {
+        return profile;
     }
 
     public static Stage getStage() {

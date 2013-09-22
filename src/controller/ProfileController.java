@@ -3,6 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
 import profile.AstroSign;
+import runner.Main;
 
 /**
  * User: Erick
@@ -10,11 +11,10 @@ import profile.AstroSign;
  * Time: 1:55 PM
  */
 public class ProfileController {
-    private AstroSign sign;
 
     private static boolean isSignSelected = false;
 
-    private static AstroSign aSign;
+    private static AstroSign aSign = Main.getSign();
 
     @FXML
     private RadioButton aries;
@@ -103,10 +103,11 @@ public class ProfileController {
             sign = AstroSign.PISCES;
         }
 
-        aSign = new AstroSign(sign);
+        aSign.setSign(sign);
         if (sign != 100) {
             isSignSelected = true;
         }
+
     }
 
 

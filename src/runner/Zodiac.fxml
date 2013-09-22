@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.*?>
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-1.0" minWidth="-1.0"
-            prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
-            fx:controller="controller.ZodController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ZodController">
     <children>
         <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                     AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -23,13 +23,13 @@
                             <effect>
                                 <Reflection>
                                     <input>
-                                        <Shadow color="#661800" height="45.41220238095237" radius="22.174479166666664"
+                                        <Shadow color="#661800" height="45.34895833333333" radius="22.1586681547619"
                                                 width="45.28571428571428"/>
                                     </input>
                                 </Reflection>
                             </effect>
                             <image>
-                                <Image url="file:/C:/Users/Erick/Documents/GitHub/TarotBuddy/src/profile/zodiacimages/Gemini.png"/>
+                                <Image url="@../profile/zodiacimages/Gemini.png"/>
                             </image>
                         </ImageView>
                         <VBox id="VBox" alignment="CENTER" spacing="25.0">

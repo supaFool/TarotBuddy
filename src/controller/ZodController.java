@@ -1,9 +1,9 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
-import javax.swing.text.html.ImageView;
 
 /**
  * User: Erick

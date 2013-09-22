@@ -3,6 +3,7 @@ package controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
+import javafx.scene.paint.Color;
 import runner.Main;
 import utils.Utils;
 
@@ -90,12 +91,15 @@ public class MenuController {
 //            Clip.getButtonClick_a().play();
         }
         if (wantsAstrology) {
-            //todo set this right
-            Main.getStage().setWidth(675 + Utils.FRAME_OFFSET);
-            Main.getStage().setHeight(650 + Utils.FRAME_OFFSET);
-            Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getStudyCards());
-            Main.getStage().centerOnScreen();
+
+            if (ProfileController.isSignSelected()) {
+                Main.getStage().setWidth(675 + Utils.FRAME_OFFSET);
+                Main.getStage().setHeight(650 + Utils.FRAME_OFFSET);
+                Main.getStage().getScene().setFill(Utils.BG_COLOR);
+                Main.getStage().getScene().setRoot(Main.getZodiac());
+                Main.getStage().getScene().setFill(Color.BLACK);
+                Main.getStage().centerOnScreen();
+            }
 
         }
 
