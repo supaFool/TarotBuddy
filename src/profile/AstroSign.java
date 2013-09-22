@@ -1,6 +1,8 @@
 package profile;
 
+import controller.LoginController;
 import javafx.scene.image.Image;
+import utils.T_B_Props;
 
 import java.util.GregorianCalendar;
 
@@ -18,6 +20,8 @@ public class AstroSign {
     public enum Element {
         EARTH, FIRE, AIR, WATER
     }
+
+    private T_B_Props props = LoginController.getProps();
 
     private GregorianCalendar date;
 
@@ -90,19 +94,26 @@ public class AstroSign {
             AQUARIUS = 10,
             PISCES = 11;
 
-    private int sign = 100;
+    private Integer sign = 100;
 
     private Quaternaries quat;
     private Element element;
 
     public AstroSign(int sign) {
         this.sign = sign;
-        setQuat(sign);
-        setElement(sign);
+        props.setProperty("astrology sign", "100");
+
     }
 
     public void setSign(int sign) {
         this.sign = sign;
+    }
+
+    public void update() {
+        setQuat(sign);
+        setElement(sign);
+        props.setProperty("astrology sign", sign.toString());
+        props.saveUserInfo("Erick");
     }
 
     private void setElement(int sign) {

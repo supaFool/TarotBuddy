@@ -18,6 +18,7 @@ public class T_B_Props extends Properties {
         //todo set Close button to save as well
         propNames = new String[]{
                 "name",
+                "password",
                 "age",
                 "astrology sign",
                 "birthday",
@@ -37,6 +38,12 @@ public class T_B_Props extends Properties {
         for (int x = 0; x < pNames.length; x++) {
             setProperty(pNames[x], UNKNOWN_FIELD);
         }
+
+        setProperty("astrology sign", "100");
+        setProperty("name", "default");
+        setProperty("rating", "1");
+
+        saveUserInfo(getProperty("name"));
     }
 
     public void saveUserInfo(String name) {
@@ -47,11 +54,9 @@ public class T_B_Props extends Properties {
         }
     }
 
-    public void loadUserInfo(String name) {
-        try {
-            loadFromXML(new FileInputStream("src/" + name + ".tb"));
-        } catch (IOException e) {
-            System.err.println("Could not load UserInfo");
-        }
+    public void loadUserInfo(String name) throws IOException {
+
+        loadFromXML(new FileInputStream("src/" + name + ".tb"));
+
     }
 }

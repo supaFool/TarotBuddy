@@ -2,8 +2,10 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
+import javafx.scene.paint.Color;
 import profile.AstroSign;
 import runner.Main;
+import utils.T_B_Props;
 import utils.Utils;
 
 /**
@@ -15,7 +17,10 @@ public class ProfileController {
 
     private static boolean isSignSelected = false;
 
-    private static AstroSign aSign = Main.getSign();
+
+    private T_B_Props props = LoginController.getProps();
+
+    private static AstroSign sign;
 
     private int signInt = 100;
 
@@ -57,6 +62,7 @@ public class ProfileController {
 
     @FXML
     public void setSign() {
+
         if (aries.isSelected()) {
             signInt = AstroSign.ARIES;
         }
@@ -105,16 +111,25 @@ public class ProfileController {
             signInt = AstroSign.PISCES;
         }
 
-        aSign.setSign(signInt);
+        sign = new AstroSign(signInt);
+
+        sign.setSign(signInt);
         if (signInt != 100) {
             isSignSelected = true;
         }
 
-        System.out.println(aSign.getId());
+        sign.update();
+
+        System.out.println(sign.getId());
+
+        props.setProperty("astrology sign", Integer.toString(signInt));
+        String tempFileName = props.getProperty("name");
+        props.saveUserInfo(tempFileName);
 
         Main.getStage().getScene().setRoot(Main.getMenu());
         Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
         Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
+        Main.getStage().getScene().setFill(Color.CYAN);
         Main.getStage().centerOnScreen();
 
     }
@@ -133,11 +148,9 @@ public class ProfileController {
     }
 
     public static AstroSign getSign() {
-        if (aSign != null) {
-            return aSign;
-        } else {
-            throw new NullPointerException("..No sign has been saved..");
-        }
+
+        return sign;
+
     }
 
 

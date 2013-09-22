@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-background-color 0x000000ff?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Light.Point?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
+<StackPane id="StackPane" minHeight="600.0" prefHeight="620.0" prefWidth="320.0" xmlns:fx="http://javafx.com/fxml/1"
+           xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.LoginController">
+    <children>
+        <ImageView fitHeight="620.0" fitWidth="320.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../card/image/decks/merc/22.jpg"/>
+            </image>
+        </ImageView>
+        <VBox alignment="CENTER" prefHeight="620.0" prefWidth="262.0" spacing="15.0">
+            <children>
+                <Text fontSmoothingType="LCD" opacity="1.0" scaleX="1.0" scaleY="1.1471937354924977"
+                      strokeType="OUTSIDE" strokeWidth="0.0" text="Tarot-Buddy" textAlignment="CENTER">
+                    <effect>
+                        <Lighting diffuseConstant="1.0317460317460319" specularConstant="0.4904761904761905"
+                                  specularExponent="10.158730158730162" surfaceScale="1.8174603174603172">
+                            <bumpInput>
+                                <Shadow/>
+                            </bumpInput>
+                            <light>
+                                <javafx.scene.effect.Light.Point x="100.0" y="100.0" z="50.0"/>
+                            </light>
+                        </Lighting>
+                    </effect>
+                    <fill>
+                        <Color blue="0.000" green="0.478" red="1.000" fx:id="x1"/>
+                    </fill>
+                    <font>
+                        <Font name="Traditional Arabic" size="50.0"/>
+                    </font>
+                </Text>
+                <Label opacity="0.68" text="Please Log-In" textFill="#ffa100">
+                    <effect>
+                        <Lighting diffuseConstant="1.365079365079365" specularConstant="1.8396825396825398"
+                                  specularExponent="16.507936507936506" surfaceScale="1.261904761904762">
+                            <bumpInput>
+                                <Shadow/>
+                            </bumpInput>
+                            <light>
+                                <javafx.scene.effect.Light.Point color="#b0ff75" x="100.0" y="100.0" z="50.0"/>
+                            </light>
+                        </Lighting>
+                    </effect>
+                    <font>
+                        <Font name="MS PMincho" size="25.0"/>
+                    </font>
+                </Label>
+                <VBox id="VBox" alignment="CENTER" prefWidth="242.0" spacing="5.0">
+                    <children>
+                        <TextField id="username" fx:id="usernameField" alignment="CENTER" focusTraversable="false"
+                                   prefWidth="100.0" promptText="Username" text=""/>
+                        <PasswordField id="password" fx:id="passwordField" focusTraversable="false" prefWidth="200.0"
+                                       promptText="Password"/>
+                    </children>
+                </VBox>
+                <HBox id="HBox" alignment="CENTER" spacing="25.0">
+                    <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#login" text="login"/>
+                        <Button mnemonicParsing="false" onMouseClicked="#createProfile" text="new profile"/>
+                    </children>
+                </HBox>
+                <Text fx:id="loginError" fill="$x1" fontSmoothingType="LCD" opacity="1.0" scaleX="1.0"
+                      scaleY="1.1471937354924977" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER">
+                    <effect>
+                        <Lighting diffuseConstant="1.0317460317460319" specularConstant="0.4904761904761905"
+                                  specularExponent="10.158730158730162" surfaceScale="1.8174603174603172">
+                            <bumpInput>
+                                <Shadow/>
+                            </bumpInput>
+                            <light>
+                                <javafx.scene.effect.Light.Point color="RED" x="100.0" y="100.0" z="50.0"/>
+                            </light>
+                        </Lighting>
+                    </effect>
+                    <font>
+                        <Font name="Traditional Arabic" size="20.0"/>
+                    </font>
+                </Text>
+            </children>
+        </VBox>
+    </children>
+</StackPane>

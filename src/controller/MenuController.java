@@ -93,8 +93,8 @@ public class MenuController {
         if (wantsAstrology) {
 
             if (ProfileController.isSignSelected()) {
-                Main.getStage().setWidth(675 + Utils.FRAME_OFFSET);
-                Main.getStage().setHeight(650 + Utils.FRAME_OFFSET);
+                Main.getStage().setWidth(800 + Utils.FRAME_OFFSET);
+                Main.getStage().setHeight(627 + Utils.FRAME_OFFSET);
                 Main.getStage().getScene().setFill(Utils.BG_COLOR);
                 Main.getStage().getScene().setRoot(Main.getZodiac());
                 Main.getStage().getScene().setFill(Color.BLACK);

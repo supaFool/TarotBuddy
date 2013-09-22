@@ -3,7 +3,6 @@ package runner;
 import card.CardData;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,9 +10,6 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import javafx.stage.WindowEvent;
-import profile.AstroSign;
-import utils.T_B_Props;
 
 public class Main extends Application {
 
@@ -32,13 +28,14 @@ public class Main extends Application {
     private static Parent swordSpread;
     private static Parent profile;
     private static Parent zodiac;
+    private static Parent login;
+    private static Parent loginNew;
+    private static Parent loginConfirm;
     //
 
-    private static T_B_Props props;
 
     private static Stage ps;
 
-    private static AstroSign sign;
 
     private static double version = 1.0;
     public static String ver = "Beta ver." + version;
@@ -47,8 +44,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        props = new T_B_Props();
-        sign = new AstroSign(100);
+
 
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
@@ -61,6 +57,9 @@ public class Main extends Application {
         swordSpread = FXMLLoader.load(getClass().getResource("SwordSpread.fxml"));
         profile = FXMLLoader.load(getClass().getResource("Profile.fxml"));
         zodiac = FXMLLoader.load(getClass().getResource("Zodiac.fxml"));
+        login = FXMLLoader.load(getClass().getResource("login.fxml"));
+        loginNew = FXMLLoader.load(getClass().getResource("loginNewProfile.fxml"));
+        loginConfirm = FXMLLoader.load(getClass().getResource("loginConfirm.fxml"));
 
 
         //Set Stage so we can retrieve it later
@@ -68,19 +67,19 @@ public class Main extends Application {
 
         Platform.setImplicitExit(true);
 
-        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent windowEvent) {
-                props.saveUserInfo("Erick");
-            }
-        });
+//        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+//            @Override
+//            public void handle(WindowEvent windowEvent) {
+//                props.saveUserInfo("Erick");
+//            }
+//        });
 
         //set stage props
         primaryStage.initStyle(StageStyle.UTILITY);
         primaryStage.setResizable(false);
         primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS, CardData.MERC_DECK)));
         primaryStage.setTitle("Tarot Buddy");
-        primaryStage.setScene(new Scene(menu, Color.DARKCYAN));
+        primaryStage.setScene(new Scene(login, Color.BLACK));
         primaryStage.show();
     }
 
@@ -108,8 +107,16 @@ public class Main extends Application {
         return tcsNoHelp;
     }
 
+    public static Parent getLogingConfirm() {
+        return loginConfirm;
+    }
+
     public static Parent getTCS() {
         return tcs;
+    }
+
+    public static Parent getNewProfile() {
+        return loginNew;
     }
 
     public static Parent getProfile() {
@@ -127,13 +134,6 @@ public class Main extends Application {
         return studyCards;
     }
 
-    public static AstroSign getSign() {
-        return sign;
-    }
-
-    public static T_B_Props getProps() {
-        return props;
-    }
 
     /**
      * @return the quiz parent
