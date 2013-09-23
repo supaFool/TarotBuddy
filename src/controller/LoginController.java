@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+import profile.AstroSign;
 import runner.Main;
 import utils.T_B_Props;
 import utils.Utils;
@@ -24,6 +25,7 @@ public class LoginController {
 
     public static T_B_Props props = new T_B_Props();
 
+    private AstroSign sign;
 
     public static String username;
 
@@ -52,14 +54,21 @@ public class LoginController {
     @FXML
     public void login() {
 
-        try {
-            props.loadUserInfo(usernameField.getText());
-        } catch (IOException e) {
-            flashSelection("No Profile Exists for " + usernameField.getText());
+        if (usernameField.getText() == null || passwordField.getText() == null) {
+            flashSelection("Fields are empty");
+        } else {
+            try {
+                props.loadUserInfo(usernameField.getText());
+            } catch (IOException e) {
+                flashSelection("No Profile Exists for " + usernameField.getText());
+            }
         }
 
 
         if (passwordField.getText().matches(props.getProperty("password"))) {
+
+            sign = ProfileController.getSign();
+
 
             Main.getStage().getScene().setRoot(Main.getMenu());
             Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
@@ -76,7 +85,7 @@ public class LoginController {
         loginError.setText(text);
         Timeline ani = new Timeline();
         KeyFrame frame = new KeyFrame(Duration.millis(0), new KeyValue(loginError.opacityProperty(), 1.0f));
-        KeyFrame fadeFrame = new KeyFrame(Duration.millis(2000), new KeyValue(loginError.opacityProperty(), 0.0f));
+        KeyFrame fadeFrame = new KeyFrame(Duration.millis(7500), new KeyValue(loginError.opacityProperty(), 0.0f));
         ani.getKeyFrames().addAll(frame, fadeFrame);
         ani.play();
     }
@@ -94,19 +103,34 @@ public class LoginController {
     }
 
     @FXML
+    public void back() {
+        Main.getStage().getScene().setFill(Utils.BG_COLOR);
+        Main.getStage().getScene().setRoot(Main.getLogin());
+        Main.getStage().getScene().setFill(Color.BLACK);
+        Main.getStage().centerOnScreen();
+    }
+
+    @FXML
     public void confirmNewAccount() {
-        props.setProperty("name", newUsername.getText());
         String pw1 = newPw1.getText();
         String pw2 = newPw2.getText();
-        if (pw1.matches(pw2)) {
-            props.setProperty("password", pw1);
-            props.saveUserInfo(newUsername.getText());
-            Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getProfile());
-            Main.getStage().getScene().setFill(Color.BLACK);
-            Main.getStage().centerOnScreen();
+        String name = newUsername.getText();
+
+
+        if (pw1.matches("") || pw2.matches("") || name.matches("")) {
+            flashSelection("Fields are empty");
         } else {
-            pwNoMatch.setText("Passwords did not match");
+            props.setProperty("name", newUsername.getText());
+            if (pw1.matches(pw2)) {
+                props.setProperty("password", pw1);
+                props.saveUserInfo(newUsername.getText());
+                Main.getStage().getScene().setFill(Utils.BG_COLOR);
+                Main.getStage().getScene().setRoot(Main.getProfile());
+                Main.getStage().getScene().setFill(Color.BLACK);
+                Main.getStage().centerOnScreen();
+            } else {
+                flashSelection("Passwords did not match");
+            }
         }
 
         System.out.println(newPw2.getText());

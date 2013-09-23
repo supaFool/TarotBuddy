@@ -119,12 +119,13 @@ public class ProfileController {
         }
 
         sign.update();
+        sign.saveProp();
 
-        System.out.println(sign.getId());
+        System.out.println(props.getProperty("astrology sign"));
 
-        props.setProperty("astrology sign", Integer.toString(signInt));
-        String tempFileName = props.getProperty("name");
-        props.saveUserInfo(tempFileName);
+//        props.setProperty("astrology sign", Integer.toString(signInt));
+//        String tempFileName = props.getProperty("name");
+//        props.saveUserInfo(tempFileName);
 
         Main.getStage().getScene().setRoot(Main.getMenu());
         Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);

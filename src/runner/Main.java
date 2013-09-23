@@ -119,6 +119,10 @@ public class Main extends Application {
         return loginNew;
     }
 
+    public static Parent getLogin() {
+        return login;
+    }
+
     public static Parent getProfile() {
         return profile;
     }

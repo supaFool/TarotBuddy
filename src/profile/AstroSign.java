@@ -112,8 +112,12 @@ public class AstroSign {
     public void update() {
         setQuat(sign);
         setElement(sign);
+
+    }
+
+    public void saveProp() {
         props.setProperty("astrology sign", sign.toString());
-        props.saveUserInfo("Erick");
+        props.saveUserInfo(props.getProperty("name"));
     }
 
     private void setElement(int sign) {

@@ -68,9 +68,22 @@
                 </VBox>
                 <HBox id="HBox" alignment="CENTER" spacing="25.0">
                     <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#login" text="login"/>
-                        <Button mnemonicParsing="false" onMouseClicked="#createProfile" text="new profile"/>
+                        <Button defaultButton="false" focusTraversable="false" mnemonicParsing="false"
+                                onMouseClicked="#login" text="login"/>
+                        <Button cancelButton="false" defaultButton="false" focusTraversable="false"
+                                mnemonicParsing="false" onMouseClicked="#createProfile" text="new profile"/>
                     </children>
+                    <effect>
+                        <Lighting diffuseConstant="1.8412698412698414" specularConstant="0.3952380952380952"
+                                  specularExponent="10.158730158730158" surfaceScale="1.1825396825396826">
+                            <bumpInput>
+                                <Shadow/>
+                            </bumpInput>
+                            <light>
+                                <javafx.scene.effect.Light.Point color="#ff9533" x="100.0" y="100.0" z="50.0"/>
+                            </light>
+                        </Lighting>
+                    </effect>
                 </HBox>
                 <Text fx:id="loginError" fill="$x1" fontSmoothingType="LCD" opacity="1.0" scaleX="1.0"
                       scaleY="1.1471937354924977" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER">

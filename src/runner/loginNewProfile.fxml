@@ -2,14 +2,12 @@
 
 <?scenebuilder-background-color 0x000000ff?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.effect.Light.Point?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -46,9 +44,30 @@
                 <PasswordField fx:id="newPw1" focusTraversable="false" prefWidth="200.0"
                                promptText="Choose a password"/>
                 <PasswordField fx:id="newPw2" focusTraversable="false" prefWidth="200.0" promptText="Confirm password"/>
-                <Button mnemonicParsing="false" onAction="#confirmNewAccount" onMouseClicked="#confirmNewAccount"
-                        text="Create Profile"/>
-                <Text fx:id="pwNoMatch" fill="RED" fontSmoothingType="LCD" scaleX="1.0" scaleY="1.0"
+                <HBox id="HBox" alignment="CENTER" spacing="66.0">
+                    <children>
+                        <Button cancelButton="true" focusTraversable="false" mnemonicParsing="false"
+                                onMouseClicked="#back" text="Back">
+                            <effect>
+                                <ColorAdjust hue="0.2748091603053435" saturation="0.1832061068702291"/>
+                            </effect>
+                        </Button>
+                        <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#confirmNewAccount"
+                                text="Create Profile"/>
+                    </children>
+                    <effect>
+                        <Lighting diffuseConstant="2.0" specularConstant="1.553968253968254"
+                                  specularExponent="14.920634920634921" surfaceScale="0.7857142857142857">
+                            <bumpInput>
+                                <Shadow/>
+                            </bumpInput>
+                            <light>
+                                <javafx.scene.effect.Light.Point color="#ffbc33" x="100.0" y="100.0" z="50.0"/>
+                            </light>
+                        </Lighting>
+                    </effect>
+                </HBox>
+                <Text id="pwNoMatch" fx:id="loginError" fill="RED" fontSmoothingType="LCD" scaleX="1.0" scaleY="1.0"
                       strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER">
                     <font>
                         <Font size="25.0"/>

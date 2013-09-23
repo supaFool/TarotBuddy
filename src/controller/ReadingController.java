@@ -172,7 +172,7 @@ public class ReadingController {
      * @param fadeAni The Timeline to set the animation to
      */
     private void getSwordSpread(Timeline fadeAni) {
-        //todo make non help sword spread
+        //todo FIX THIS
         Parent p = Main.getSwordSpread();
         Main.getStage().setOpacity(0f);
         Main.getStage().getScene().setRoot(p);

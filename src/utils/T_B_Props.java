@@ -15,7 +15,7 @@ public class T_B_Props extends Properties {
     private String UNKNOWN_FIELD = "Unknown";
 
     public T_B_Props() {
-        //todo set Close button to save as well
+
         propNames = new String[]{
                 "name",
                 "password",
@@ -48,7 +48,7 @@ public class T_B_Props extends Properties {
 
     public void saveUserInfo(String name) {
         try {
-            storeToXML(new FileOutputStream("src/" + name + ".tb"), null);
+            storeToXML(new FileOutputStream(name + ".tb"), null);
         } catch (IOException e) {
             System.err.println("Could not save " + name + ".tb");
         }
@@ -56,7 +56,7 @@ public class T_B_Props extends Properties {
 
     public void loadUserInfo(String name) throws IOException {
 
-        loadFromXML(new FileInputStream("src/" + name + ".tb"));
+        loadFromXML(new FileInputStream(name + ".tb"));
 
     }
 }
