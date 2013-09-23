@@ -4,25 +4,32 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.*?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="600.0" prefWidth="319.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ProfileController">
+            prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="controller.ProfileController">
     <children>
-        <Accordion prefHeight="600.0" prefWidth="319.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+        <Accordion prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <expandedPane>
                 <TitledPane fx:id="x3" alignment="CENTER" animated="false" text="Astrology Profile"
                             textAlignment="CENTER">
                     <content>
-                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <StackPane id="StackPane">
                             <children>
-                                <VBox alignment="CENTER" prefHeight="552.0" prefWidth="315.0" spacing="15.0"
-                                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <ImageView fitHeight="620.0" fitWidth="320.0" opacity="0.63" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../card/image/decks/mantegna/31.JPG"/>
+                                    </image>
+                                </ImageView>
+                                <VBox alignment="CENTER" prefHeight="552.0" prefWidth="315.0" spacing="15.0">
                                     <children>
                                         <HBox id="HBox" alignment="CENTER" spacing="5.0">
                                             <children>
@@ -49,7 +56,7 @@
                                             </padding>
                                         </HBox>
                                         <RadioButton fx:id="aries" alignment="CENTER" contentDisplay="TOP"
-                                                     mnemonicParsing="false" selected="false"
+                                                     mnemonicParsing="false" selected="true"
                                                      text="Aries - March 21 to April 19">
                                             <effect>
                                                 <Lighting diffuseConstant="1.1111111111111112"
@@ -118,7 +125,12 @@
                                                                 <Shadow/>
                                                             </bumpInput>
                                                             <light>
-                                                                <javafx.scene.effect.Light.Distant color="#ffe799"/>
+                                                                <javafx.scene.effect.Light.Distant>
+                                                                    <color>
+                                                                        <Color blue="0.600" green="0.906" red="1.000"
+                                                                               fx:id="x4"/>
+                                                                    </color>
+                                                                </javafx.scene.effect.Light.Distant>
                                                             </light>
                                                         </Lighting>
                                                     </effect>
@@ -137,7 +149,7 @@
                                                                 <Shadow/>
                                                             </bumpInput>
                                                             <light>
-                                                                <javafx.scene.effect.Light.Distant color="#ffe799"/>
+                                                                <javafx.scene.effect.Light.Distant color="$x4"/>
                                                             </light>
                                                         </Lighting>
                                                     </effect>
@@ -148,19 +160,18 @@
                                             </padding>
                                         </HBox>
                                     </children>
+                                    <effect>
+                                        <ColorAdjust brightness="-0.564885496183206" contrast="0.717557251908397"
+                                                     hue="0.25190839694656497" saturation="-0.5954198473282443"/>
+                                    </effect>
                                 </VBox>
                             </children>
-                        </AnchorPane>
+                        </StackPane>
                     </content>
                 </TitledPane>
             </expandedPane>
             <panes>
                 <fx:reference source="x3"/>
-                <TitledPane animated="false" text="untitled">
-                    <content>
-                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
-                    </content>
-                </TitledPane>
             </panes>
         </Accordion>
     </children>

@@ -85,9 +85,10 @@
                                 <MenuItem mnemonicParsing="false" onAction="#close" text="Close"/>
                             </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Personalize">
+                        <Menu mnemonicParsing="false" text="Profile">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="Set Colors"/>
+                                <MenuItem mnemonicParsing="false" onAction="#openProfile" text="Create/Edit Profile"/>
                             </items>
                         </Menu>
                         <Menu mnemonicParsing="false" text="Help">
