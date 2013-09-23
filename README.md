@@ -9,6 +9,16 @@ Tarot Buddy Beta. Build - Fortune Telling Software.
 >* Different Tarot decks to choose from
 >* Personal Profile for each user
 
+![sss](http://www.java-gaming.org/user-generated-content/members/159849/reader-ss.jpg)
+> Spread Screenshot
+
+
+
+![ss](http://www.java-gaming.org/user-generated-content/members/159849/astropreview.jpg)
+> Astrology Preview (Coming Soon)
+
+
+
 ## Coming Soon
 >* Astrology
 >* Symbolism
