@@ -18,7 +18,7 @@ Tarot Buddy Beta. Build - Fortune Telling Software.
 
 
 #### To Install
->* [Download Beta](https://github.com/supaFool/TarotBuddy/archive/Dev-Release.zip)
+>* [Download Beta](https://github.com/supaFool/TarotBuddy/releases)
 >* Navigate to -- TarotBuddy\out\artifacts\TarotBuddy_DEV
 >* Place the .jar file anywhere you like and run it
 
