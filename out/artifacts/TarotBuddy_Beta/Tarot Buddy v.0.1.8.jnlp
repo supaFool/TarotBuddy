@@ -11,7 +11,7 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Tarot Buddy v.0.1.8.jar" size="66539040" download="eager" />
+    <jar href="Tarot Buddy v.0.1.8.jar" size="66540015" download="eager" />
   </resources>
   <applet-desc  width="600" height="400" main-class="com.javafx.main.NoJavaFXFallback"  name="Tarot Buddy v.0.1.8" >
     <param name="requiredFXVersion" value="2.2+"/>

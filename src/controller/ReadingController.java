@@ -127,7 +127,8 @@ public class ReadingController {
                 break;
 
                 case SWORD: {
-                    getSwordSpread(fadeAni);
+//                    getSwordSpread(fadeAni);
+                    flashSelection("Under Development");
 
                     break;
                 }
@@ -228,7 +229,8 @@ public class ReadingController {
     @FXML
     public void wantsSword() {
         spread = SpreadType.SWORD;
-        typeOfReading.setText(typeOfReading.getItems().get(1).getText());
+//        typeOfReading.setText(typeOfReading.getItems().get(1).getText());
+        typeOfReading.setText("Coming Soon");
     }
 
     public static void setStage(Stage stage) {
