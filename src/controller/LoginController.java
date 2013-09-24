@@ -130,7 +130,8 @@ public class LoginController {
             props.setProperty("name", newUsername.getText());
             if (pw1.matches(pw2)) {
                 props.setProperty("password", pw1);
-                props.saveUserInfo(newUsername.getText());
+                props.saveUserInfo(name);
+                sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
                 Main.getStage().getScene().setFill(Utils.BG_COLOR);
                 Main.getStage().getScene().setRoot(Main.getProfile());
                 Main.getStage().getScene().setFill(Color.BLACK);

@@ -12,9 +12,8 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.*?>
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            onKeyPressed="#goHome" onMouseClicked="#refresh" prefHeight="627.0" prefWidth="800.0"
-            xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
-            fx:controller="controller.ZodController">
+            prefHeight="627.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ZodController">
     <children>
         <VBox id="VBox" alignment="CENTER" layoutX="0.0" layoutY="11.0" spacing="5.0">
             <children>
@@ -55,7 +54,7 @@
                             <effect>
                                 <Reflection>
                                     <input>
-                                        <Shadow color="#661800" height="45.28966703869047" radius="22.143845331101186"
+                                        <Shadow color="#661800" height="45.28769066220237" radius="22.143351236979164"
                                                 width="45.28571428571428"/>
                                     </input>
                                 </Reflection>
@@ -167,7 +166,7 @@
                         </VBox>
                     </children>
                 </StackPane>
-                <HBox opacity="0.59" prefHeight="22.0" prefWidth="800.0">
+                <HBox alignment="CENTER" opacity="0.59" prefHeight="22.0" prefWidth="800.0" spacing="35.0">
                     <children>
                         <Button mnemonicParsing="false" onMouseClicked="#goHome" text="Home">
                             <effect>
@@ -177,7 +176,24 @@
                                         <Shadow/>
                                     </bumpInput>
                                     <light>
-                                        <javafx.scene.effect.Light.Distant color="#85cc87"/>
+                                        <javafx.scene.effect.Light.Distant>
+                                            <color>
+                                                <Color blue="0.529" green="0.800" red="0.522" fx:id="x4"/>
+                                            </color>
+                                        </javafx.scene.effect.Light.Distant>
+                                    </light>
+                                </Lighting>
+                            </effect>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#refresh" text="Refresh">
+                            <effect>
+                                <Lighting diffuseConstant="1.5873015873015874" specularConstant="0.31587301587301586"
+                                          specularExponent="20.317460317460316" surfaceScale="1.1031746031746033">
+                                    <bumpInput>
+                                        <Shadow/>
+                                    </bumpInput>
+                                    <light>
+                                        <javafx.scene.effect.Light.Distant color="$x4"/>
                                     </light>
                                 </Lighting>
                             </effect>

@@ -43,7 +43,6 @@ public class T_B_Props extends Properties {
         setProperty("name", "default");
         setProperty("rating", "1");
 
-        saveUserInfo(getProperty("name"));
     }
 
     public void saveUserInfo(String name) {

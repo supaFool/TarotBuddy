@@ -6,6 +6,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import profile.AstroSign;
 import runner.Main;
+import utils.T_B_Props;
 import utils.Utils;
 
 
@@ -54,7 +55,10 @@ public class ZodController {
 
     @FXML
     public void refresh() {
+        T_B_Props props = LoginController.getProps();
         sign = LoginController.getSign();
+        sign.setSign(Integer.parseInt(props.getProperty("astrology sign")));
+        sign.update();
         bgLogo.setImage(sign.getZodiacImage());
         rangeText.setText(sign.getBirthYearString());
         elementText.setText(sign.getElement().toString());
