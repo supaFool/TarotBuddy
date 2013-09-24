@@ -46,6 +46,9 @@ public class T_B_Props extends Properties {
     }
 
     public void saveUserInfo(String name) {
+
+        //todo Fix these so they save in a file and not just all over
+        //Will also have to fix the loading one
         try {
             storeToXML(new FileOutputStream(name + ".tb"), null);
         } catch (IOException e) {
