@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import runner.Main;
-import utils.Utils;
 
 /**
  * User: Erick
@@ -50,11 +49,7 @@ public class LookAtController {
      */
     @FXML
     public void home() {
-        Main.getStage().getScene().setRoot(Main.getMenu());
-        Main.getStage().getScene().setFill(Utils.BG_COLOR);
-        Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
-        Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
-        Main.getStage().centerOnScreen();
+        Stage.setStage(Stage.MENU);
     }
 
     /**

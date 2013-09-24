@@ -17,7 +17,6 @@ import runner.Main;
 import utils.Utils;
 
 /**
- * Created with Intellij IDEA.
  * User: Erick
  * Date: 8/30/13
  * Time: 1:13 PM
@@ -103,7 +102,6 @@ public class ReadingController {
     @FXML
     public void getReading() {
         System.out.println(spread);
-        Timeline fadeAni = getStageAni();
 
         if (wiaChoose.isSelected()) {
             SpreadController.deck = DeckType.WIATE;
@@ -122,7 +120,7 @@ public class ReadingController {
             switch (spread) {
                 case THREE_CARD_SPREAD: {
 
-                    set3CardStage(fadeAni);
+                    set3CardStage();
                 }
                 break;
 
@@ -133,7 +131,7 @@ public class ReadingController {
                     break;
                 }
                 default: {
-                    set3CardStage(fadeAni);
+                    set3CardStage();
                 }
 
 
@@ -154,17 +152,6 @@ public class ReadingController {
         }
     }
 
-
-    /**
-     * @return the fade animation for the stage fade effect
-     */
-    private Timeline getStageAni() {
-        Timeline fadeAni = new Timeline();
-        KeyFrame f1 = new KeyFrame(Duration.millis(225), new KeyValue(Main.getStage().opacityProperty(), 0.0f));
-        KeyFrame f2 = new KeyFrame(Duration.millis(1450), new KeyValue(Main.getStage().opacityProperty(), 1.0f));
-        fadeAni.getKeyFrames().addAll(f1, f2);
-        return fadeAni;
-    }
 
     /**
      * Sets the Parent of the current Scene to the SwordSpread.fxml
@@ -188,33 +175,15 @@ public class ReadingController {
     /**
      * Sets the Parent of the current Scene to the TCS.fxml
      * Also plays the Animation
-     *
-     * @param fadeAni The Timeline to set the animation to
      */
-    private void set3CardStage(Timeline fadeAni) {
+    private void set3CardStage() {
         System.out.println(wantsHelp);
         if (wantsHelp && (SpreadController.deck == DeckType.WIATE || SpreadController.deck == DeckType.WIA_ART)) {
-            Parent p = Main.getTCS();
-            Main.getStage().setOpacity(0f);
-            Main.getStage().getScene().setRoot(p);
-            SpreadController.invert = invertCards;
-            Main.getStage().getScene().setFill(Utils.READING_COLOR);
-            Main.getStage().setWidth(778.0 + Utils.FRAME_OFFSET);
-            Main.getStage().setHeight(727.0 + Utils.FRAME_OFFSET);
-            Main.getStage().centerOnScreen();
-            fadeAni.play();
+            controller.Stage.setStage(controller.Stage.TCS);
         }
 
         if (!wantsHelp) {
-            Parent p = Main.getTcsNoHelp();
-            Main.getStage().setOpacity(0f);
-            Main.getStage().getScene().setRoot(p);
-            SpreadController.invert = invertCards;
-            Main.getStage().getScene().setFill(Utils.READING_COLOR);
-            Main.getStage().setWidth(775.0 + Utils.FRAME_OFFSET);
-            Main.getStage().setHeight(500.0 + Utils.FRAME_OFFSET);
-            Main.getStage().centerOnScreen();
-            fadeAni.play();
+            controller.Stage.setStage(controller.Stage.TCS_NO_HELP);
         }
     }
 
@@ -256,9 +225,7 @@ public class ReadingController {
 
     @FXML
     public void close() {
-        Main.getStage().getScene().setRoot(Main.getMenu());
-        Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
-        Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
+        controller.Stage.setStage(controller.Stage.MENU);
     }
 
     public void setInvert(boolean b) {

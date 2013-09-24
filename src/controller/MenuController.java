@@ -3,7 +3,6 @@ package controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
-import javafx.scene.paint.Color;
 import runner.Main;
 import utils.Utils;
 
@@ -58,19 +57,12 @@ public class MenuController {
 //                ", Study " + wantsStudy + ", Look At " + wantsLookAt);
 
         if (wantsReading) {
-            System.out.println(wantsReading + " Wants Reading");
-            Main.getStage().setWidth(601 + Utils.FRAME_OFFSET);
-            Main.getStage().setHeight(161 + Utils.FRAME_OFFSET);
-            Main.getStage().getScene().setRoot(Main.getReading());
+            Stage.setStage(Stage.READING);
 //            Clip.getButtonClick_a().play();
 
         }
         if (wantsLookAt) {
-            Main.getStage().setWidth(674 + Utils.FRAME_OFFSET);
-            Main.getStage().setHeight(405 + Utils.FRAME_OFFSET);
-            Main.getStage().getScene().setFill(Utils.READING_COLOR);
-            Main.getStage().getScene().setRoot(Main.getLookAt());
-            Main.getStage().centerOnScreen();
+            Stage.setStage(Stage.LOOK_AT_DECK);
 //            Clip.getButtonClick_a().play();
         }
         if (wantsQuiz) {
@@ -83,22 +75,13 @@ public class MenuController {
 //            s.show();
         }
         if (wantsStudy) {
-            Main.getStage().setWidth(675 + Utils.FRAME_OFFSET);
-            Main.getStage().setHeight(650 + Utils.FRAME_OFFSET);
-            Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getStudyCards());
-            Main.getStage().centerOnScreen();
+            Stage.setStage(Stage.STUDY);
 //            Clip.getButtonClick_a().play();
         }
         if (wantsAstrology) {
 
             if (ProfileController.isSignSelected()) {
-                Main.getStage().setWidth(800 + Utils.FRAME_OFFSET);
-                Main.getStage().setHeight(627 + Utils.FRAME_OFFSET);
-                Main.getStage().getScene().setFill(Utils.BG_COLOR);
-                Main.getStage().getScene().setRoot(Main.getZodiac());
-                Main.getStage().getScene().setFill(Color.BLACK);
-                Main.getStage().centerOnScreen();
+                Stage.setStage(Stage.ZODIAC);
             }
 
         }

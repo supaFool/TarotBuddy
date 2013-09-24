@@ -2,11 +2,8 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
-import javafx.scene.paint.Color;
 import profile.AstroSign;
-import runner.Main;
 import utils.T_B_Props;
-import utils.Utils;
 
 /**
  * User: Erick
@@ -127,11 +124,7 @@ public class ProfileController {
         String tempFileName = props.getProperty("name");
         props.saveUserInfo(tempFileName);
 
-        Main.getStage().getScene().setRoot(Main.getMenu());
-        Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
-        Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
-        Main.getStage().getScene().setFill(Color.CYAN);
-        Main.getStage().centerOnScreen();
+        Stage.setStage(Stage.MENU);
 
     }
 
@@ -146,17 +139,7 @@ public class ProfileController {
 
     @FXML
     public void cancel() {
-        Main.getStage().getScene().setRoot(Main.getMenu());
-        Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
-        Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
-        Main.getStage().centerOnScreen();
-    }
-
-    public static AstroSign getSign() {
-        sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
-
-        return sign;
-
+        Stage.setStage(Stage.MENU);
     }
 
 

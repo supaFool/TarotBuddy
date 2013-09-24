@@ -6,13 +6,10 @@ import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import profile.AstroSign;
-import runner.Main;
 import utils.T_B_Props;
-import utils.Utils;
 
 import java.io.IOException;
 
@@ -49,9 +46,6 @@ public class LoginController {
     private PasswordField newPw2;
 
     @FXML
-    private Text pwNoMatch;
-
-    @FXML
     public void login() {
 
         if (usernameField.getText() == null || passwordField.getText() == null) {
@@ -69,15 +63,7 @@ public class LoginController {
             sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
             sign.update();
             ProfileController.setIsSignSelected(true);
-
-            System.out.println(sign.getId());
-
-
-            Main.getStage().getScene().setRoot(Main.getMenu());
-            Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
-            Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
-            Main.getStage().getScene().setFill(Color.CYAN);
-            Main.getStage().centerOnScreen();
+            Stage.setStage(Stage.MENU);
         } else {
             flashSelection("Invalid Password or Username");
         }
@@ -103,18 +89,12 @@ public class LoginController {
 
     @FXML
     public void createProfile() {
-        Main.getStage().getScene().setFill(Utils.BG_COLOR);
-        Main.getStage().getScene().setRoot(Main.getNewProfile());
-        Main.getStage().getScene().setFill(Color.BLACK);
-        Main.getStage().centerOnScreen();
+        Stage.setStage(Stage.LOG_IN_NEW_PROFILE);
     }
 
     @FXML
     public void back() {
-        Main.getStage().getScene().setFill(Utils.BG_COLOR);
-        Main.getStage().getScene().setRoot(Main.getLogin());
-        Main.getStage().getScene().setFill(Color.BLACK);
-        Main.getStage().centerOnScreen();
+        Stage.setStage(Stage.LOGIN);
     }
 
     @FXML
@@ -132,10 +112,7 @@ public class LoginController {
                 props.setProperty("password", pw1);
                 props.saveUserInfo(name);
                 sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
-                Main.getStage().getScene().setFill(Utils.BG_COLOR);
-                Main.getStage().getScene().setRoot(Main.getProfile());
-                Main.getStage().getScene().setFill(Color.BLACK);
-                Main.getStage().centerOnScreen();
+                Stage.setStage(Stage.PROFILE);
             } else {
                 flashSelection("Passwords did not match");
             }

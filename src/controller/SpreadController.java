@@ -8,8 +8,6 @@ import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import runner.Main;
-import utils.Utils;
 
 import java.util.Random;
 
@@ -114,11 +112,7 @@ public class SpreadController {
     @FXML
     public void done() {
 
-        Main.getStage().getScene().setRoot(Main.getReading());
-        Main.getStage().setWidth(601 + Utils.FRAME_OFFSET);
-        Main.getStage().setHeight(161 + Utils.FRAME_OFFSET);
-        Main.getStage().centerOnScreen();
-        Main.getStage().getScene().setFill(Utils.BG_COLOR);
+        Stage.setStage(Stage.READING);
 
         //Reset everything for next time;
         past.setImage(null);

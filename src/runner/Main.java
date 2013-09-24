@@ -75,7 +75,8 @@ public class Main extends Application {
 //        });
 
         //set stage props
-        primaryStage.initStyle(StageStyle.UTILITY);
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+//        primaryStage.setFullScreen(true);
         primaryStage.setResizable(false);
         primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS, CardData.MERC_DECK)));
         primaryStage.setTitle("Tarot Buddy");

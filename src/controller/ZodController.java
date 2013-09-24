@@ -2,12 +2,9 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import profile.AstroSign;
-import runner.Main;
 import utils.T_B_Props;
-import utils.Utils;
 
 
 /**
@@ -46,11 +43,7 @@ public class ZodController {
 
     @FXML
     public void goHome() {
-        Main.getStage().getScene().setRoot(Main.getMenu());
-        Main.getStage().getScene().setFill(Color.DARKCYAN);
-        Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
-        Main.getStage().setHeight(160.0 + Utils.FRAME_OFFSET);
-        Main.getStage().centerOnScreen();
+        Stage.setStage(Stage.MENU);
     }
 
     @FXML
