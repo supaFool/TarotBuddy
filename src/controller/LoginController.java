@@ -25,7 +25,7 @@ public class LoginController {
 
     public static T_B_Props props = new T_B_Props();
 
-    private AstroSign sign;
+    private static AstroSign sign;
 
     public static String username;
 
@@ -66,8 +66,11 @@ public class LoginController {
 
 
         if (passwordField.getText().matches(props.getProperty("password"))) {
+            sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
+            sign.update();
+            ProfileController.setIsSignSelected(true);
 
-            sign = ProfileController.getSign();
+            System.out.println(sign.getId());
 
 
             Main.getStage().getScene().setRoot(Main.getMenu());
@@ -79,6 +82,10 @@ public class LoginController {
             flashSelection("Invalid Password or Username");
         }
 
+    }
+
+    public static AstroSign getSign() {
+        return sign;
     }
 
     private void flashSelection(String text) {

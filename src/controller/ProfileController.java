@@ -18,7 +18,7 @@ public class ProfileController {
     private static boolean isSignSelected = false;
 
 
-    private T_B_Props props = LoginController.getProps();
+    private static T_B_Props props = LoginController.getProps();
 
     private static AstroSign sign;
 
@@ -111,7 +111,7 @@ public class ProfileController {
             signInt = AstroSign.PISCES;
         }
 
-        sign = new AstroSign(signInt);
+        sign = LoginController.getSign();
 
         sign.setSign(signInt);
         if (signInt != 100) {
@@ -123,9 +123,9 @@ public class ProfileController {
 
         System.out.println(props.getProperty("astrology sign"));
 
-//        props.setProperty("astrology sign", Integer.toString(signInt));
-//        String tempFileName = props.getProperty("name");
-//        props.saveUserInfo(tempFileName);
+        props.setProperty("astrology sign", Integer.toString(signInt));
+        String tempFileName = props.getProperty("name");
+        props.saveUserInfo(tempFileName);
 
         Main.getStage().getScene().setRoot(Main.getMenu());
         Main.getStage().setWidth(540.0 + Utils.FRAME_OFFSET);
@@ -140,6 +140,10 @@ public class ProfileController {
         return isSignSelected;
     }
 
+    public static void setIsSignSelected(boolean b) {
+        isSignSelected = b;
+    }
+
     @FXML
     public void cancel() {
         Main.getStage().getScene().setRoot(Main.getMenu());
@@ -149,6 +153,7 @@ public class ProfileController {
     }
 
     public static AstroSign getSign() {
+        sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
 
         return sign;
 

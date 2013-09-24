@@ -16,7 +16,7 @@ import utils.Utils;
  */
 public class ZodController {
 
-    AstroSign sign = ProfileController.getSign();
+    AstroSign sign;
 
     @FXML
     private ImageView bgLogo;
@@ -54,6 +54,7 @@ public class ZodController {
 
     @FXML
     public void refresh() {
+        sign = LoginController.getSign();
         bgLogo.setImage(sign.getZodiacImage());
         rangeText.setText(sign.getBirthYearString());
         elementText.setText(sign.getElement().toString());

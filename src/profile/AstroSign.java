@@ -101,7 +101,6 @@ public class AstroSign {
 
     public AstroSign(int sign) {
         this.sign = sign;
-        props.setProperty("astrology sign", "100");
 
     }
 
@@ -110,9 +109,10 @@ public class AstroSign {
     }
 
     public void update() {
+        sign = Integer.parseInt(props.getProperty("astrology sign"));
+
         setQuat(sign);
         setElement(sign);
-
     }
 
     public void saveProp() {
