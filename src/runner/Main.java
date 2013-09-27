@@ -18,19 +18,19 @@ public class Main extends Application {
      */
 
     //Root for all the Scenes
-    private static Parent reading;
-    private static Parent studyCards;
-    private static Parent quiz;
-    private static Parent lookAt;
-    private static Parent menu;
-    private static Parent tcs;
-    private static Parent tcsNoHelp;
-    private static Parent swordSpread;
-    private static Parent profile;
-    private static Parent zodiac;
-    private static Parent login;
-    private static Parent loginNew;
-    private static Parent loginConfirm;
+   private static Parent reading;
+   private static Parent studyCards;
+   private static Parent quiz;
+   private static Parent lookAt;
+   private static Parent menu;
+   private static Parent tcs;
+   private static Parent tcsNoHelp;
+   private static Parent swordSpread;
+   private static Parent profile;
+   private static Parent zodiac;
+   private static Parent login;
+   private static Parent loginNew;
+   private static Parent loginConfirm;
     //
 
 
@@ -44,7 +44,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
+             //featur
 
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
@@ -65,7 +65,7 @@ public class Main extends Application {
         //Set Stage so we can retrieve it later
         Main.ps = primaryStage;
 
-        Platform.setImplicitExit(true);
+//        Platform.setImplicitExit(true);
 
 //        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
 //            @Override
@@ -157,4 +157,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+
 }

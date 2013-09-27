@@ -90,7 +90,7 @@ public class Stage {
 
         if (stage == PROFILE) {
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getLookAt());
+            Main.getStage().getScene().setRoot(Main.getProfile());
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }

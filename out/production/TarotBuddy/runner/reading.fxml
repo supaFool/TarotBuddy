@@ -1,191 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?scenebuilder-background-color 0xffd466ff?>
-
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="315.0" prefWidth="899.0" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ReadingController">
-    <children>
-        <ImageView fitHeight="335.0" fitWidth="919.0" layoutX="-11.0" layoutY="-12.0" pickOnBounds="true"
-                   preserveRatio="false">
-            <image>
-                <Image url="@../card/image/decks/bg.png"/>
-            </image>
-        </ImageView>
-        <VBox id="VBox" alignment="CENTER" layoutX="3.0" layoutY="0.0" prefHeight="315.0" spacing="45.0">
-            <children>
-                <HBox id="HBox" alignment="CENTER" prefWidth="896.0" spacing="65.0">
-                    <children>
-                        <VBox id="VBox" alignment="CENTER" spacing="20.0">
-                            <children>
-                                <MenuButton fx:id="typeOfReading" focusTraversable="false" mnemonicParsing="false"
-                                            text="What Type Of Reading Do You Want">
-                                    <effect>
-                                        <Reflection/>
-                                    </effect>
-                                    <font>
-                                        <Font name="Microsoft YaHei" size="12.0" fx:id="x2"/>
-                                    </font>
-                                    <items>
-                                        <MenuItem mnemonicParsing="false" onAction="#wants3Card"
-                                                  text="3 Card - Past-Present-Future"/>
-                                        <MenuItem mnemonicParsing="false" onAction="#wantsSword" text="7 Card - Sword"/>
-                                        <MenuItem mnemonicParsing="false" text="More Coming Soon!!!"/>
-                                    </items>
-                                </MenuButton>
-                                <HBox id="HBox" alignment="CENTER" spacing="5.0">
-                                    <children>
-                                        <ToggleButton fx:id="helpToggle" focusTraversable="false" font="$x2"
-                                                      mnemonicParsing="false" onAction="#setHelp"
-                                                      text="Reading Helper Enabled">
-                                            <effect>
-                                                <Reflection/>
-                                            </effect>
-                                            <tooltip>
-                                                <Tooltip
-                                                        text="Enable to show guides for reading the spread and the cards"/>
-                                            </tooltip>
-                                        </ToggleButton>
-                                        <CheckBox fx:id="invert" mnemonicParsing="false" onAction="#invertSelected"
-                                                  text="Reversals">
-                                            <textFill>
-                                                <Color blue="0.000" green="0.960" red="1.000" fx:id="x3"/>
-                                            </textFill>
-                                        </CheckBox>
-                                    </children>
-                                </HBox>
-                            </children>
-                            <effect>
-                                <Lighting>
-                                    <bumpInput>
-                                        <Shadow/>
-                                    </bumpInput>
-                                    <light>
-                                        <javafx.scene.effect.Light.Distant color="#ffdf63"/>
-                                    </light>
-                                </Lighting>
-                            </effect>
-                        </VBox>
-                        <GridPane prefHeight="76.0" prefWidth="270.0">
-                            <children>
-                                <RadioButton fx:id="wiaChoose" mnemonicParsing="false" onAction="#flash1910"
-                                             selected="true" text="1910 Deck" textFill="$x3" GridPane.columnIndex="0"
-                                             GridPane.rowIndex="0">
-                                    <effect>
-                                        <Reflection/>
-                                    </effect>
-                                    <toggleGroup>
-                                        <ToggleGroup fx:id="deck"/>
-                                    </toggleGroup>
-                                </RadioButton>
-                                <RadioButton fx:id="mercChoose" mnemonicParsing="false" onAction="#flashMerc"
-                                             selected="false" text="Marseilles Deck" textFill="$x3" toggleGroup="$deck"
-                                             GridPane.columnIndex="0" GridPane.rowIndex="1">
-                                    <effect>
-                                        <Reflection/>
-                                    </effect>
-                                </RadioButton>
-                                <RadioButton fx:id="wiaArtChoose" mnemonicParsing="false" onAction="#flash1910Art"
-                                             selected="false" text="1910 Art Variation" textFill="$x3"
-                                             toggleGroup="$deck" GridPane.columnIndex="0" GridPane.rowIndex="2">
-                                    <effect>
-                                        <Reflection/>
-                                    </effect>
-                                </RadioButton>
-                                <RadioButton mnemonicParsing="false" text="Mantenga 50 Card" textAlignment="CENTER"
-                                             textFill="$x3" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-                            </children>
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0"
-                                                   prefWidth="132.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0"
-                                                   prefWidth="138.0"/>
-                            </columnConstraints>
-                            <effect>
-                                <Lighting diffuseConstant="1.4444444444444444" specularConstant="0.0"
-                                          specularExponent="4.761904761904763" surfaceScale="1.896825396825397">
-                                    <bumpInput>
-                                        <Shadow/>
-                                    </bumpInput>
-                                    <light>
-                                        <javafx.scene.effect.Light.Distant color="#e4ff72"/>
-                                    </light>
-                                </Lighting>
-                            </effect>
-                            <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                            </rowConstraints>
-                        </GridPane>
-                    </children>
-                </HBox>
-                <Text fx:id="selection" fill="$x3" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0"
-                      text="" textAlignment="CENTER">
-                    <effect>
-                        <Reflection/>
-                    </effect>
-                    <font>
-                        <Font size="20.0"/>
-                    </font>
-                </Text>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="899.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ReadingController">
+  <children>
+    <ImageView fitHeight="335.0" fitWidth="919.0" layoutX="-11.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="false">
+      <image>
+        <Image url="@../card/image/decks/bg.png" />
+      </image>
+    </ImageView>
+    <VBox id="VBox" alignment="CENTER" layoutX="3.0" layoutY="0.0" prefHeight="315.0" spacing="45.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER" prefWidth="896.0" spacing="65.0">
+          <children>
+            <VBox id="VBox" alignment="CENTER" spacing="20.0">
+              <children>
+                <MenuButton fx:id="typeOfReading" focusTraversable="false" mnemonicParsing="false" text="What Type Of Reading Do You Want">
+                  <effect>
+                    <Reflection />
+                  </effect>
+                  <font>
+                    <Font name="Microsoft YaHei" size="12.0" fx:id="x2" />
+                  </font>
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#wants3Card" text="3 Card - Past-Present-Future" />
+                    <MenuItem mnemonicParsing="false" onAction="#wantsSword" text="7 Card - Sword" />
+                    <MenuItem mnemonicParsing="false" text="More Coming Soon!!!" />
+                  </items>
+                </MenuButton>
                 <HBox id="HBox" alignment="CENTER" spacing="5.0">
-                    <children>
-                        <Button focusTraversable="false" font="$x2" mnemonicParsing="false" onAction="#close"
-                                text="Home">
-                            <effect>
-                                <DropShadow offsetX="5.0" offsetY="5.0">
-                                    <color>
-                                        <Color blue="0.392" green="0.392" red="0.392" fx:id="x1"/>
-                                    </color>
-                                </DropShadow>
-                            </effect>
-                        </Button>
-                        <Button focusTraversable="false" mnemonicParsing="false" onAction="#getReading"
-                                text="Get Reading" textAlignment="LEFT">
-                            <effect>
-                                <DropShadow color="$x1" offsetX="5.0" offsetY="5.0"/>
-                            </effect>
-                            <font>
-                                <Font name="Microsoft YaHei UI" size="12.0"/>
-                            </font>
-                        </Button>
-                        <HBox id="HBox" alignment="CENTER" spacing="5.0">
-                            <children>
-                                <Button focusTraversable="false" font="$x2" mnemonicParsing="false" onAction="#exit"
-                                        text="Exit"/>
-                            </children>
-                            <padding>
-                                <Insets left="15.0"/>
-                            </padding>
-                        </HBox>
-                    </children>
-                    <effect>
-                        <Lighting diffuseConstant="0.8888888888888888" specularConstant="0.15714285714285714"
-                                  specularExponent="13.650793650793652" surfaceScale="2.2936507936507935">
-                            <bumpInput>
-                                <Shadow/>
-                            </bumpInput>
-                            <light>
-                                <javafx.scene.effect.Light.Distant color="#ffa900"/>
-                            </light>
-                        </Lighting>
-                    </effect>
+                  <children>
+                    <ToggleButton fx:id="helpToggle" focusTraversable="false" font="$x2" mnemonicParsing="false" onAction="#setHelp" text="Reading Helper Enabled">
+                      <effect>
+                        <Reflection />
+                      </effect>
+                      <tooltip>
+                        <Tooltip text="Enable to show guides for reading the spread and the cards" />
+                      </tooltip>
+                    </ToggleButton>
+                    <CheckBox fx:id="invert" mnemonicParsing="false" onAction="#invertSelected" text="Reversals">
+                      <textFill>
+                        <Color blue="0.000" green="0.960" red="1.000" fx:id="x3" />
+                      </textFill>
+                    </CheckBox>
+                  </children>
                 </HBox>
-            </children>
-        </VBox>
-    </children>
-    <padding>
-        <Insets right="15.0" top="15.0"/>
-    </padding>
+              </children>
+              <effect>
+                <Lighting>
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant color="#ffdf63" />
+                  </light>
+                </Lighting>
+              </effect>
+            </VBox>
+            <GridPane prefHeight="76.0" prefWidth="270.0">
+              <children>
+                <RadioButton fx:id="wiaChoose" mnemonicParsing="false" onAction="#flash1910" selected="true" text="1910 Deck" textFill="$x3" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <effect>
+                    <Reflection />
+                  </effect>
+                  <toggleGroup>
+                    <ToggleGroup fx:id="deck" />
+                  </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="mercChoose" mnemonicParsing="false" onAction="#flashMerc" selected="false" text="Marseilles Deck" textFill="$x3" toggleGroup="$deck" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <effect>
+                    <Reflection />
+                  </effect>
+                </RadioButton>
+                <RadioButton fx:id="wiaArtChoose" mnemonicParsing="false" onAction="#flash1910Art" selected="false" text="1910 Art Variation" textFill="$x3" toggleGroup="$deck" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <effect>
+                    <Reflection />
+                  </effect>
+                </RadioButton>
+                <RadioButton mnemonicParsing="false" text="Mantenga 50 Card" textAlignment="CENTER" textFill="$x3" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="132.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="138.0" />
+              </columnConstraints>
+              <effect>
+                <Lighting diffuseConstant="1.4444444444444444" specularConstant="0.0" specularExponent="4.761904761904763" surfaceScale="1.896825396825397">
+                  <bumpInput>
+                    <Shadow />
+                  </bumpInput>
+                  <light>
+                    <javafx.scene.effect.Light.Distant color="#e4ff72" />
+                  </light>
+                </Lighting>
+              </effect>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+        </HBox>
+        <Text fx:id="selection" fill="$x3" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER">
+          <effect>
+            <Reflection />
+          </effect>
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Text>
+        <HBox id="HBox" alignment="CENTER" spacing="5.0">
+          <children>
+            <Button focusTraversable="false" font="$x2" mnemonicParsing="false" onAction="#close" text="Home">
+              <effect>
+                <DropShadow offsetX="5.0" offsetY="5.0">
+                  <color>
+                    <Color blue="0.392" green="0.392" red="0.392" fx:id="x1" />
+                  </color>
+                </DropShadow>
+              </effect>
+            </Button>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#getReading" text="Get Reading" textAlignment="LEFT">
+              <effect>
+                <DropShadow color="$x1" offsetX="5.0" offsetY="5.0" />
+              </effect>
+              <font>
+                <Font name="Microsoft YaHei UI" size="12.0" />
+              </font>
+            </Button>
+            <HBox id="HBox" alignment="CENTER" spacing="5.0">
+              <children>
+                <Button focusTraversable="false" font="$x2" mnemonicParsing="false" onAction="#exit" text="Exit" />
+              </children>
+              <padding>
+                <Insets left="15.0" />
+              </padding>
+            </HBox>
+          </children>
+          <effect>
+            <Lighting diffuseConstant="0.8888888888888888" specularConstant="0.15714285714285714" specularExponent="13.650793650793652" surfaceScale="2.2936507936507935">
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant color="#33ffed" />
+              </light>
+            </Lighting>
+          </effect>
+        </HBox>
+      </children>
+    </VBox>
+  </children>
+  <padding>
+    <Insets right="15.0" top="15.0" />
+  </padding>
 </AnchorPane>
