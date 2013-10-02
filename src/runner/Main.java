@@ -3,6 +3,7 @@ package runner;
 import card.CardData;
 import javafx.application.Application;
 import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,30 +12,36 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import javax.swing.*;
+import java.applet.Applet;
+import java.io.IOException;
+
 public class Main extends Application {
+
 
     /**
      * I guess you have to initialize all .fxml in menu class
      */
 
     //Root for all the Scenes
-   private static Parent reading;
-   private static Parent studyCards;
-   private static Parent quiz;
-   private static Parent lookAt;
-   private static Parent menu;
-   private static Parent tcs;
-   private static Parent tcsNoHelp;
-   private static Parent swordSpread;
-   private static Parent profile;
-   private static Parent zodiac;
-   private static Parent login;
-   private static Parent loginNew;
-   private static Parent loginConfirm;
+    private static Parent reading;
+    private static Parent studyCards;
+    private static Parent quiz;
+    private static Parent lookAt;
+    private static Parent menu;
+    private static Parent tcs;
+    private static Parent tcsNoHelp;
+    private static Parent swordSpread;
+    private static Parent profile;
+    private static Parent zodiac;
+    private static Parent login;
+    private static Parent loginNew;
+    private static Parent loginConfirm;
     //
 
 
     private static Stage ps;
+
 
 
     private static double version = 1.0;
@@ -44,9 +51,29 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-             //featur
+        //featur
+
 
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
+        initFXML();
+
+
+        //Set Stage so we can retrieve it later
+        Main.ps = primaryStage;
+
+
+
+        //set stage props
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+//        primaryStage.setFullScreen(true);
+        primaryStage.setResizable(false);
+        primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS, CardData.MERC_DECK)));
+        primaryStage.setTitle("Tarot Buddy");
+        primaryStage.setScene(new Scene(login, Color.BLACK));
+        primaryStage.show();
+    }
+
+    private void initFXML() throws IOException {
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
         reading = FXMLLoader.load(getClass().getResource("reading.fxml"));
         studyCards = FXMLLoader.load(getClass().getResource("study.fxml"));
@@ -60,28 +87,7 @@ public class Main extends Application {
         login = FXMLLoader.load(getClass().getResource("login.fxml"));
         loginNew = FXMLLoader.load(getClass().getResource("loginNewProfile.fxml"));
         loginConfirm = FXMLLoader.load(getClass().getResource("loginConfirm.fxml"));
-
-
-        //Set Stage so we can retrieve it later
-        Main.ps = primaryStage;
-
-//        Platform.setImplicitExit(true);
-
-//        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-//            @Override
-//            public void handle(WindowEvent windowEvent) {
-//                props.saveUserInfo("Erick");
-//            }
-//        });
-
-        //set stage props
-        primaryStage.initStyle(StageStyle.UNDECORATED);
-//        primaryStage.setFullScreen(true);
-        primaryStage.setResizable(false);
-        primaryStage.getIcons().add(new Image(CardData.getImageFile(CardData.THE_MAGUS, CardData.MERC_DECK)));
-        primaryStage.setTitle("Tarot Buddy");
-        primaryStage.setScene(new Scene(login, Color.BLACK));
-        primaryStage.show();
+        System.out.println("Loaded FXML");
     }
 
 
@@ -156,7 +162,10 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+
+
     }
+
 
 
 }

@@ -17,11 +17,11 @@ public class Clip {
 
     //Sound used for scroll menu
     public static AudioClip getScroll_a() {
-        return new AudioClip("sound/button/dropdown.wav");
+        return new AudioClip("src/sound/button/dropdown.wav");
     }
 
     public static AudioClip getButtonClick_a() {
-        return new AudioClip("/sound/button/click.wav");
+        return new AudioClip("src/sound/button/click.wav");
     }
 
 }

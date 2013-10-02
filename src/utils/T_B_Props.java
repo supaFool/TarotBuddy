@@ -35,6 +35,7 @@ public class T_B_Props extends Properties {
     }
 
     private void initProperties(String[] pNames) {
+
         for (int x = 0; x < pNames.length; x++) {
             setProperty(pNames[x], UNKNOWN_FIELD);
         }
@@ -47,10 +48,9 @@ public class T_B_Props extends Properties {
 
     public void saveUserInfo(String name) {
 
-        //todo Fix these so they save in a file and not just all over
-        //Will also have to fix the loading one
         try {
-            storeToXML(new FileOutputStream(name + ".tb"), null);
+            storeToXML(new FileOutputStream("src/" + name + ".tb"), null);
+
         } catch (IOException e) {
             System.err.println("Could not save " + name + ".tb");
         }
@@ -58,7 +58,7 @@ public class T_B_Props extends Properties {
 
     public void loadUserInfo(String name) throws IOException {
 
-        loadFromXML(new FileInputStream(name + ".tb"));
+        loadFromXML(new FileInputStream("src/" + name + ".tb"));
 
     }
 }

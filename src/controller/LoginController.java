@@ -9,6 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import profile.AstroSign;
+import runner.Main;
+import sound.Clip;
 import utils.T_B_Props;
 
 import java.io.IOException;
@@ -103,7 +105,6 @@ public class LoginController {
         String pw2 = newPw2.getText();
         String name = newUsername.getText();
 
-
         if (pw1.matches("") || pw2.matches("") || name.matches("")) {
             flashSelection("Fields are empty");
         } else {
@@ -113,6 +114,7 @@ public class LoginController {
                 props.saveUserInfo(name);
                 sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
                 Stage.setStage(Stage.PROFILE);
+
             } else {
                 flashSelection("Passwords did not match");
             }
