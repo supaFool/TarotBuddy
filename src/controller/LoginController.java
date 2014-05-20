@@ -30,27 +30,51 @@ public class LoginController {
 
     public String password;
 
+    /**
+     * flashes if something goes wrong with login
+     */
     @FXML
     private Text loginError;
 
+    /**
+     * Field for Username for existing users
+     */
     @FXML
     private TextField usernameField;
 
+    /**
+     * Field for Password for existing users
+     */
     @FXML
     private PasswordField passwordField;
 
+    /**
+     * Field for Username when creating a new account
+     */
     @FXML
     private TextField newUsername;
 
+    /**
+     * Field for desired password while creating a new account
+     */
     @FXML
     private PasswordField newPw1;
+
+    /**
+     * Field for desired password verification while creating a new account
+     */
     @FXML
     private PasswordField newPw2;
 
+    /**
+     * Called on login button event
+     */
     @FXML
     public void login() {
 
+        // Sets Password fields to NULL to ensure user puts in username and PW
         if (usernameField.getText() == null || passwordField.getText() == null) {
+            // if password or username is empty flash text
             flashSelection("Fields are empty");
         } else {
             try {
