@@ -79,6 +79,32 @@ public class SpreadController {
 
     }
 
+    /**
+     * flips over the Present Card
+     */
+    @FXML
+    public void showPresentCard() {
+
+    }
+
+    /**
+     * Checks to make sure the Present Card is showing,
+     * then flips over Past Card
+     */
+    @FXML
+    public void showPastCard() {
+
+    }
+
+    /**
+     * Checks to make sure the Present and Past cards are showing,
+     * then flips over Future Card
+     */
+    @FXML
+    public void showFutureCard() {
+
+    }
+
     @FXML
     public void showPresentMeaning() {
         if (presentIsShowing) {

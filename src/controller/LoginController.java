@@ -137,7 +137,7 @@ public class LoginController {
                 props.setProperty("password", pw1);
                 props.saveUserInfo(name);
                 sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
-                Stage.setStage(Stage.PROFILE);
+                Stage.setStage(Stage.MENU);
 
             } else {
                 flashSelection("Passwords did not match");
