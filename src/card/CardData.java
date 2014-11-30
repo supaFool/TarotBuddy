@@ -10,6 +10,10 @@ import java.util.Random;
  * Date: 8/30/13
  * Time: 3:09 AM
  */
+
+/**
+ * Class that holds Card names, Meanings, Images, etc...
+ */
 public class CardData {
 
     public static int WIADEC = 1910;
@@ -100,7 +104,7 @@ public class CardData {
     public static final int KNIGHT_OF_PENTACLES = 75;
     public static final int KING_OF_PENTACLES = 76;
     public static final int QUEEN_OF_PENTACLES = 77;
-    public static final int BACK_GROUND = 78;
+//    public static final int BACK_GROUND = 78;
 
     /**
      * Card In Depth Meaning
@@ -545,14 +549,14 @@ public class CardData {
             new ImageView(new Image("/card/image/ZSpBack.gif"))};
 
     //Keep track of which way the card is facing, prob going to use this in DealingLogic.initAnimation
-    private boolean hasBeenFlipped = false;
+//    private boolean hasBeenFlipped = false;
 
-    public boolean isHasBeenFlipped() {
-        return hasBeenFlipped;
-    }
+//    public boolean isHasBeenFlipped() {
+//        return hasBeenFlipped;
+//    }
 
-    public void setHasBeenFlipped(boolean b) {
-    }
+//    public void setHasBeenFlipped(boolean b) {
+//    }
 
 
     /**

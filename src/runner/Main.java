@@ -2,8 +2,6 @@ package runner;
 
 import card.CardData;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,8 +10,6 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
-import javax.swing.*;
-import java.applet.Applet;
 import java.io.IOException;
 
 public class Main extends Application {
@@ -26,7 +22,7 @@ public class Main extends Application {
     //Root for all the Scenes
     private static Parent reading;
     private static Parent studyCards;
-    private static Parent quiz;
+//    private static Parent quiz;
     private static Parent lookAt;
     private static Parent menu;
     private static Parent tcs;
@@ -36,22 +32,19 @@ public class Main extends Application {
     private static Parent zodiac;
     private static Parent login;
     private static Parent loginNew;
-    private static Parent loginConfirm;
-    //
+//    private static Parent loginConfirm;
+
 
 
     private static Stage ps;
 
 
 
-    private static double version = 1.0;
-    public static String ver = "Beta ver." + version;
-
-    public static String TITLE = "Tarot-Buddy " + ver;
+//    private static double version = 1.0;
+//    public static String ver = "Beta ver." + version;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //featur
 
 
         //Init all fxml, should not have to do this way i don't think, but i can figure it out
@@ -77,7 +70,7 @@ public class Main extends Application {
         menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
         reading = FXMLLoader.load(getClass().getResource("reading.fxml"));
         studyCards = FXMLLoader.load(getClass().getResource("study.fxml"));
-        quiz = FXMLLoader.load(getClass().getResource("quiz.fxml"));
+//        quiz = FXMLLoader.load(getClass().getResource("quiz.fxml"));
         tcs = FXMLLoader.load(getClass().getResource("TCS.fxml"));
         lookAt = FXMLLoader.load(getClass().getResource("lookAtDeck.fxml"));
         tcsNoHelp = FXMLLoader.load(getClass().getResource("TCSnoHelp.fxml"));
@@ -86,7 +79,7 @@ public class Main extends Application {
         zodiac = FXMLLoader.load(getClass().getResource("Zodiac.fxml"));
         login = FXMLLoader.load(getClass().getResource("login.fxml"));
         loginNew = FXMLLoader.load(getClass().getResource("loginNewProfile.fxml"));
-        loginConfirm = FXMLLoader.load(getClass().getResource("loginConfirm.fxml"));
+//        loginConfirm = FXMLLoader.load(getClass().getResource("loginConfirm.fxml"));
         System.out.println("Loaded FXML");
     }
 
@@ -114,9 +107,9 @@ public class Main extends Application {
         return tcsNoHelp;
     }
 
-    public static Parent getLogingConfirm() {
-        return loginConfirm;
-    }
+//    public static Parent getLogingConfirm() {
+//        return loginConfirm;
+//    }
 
     public static Parent getTCS() {
         return tcs;
@@ -146,12 +139,12 @@ public class Main extends Application {
     }
 
 
-    /**
-     * @return the quiz parent
-     */
-    public static Parent getQuiz() {
-        return quiz;
-    }
+//    /**
+//     * @return the quiz parent
+//     */
+//    public static Parent getQuiz() {
+//        return quiz;
+//    }
 
     /**
      * @return the lookAt parent
