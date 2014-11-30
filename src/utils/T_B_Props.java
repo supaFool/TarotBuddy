@@ -73,7 +73,7 @@ public class T_B_Props extends Properties {
      */
     public void loadUserInfo(String name) throws IOException {
 
-        loadFromXML(new FileInputStream("src/" + name + ".tb"));
+        loadFromXML(new FileInputStream("src/saveddata/" + name + ".tb"));
 
     }
 }

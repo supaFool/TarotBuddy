@@ -31,103 +31,103 @@ public class Stage {
         double width = 0;
         double height = 0;
         if (stage == LOGIN) {
-            Main.getStage().getScene().setFill(Utils.BG_COLOR);
             Main.getStage().getScene().setRoot(Main.getLogin());
+            Main.getStage().getScene().setFill(Utils.BG_COLOR);
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == LOG_IN_NEW_PROFILE) {
-            Main.getStage().getScene().setFill(Utils.BG_COLOR);
             Main.getStage().getScene().setRoot(Main.getNewProfile());
+            Main.getStage().getScene().setFill(Utils.BG_COLOR);
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == LOOK_AT_DECK) {
+            Main.getStage().getScene().setRoot(Main.getLookAt());
             width = Utils.LOOK_AT_DECK_SIZE[0];
             height = Utils.LOOK_AT_DECK_SIZE[1];
             Main.getStage().setWidth(Utils.LOOK_AT_DECK_SIZE[0]);
             Main.getStage().setHeight(Utils.LOOK_AT_DECK_SIZE[1]);
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getLookAt());
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == MENU) {
+            Main.getStage().getScene().setRoot(Main.getMenu());
             width = Utils.MENU_SIZE[0];
             height = Utils.MENU_SIZE[1];
             Main.getStage().setWidth(Utils.MENU_SIZE[0]);
             Main.getStage().setHeight(Utils.MENU_SIZE[1]);
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getMenu());
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == READING) {
+            Main.getStage().getScene().setRoot(Main.getReading());
             width = Utils.READING_SIZE[0];
             height = Utils.READING_SIZE[1];
             Main.getStage().setWidth(Utils.READING_SIZE[0]);
             Main.getStage().setHeight(Utils.READING_SIZE[1]);
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getReading());
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == STUDY) {
+            Main.getStage().getScene().setRoot(Main.getStudyCards());
             width = Utils.STUDY_SIZE[0];
             height = Utils.STUDY_SIZE[1];
             Main.getStage().setWidth(Utils.STUDY_SIZE[0]);
             Main.getStage().setHeight(Utils.STUDY_SIZE[1]);
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getStudyCards());
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == PROFILE) {
-            Main.getStage().getScene().setFill(Utils.BG_COLOR);
             Main.getStage().getScene().setRoot(Main.getProfile());
+            Main.getStage().getScene().setFill(Utils.BG_COLOR);
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == TCS) {
+            Main.getStage().getScene().setRoot(Main.getTCS());
             width = Utils.TCS_SIZE[0];
             height = Utils.TCS_SIZE[1];
             Main.getStage().setWidth(Utils.TCS_SIZE[0]);
             Main.getStage().setHeight(Utils.TCS_SIZE[1]);
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getTCS());
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == TCS_NO_HELP) {
+            Main.getStage().getScene().setRoot(Main.getTcsNoHelp());
             width = Utils.TCS_NO_HELP_SIZE[0];
             height = Utils.TCS_NO_HELP_SIZE[1];
             Main.getStage().setWidth(Utils.TCS_SIZE[0]);
             Main.getStage().setHeight(Utils.TCS_SIZE[1]);
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getTcsNoHelp());
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
 
         if (stage == ZODIAC) {
+            Main.getStage().getScene().setRoot(Main.getZodiac());
             width = Utils.ZODIAC_SIZE[0];
             height = Utils.ZODIAC_SIZE[1];
             Main.getStage().setWidth(Utils.ZODIAC_SIZE[0]);
             Main.getStage().setHeight(Utils.ZODIAC_SIZE[1]);
             Main.getStage().getScene().setFill(Utils.BG_COLOR);
-            Main.getStage().getScene().setRoot(Main.getZodiac());
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
-        getStageAni(width, height).play();
+       // getStageAni(width, height).play();
     }
 
     /**
