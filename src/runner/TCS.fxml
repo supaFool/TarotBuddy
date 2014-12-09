@@ -16,11 +16,6 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="778.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SpreadController">
     <children>
-        <ImageView fitHeight="727.0" fitWidth="778.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="false">
-            <image>
-                <Image url="@../card/image/TextureBlack.jpg" />
-            </image>
-        </ImageView>
         <HBox id="HBox" alignment="CENTER" layoutX="74.0" layoutY="32.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="630.0" spacing="15.0">
             <children>
                 <VBox id="VBox" alignment="CENTER" minWidth="-Infinity" prefWidth="200.0" spacing="5.0">
@@ -139,13 +134,6 @@
                     </content>
                 </ScrollPane>
             </children>
-            <effect>
-                <InnerShadow choke="0.5714285714285715" height="252.3516865079365" radius="126.33792162698413" width="255.0">
-                    <input>
-                        <SepiaTone />
-                    </input>
-                </InnerShadow>
-            </effect>
         </StackPane>
     </children>
 </AnchorPane>

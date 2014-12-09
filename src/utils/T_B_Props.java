@@ -1,9 +1,16 @@
 package utils;
 
+import jdk.nashorn.internal.runtime.Version;
+import sun.management.FileSystem;
+
+import javax.security.auth.login.Configuration;
+import javax.tools.JavaFileManager;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.logging.FileHandler;
 
 /**
  * User: Erick
@@ -74,6 +81,7 @@ public class T_B_Props extends Properties {
     public void loadUserInfo(String name) throws IOException {
 
         loadFromXML(new FileInputStream("src/saveddata/" + name + ".tb"));
+
 
     }
 }

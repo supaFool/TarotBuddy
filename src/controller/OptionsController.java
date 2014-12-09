@@ -46,6 +46,9 @@ public class OptionsController {
         OptionsController.isAnimated = isAnimated;
     }
 
+    /**
+     * Flashes a message on background animation toggle
+     */
     @FXML
     public void listenForAnimationSelection() {
         setIsAnimated(aniToggle.isSelected() ? false : true);

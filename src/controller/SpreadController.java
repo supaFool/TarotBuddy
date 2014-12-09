@@ -109,8 +109,12 @@ public class SpreadController {
     public void showPresentMeaning() {
         if (presentIsShowing) {
             if (help) {
-                meaningTitle.setText(CardData.getCardTitle(presentCardNumber));
-                meaningText.setText(CardData.getCardMeaning(presentCardNumber));
+                try {
+                    meaningTitle.setText(CardData.getCardTitle(presentCardNumber));
+                    meaningText.setText(CardData.getCardMeaning(presentCardNumber));
+                }catch (NullPointerException n){
+
+                }
             }
         }
     }
@@ -119,8 +123,12 @@ public class SpreadController {
     public void showPastMeaning() {
         if (pastIsShowing) {
             if (help) {
-                meaningTitle.setText(CardData.getCardTitle(pastCardNumber));
-                meaningText.setText(CardData.getCardMeaning(pastCardNumber));
+                try {
+                    meaningTitle.setText(CardData.getCardTitle(pastCardNumber));
+                    meaningText.setText(CardData.getCardMeaning(pastCardNumber));
+                }catch (NullPointerException n){
+
+                }
             }
         }
     }
@@ -129,8 +137,12 @@ public class SpreadController {
     public void showFutureMeaning() {
         if (futureIsShowing) {
             if (help) {
+                try {
                 meaningTitle.setText(CardData.getCardTitle(futureCardNumber));
                 meaningText.setText(CardData.getCardMeaning(futureCardNumber));
+                }catch (NullPointerException n){
+
+                }
             }
         }
     }
@@ -221,9 +233,9 @@ public class SpreadController {
             }
             meanings[counter] = CardData.getCardMeaning(pastCardNumber);
 
-            if (invert && r.nextBoolean()) {
-                past.setRotate(180);
-            }
+//            if (invert && r.nextBoolean()) {
+//                past.setRotate(180);
+//            }
             pastIsShowing = true;
 
             System.out.println("Past card inverted: " + c3inverted);
@@ -251,9 +263,9 @@ public class SpreadController {
                 KeyFrame f2 = new KeyFrame(Duration.millis(350), v2);
                 t.getKeyFrames().addAll(f1, f2);
                 meanings[counter] = CardData.getCardMeaning(presentCardNumber);
-                if (invert && r.nextBoolean()) {
-                    present.setRotate(180);
-                }
+//                if (invert && r.nextBoolean()) {
+//                    present.setRotate(180);
+//                }
                 presentIsShowing = true;
                 System.out.println("Present card inverted: " + c2inverted);
             }
@@ -279,9 +291,9 @@ public class SpreadController {
             meanings[counter] = CardData.getCardMeaning(futureCardNumber);
 
 
-            if (invert && r.nextBoolean()) {
-                future.setRotate(180);
-            }
+//            if (invert && r.nextBoolean()) {
+//                future.setRotate(180);
+//            }
 
             futureIsShowing = true;
             System.out.println("Future card inverted" + c3inverted);
