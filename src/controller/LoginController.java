@@ -9,8 +9,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 import profile.AstroSign;
-import runner.Main;
-import sound.Clip;
 import utils.T_B_Props;
 
 import java.io.IOException;
@@ -135,6 +133,9 @@ public class LoginController {
             props.setProperty("name", newUsername.getText());
             if (pw1.matches(pw2)) {
                 props.setProperty("password", pw1);
+
+                //GIVE OPTION TO SWITCH SIGNING IN OFF
+
                 props.saveUserInfo(name);
                 sign = new AstroSign(Integer.parseInt(props.getProperty("astrology sign")));
                 Stage.setStage(Stage.MENU);

@@ -147,6 +147,9 @@ public class SpreadController {
         }
     }
 
+    /**
+     * Done with Reading
+     */
     @FXML
     public void done() {
 
@@ -183,6 +186,9 @@ public class SpreadController {
             meaningText.setText(null);
             meaningTitle.setText(null);
         }
+        Integer readingcounter = Integer.parseInt(LoginController.getProps().getProperty("spreads looked at"));
+        readingcounter++;
+        LoginController.getProps().setProperty("spreads looked at", readingcounter.toString());
 
     }
 

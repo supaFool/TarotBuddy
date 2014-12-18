@@ -1,16 +1,9 @@
 package utils;
 
-import jdk.nashorn.internal.runtime.Version;
-import sun.management.FileSystem;
-
-import javax.security.auth.login.Configuration;
-import javax.tools.JavaFileManager;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
-import java.util.logging.FileHandler;
 
 /**
  * User: Erick
@@ -18,6 +11,7 @@ import java.util.logging.FileHandler;
  * Time: 12:09 AM
  */
 public class T_B_Props extends Properties {
+
     private String[] propNames;
     private String UNKNOWN_FIELD = "Unknown";
 
@@ -38,12 +32,16 @@ public class T_B_Props extends Properties {
                 "lucky number",
                 "unlucky number",
                 "favorite color",
-                "rating"
+                "rating",
+                "spreads looked at"
 
         };
         initProperties(propNames);
     }
 
+    public String[] getPropNames() {
+        return propNames;
+    }
     private void initProperties(String[] pNames) {
 
         for (String pName : pNames) {
@@ -53,6 +51,7 @@ public class T_B_Props extends Properties {
         setProperty("astrology sign", "100");
         setProperty("name", "default");
         setProperty("rating", "1");
+        setProperty("spreads looked at", "0");
 
     }
 

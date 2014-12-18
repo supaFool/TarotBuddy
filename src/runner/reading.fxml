@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?scenebuilder-background-color 0xffd466ff?>
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="899.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.ReadingController">
   <children>
     <ImageView fitHeight="335.0" fitWidth="919.0" layoutX="-11.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="false">
