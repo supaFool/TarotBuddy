@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?scenebuilder-background-color 0x000000ff?>
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.effect.Light.Point?>
@@ -16,16 +13,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 <StackPane id="StackPane" minHeight="600.0" prefHeight="620.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
     <children>
-        <ImageView fitHeight="620.0" fitWidth="320.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="620.0" fitWidth="320.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../card/image/decks/merc/22.jpg" />
             </image>
-         <effect>
-            <GaussianBlur radius="14.35" />
-         </effect>
         </ImageView>
         <VBox alignment="CENTER" prefHeight="620.0" prefWidth="262.0" spacing="15.0">
             <children>
