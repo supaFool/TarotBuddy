@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import scenes.SceneController;
 
 import java.io.IOException;
 
@@ -32,6 +33,7 @@ public class Main extends Application {
     private static Parent zodiac;
     private static Parent login;
     private static Parent loginNew;
+    boolean isTest;
 //    private static Parent loginConfirm;
 
 
@@ -67,26 +69,40 @@ public class Main extends Application {
     }
 
     private void initFXML() throws IOException {
-        menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
-        reading = FXMLLoader.load(getClass().getResource("reading.fxml"));
-        studyCards = FXMLLoader.load(getClass().getResource("study.fxml"));
+        isTest = false;
+        {
+            System.out.println("Test is " + isTest);
+            if (!isTest) {
+                menu = FXMLLoader.load(getClass().getResource("menu.fxml"));
+                reading = FXMLLoader.load(getClass().getResource("reading.fxml"));
+                studyCards = FXMLLoader.load(getClass().getResource("study.fxml"));
 //        quiz = FXMLLoader.load(getClass().getResource("quiz.fxml"));
-        tcs = FXMLLoader.load(getClass().getResource("TCS.fxml"));
-        lookAt = FXMLLoader.load(getClass().getResource("lookAtDeck.fxml"));
-        tcsNoHelp = FXMLLoader.load(getClass().getResource("TCSnoHelp.fxml"));
-        swordSpread = FXMLLoader.load(getClass().getResource("SwordSpread.fxml"));
-        profile = FXMLLoader.load(getClass().getResource("Profile.fxml"));
-        zodiac = FXMLLoader.load(getClass().getResource("Zodiac.fxml"));
-        login = FXMLLoader.load(getClass().getResource("login.fxml"));
-        loginNew = FXMLLoader.load(getClass().getResource("loginNewProfile.fxml"));
+                tcs = FXMLLoader.load(getClass().getResource("TCS.fxml"));
+                lookAt = FXMLLoader.load(getClass().getResource("lookAtDeck.fxml"));
+                tcsNoHelp = FXMLLoader.load(getClass().getResource("TCSnoHelp.fxml"));
+                swordSpread = FXMLLoader.load(getClass().getResource("SwordSpread.fxml"));
+                profile = FXMLLoader.load(getClass().getResource("Profile.fxml"));
+                zodiac = FXMLLoader.load(getClass().getResource("Zodiac.fxml"));
+                login = FXMLLoader.load(getClass().getResource("login.fxml"));
+                loginNew = FXMLLoader.load(getClass().getResource("loginNewProfile.fxml"));
 //        loginConfirm = FXMLLoader.load(getClass().getResource("loginConfirm.fxml"));
-        System.out.println("Loaded FXML");
+                System.out.println("Loaded FXML");
+                SceneController sc = new SceneController();
+            }else{
+                System.out.println("Exiting Program...test booleans are colliding");
+                System.exit(1);
+            }
+        }
     }
 
 
     /**
      * @return the reading parent
+     *
+     *
      */
+
+    //TODO add to array
     public static Parent getReading() {
         return reading;
     }

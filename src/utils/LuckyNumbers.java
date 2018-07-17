@@ -15,6 +15,7 @@ public class LuckyNumbers {
              luckyNumbers[x] = new Random().nextInt();
          }
         return luckyNumbers;
+//         TEST
     }
 
 }
