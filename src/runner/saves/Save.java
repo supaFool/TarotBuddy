@@ -8,6 +8,8 @@ import java.util.logging.SimpleFormatter;
 
 /**
  * Created by supaFool on 7/19/2018.
+ *
+ * Newly added feature, Is on the todo To fix this.
  */
 public class Save {
     private static Logger logger;
