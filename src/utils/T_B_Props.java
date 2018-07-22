@@ -37,6 +37,7 @@ public class T_B_Props extends Properties {
 
         };
         initProperties(propNames);
+        System.out.println("Props Loaded");
     }
 
     public String[] getPropNames() {

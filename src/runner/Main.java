@@ -14,7 +14,8 @@ import scenes.SceneController;
 import java.io.IOException;
 
 public class Main extends Application {
-
+//TODO Make a saving class
+    //TODO Optimize load files
 
     /**
      * I guess you have to initialize all .fxml in menu class
@@ -87,11 +88,11 @@ public class Main extends Application {
                 loginNew = FXMLLoader.load(getClass().getResource("loginNewProfile.fxml"));
 //        loginConfirm = FXMLLoader.load(getClass().getResource("loginConfirm.fxml"));
                 System.out.println("Loaded FXML");
-                SceneController sc = new SceneController();
+//                SceneController sc = new SceneController();
             }else{
                 System.out.println("Exiting Program...test booleans are colliding");
                 System.exit(1);
-            }
+            } 
         }
     }
 

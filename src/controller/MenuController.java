@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuButton;
 import runner.Main;
+import runner.saves.Save;
 import utils.Utils;
 
 /**
@@ -43,6 +44,9 @@ public class MenuController {
         wantsQuiz = false;
         wantsLookAt = false;
         wantsAstrology = false;
+
+        System.out.println("Saving...");
+        new Save();
     }
 
     @FXML
