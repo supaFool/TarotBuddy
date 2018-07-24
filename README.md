@@ -1,9 +1,9 @@
-TarotBuddy Beta
+TarotBuddy Alpha
 ==================
 Tarot Buddy Beta. Build - Fortune Telling Software.
 
 # Picking up where I let off.
-### If you already have the app then you are going to be impressed. There are so many new thing coming. Cureently I am working on getting all the loading done properly. Thats the biggest holdup.
+### Got Everything ready for OpenGl. This is going to make TB a lot more resource friendly. 
 
 ## Features
 >* Personalized Tarot Reading
