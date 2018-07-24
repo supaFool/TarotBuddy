@@ -2,6 +2,8 @@ package opengl;
 
 
 import org.newdawn.slick.*;
+import org.newdawn.slick.geom.Circle;
+import org.newdawn.slick.geom.Shape;
 
 import java.util.logging.Level;
         import java.util.logging.Logger;
@@ -12,21 +14,23 @@ import java.util.logging.Level;
 
 public class Game extends BasicGame
 {
+
     public Game(String gamename)
     {
         super(gamename);
     }
 
     @Override
-    public void init(GameContainer gc) throws SlickException {}
+    public void init(GameContainer gc) throws SlickException {
+    }
 
     @Override
-    public void update(GameContainer gc, int i) throws SlickException {}
+    public void update(GameContainer gc, int i) throws SlickException {
+    }
 
     @Override
     public void render(GameContainer gc, Graphics g) throws SlickException
     {
-        g.drawString("Howdy!", 100, 10);
     }
 
     public static void main(String[] args)
@@ -34,7 +38,7 @@ public class Game extends BasicGame
         try
         {
             AppGameContainer appgc;
-            appgc = new AppGameContainer(new Game("Simple Slick Game"));
+            appgc = new AppGameContainer(new Game("Tarot Buddy"));
             appgc.setDisplayMode(640, 480, false);
             appgc.start();
         }

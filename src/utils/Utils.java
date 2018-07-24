@@ -11,6 +11,7 @@ import javafx.scene.paint.Color;
 public class Utils {
     public static Color BG_COLOR = Color.DARKCYAN;
     public static Color READING_COLOR = Color.BLACK;
+    public static String TITLE = "Tarot Buddy";
 
     // Only need in windowed
     public static int FRAME_OFFSET = 0;
