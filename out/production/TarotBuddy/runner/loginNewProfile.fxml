@@ -5,7 +5,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
-<?import javafx.scene.effect.Light.Point?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -13,68 +12,81 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<StackPane id="StackPane" minHeight="600.0" prefHeight="620.0" prefWidth="320.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<StackPane xmlns:fx="http://javafx.com/fxml/1" id="StackPane" minHeight="600.0" prefHeight="620.0" prefWidth="320.0"
+           xmlns="http://javafx.com/javafx/8" fx:controller="controller.LoginController">
     <children>
         <ImageView fitHeight="620.0" fitWidth="320.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../card/image/decks/merc/22.jpg" />
+                <Image url="@../card/image/decks/merc/22.jpg"/>
             </image>
         </ImageView>
         <VBox alignment="CENTER" prefHeight="620.0" prefWidth="262.0" spacing="15.0">
             <children>
-                <Text fill="#ff7a00" fontSmoothingType="LCD" opacity="1.0" scaleX="1.0" scaleY="1.1471937354924977" strokeType="OUTSIDE" strokeWidth="0.0" text="Tarot-Buddy" textAlignment="CENTER">
+                <Text fill="#ff7a00" fontSmoothingType="LCD" opacity="1.0" scaleX="1.0" scaleY="1.1471937354924977"
+                      strokeType="OUTSIDE" strokeWidth="0.0" text="Tarot-Buddy" textAlignment="CENTER">
                     <effect>
-                        <Lighting diffuseConstant="1.35" specularConstant="1.51" specularExponent="1.78" surfaceScale="5.07">
+                        <Lighting diffuseConstant="1.35" specularConstant="1.51" specularExponent="1.78"
+                                  surfaceScale="5.07">
                             <bumpInput>
-                                <Shadow />
+                                <Shadow/>
                             </bumpInput>
                             <light>
-                                <javafx.scene.effect.Light.Point color="#ebd58b" x="10.0" y="10.0" z="10.0" />
+                                <javafx.scene.effect.Light.Point color="#ebd58b" x="10.0" y="10.0" z="10.0"/>
                             </light>
                         </Lighting>
                     </effect>
                     <font>
-                        <Font name="Traditional Arabic" size="50.0" />
+                        <Font name="Traditional Arabic" size="50.0"/>
                     </font>
                 </Text>
-                <TextField fx:id="newUsername" alignment="CENTER" focusTraversable="false" prefWidth="200.0" promptText="Please enter desired username">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <effect>
-                  <DropShadow height="23.97" radius="5.4925" spread="0.07" width="0.0" />
-               </effect></TextField>
-                <PasswordField fx:id="newPw1" alignment="CENTER" focusTraversable="false" prefWidth="200.0" promptText="Choose a password">
-               <effect>
-                  <DropShadow height="23.97" radius="5.4925" spread="0.07" width="0.0" />
-               </effect></PasswordField>
-                <PasswordField fx:id="newPw2" alignment="CENTER" focusTraversable="false" prefWidth="200.0" promptText="Confirm password">
-               <effect>
-                  <DropShadow height="23.97" radius="5.4925" spread="0.07" width="0.0" />
-               </effect></PasswordField>
+                <TextField fx:id="newUsername" alignment="CENTER" focusTraversable="false" prefWidth="200.0"
+                           promptText="Please enter desired username">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.07" width="0.0"/>
+                    </effect>
+                </TextField>
+                <PasswordField fx:id="newPw1" alignment="CENTER" focusTraversable="false" prefWidth="200.0"
+                               promptText="Choose a password">
+                    <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.07" width="0.0"/>
+                    </effect>
+                </PasswordField>
+                <PasswordField fx:id="newPw2" alignment="CENTER" focusTraversable="false" prefWidth="200.0"
+                               promptText="Confirm password">
+                    <effect>
+                        <DropShadow height="23.97" radius="5.4925" spread="0.07" width="0.0"/>
+                    </effect>
+                </PasswordField>
                 <HBox id="HBox" alignment="CENTER" spacing="66.0">
                     <children>
-                        <Button cancelButton="true" focusTraversable="false" mnemonicParsing="false" onMouseClicked="#back" text="Back">
+                        <Button cancelButton="true" focusTraversable="false" mnemonicParsing="false"
+                                onMouseClicked="#back" text="Back">
                             <effect>
-                                <ColorAdjust hue="0.2748091603053435" saturation="0.1832061068702291" />
+                                <ColorAdjust hue="0.2748091603053435" saturation="0.1832061068702291"/>
                             </effect>
                         </Button>
-                        <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#confirmNewAccount" text="Create Profile" />
+                        <Button focusTraversable="false" mnemonicParsing="false" onMouseClicked="#confirmNewAccount"
+                                text="Create Profile"/>
                     </children>
                     <effect>
-                        <Lighting diffuseConstant="2.0" specularConstant="1.553968253968254" specularExponent="14.920634920634921" surfaceScale="0.7857142857142857">
+                        <Lighting diffuseConstant="2.0" specularConstant="1.553968253968254"
+                                  specularExponent="14.920634920634921" surfaceScale="0.7857142857142857">
                             <bumpInput>
-                                <Shadow />
+                                <Shadow/>
                             </bumpInput>
                             <light>
-                                <javafx.scene.effect.Light.Point color="#ffbc33" x="100.0" y="100.0" z="50.0" />
+                                <javafx.scene.effect.Light.Point color="#ffbc33" x="100.0" y="100.0" z="50.0"/>
                             </light>
                         </Lighting>
                     </effect>
                 </HBox>
-                <Text id="pwNoMatch" fx:id="loginError" fill="RED" fontSmoothingType="LCD" scaleX="1.0" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER">
+                <Text id="pwNoMatch" fx:id="loginError" fill="RED" fontSmoothingType="LCD" scaleX="1.0" scaleY="1.0"
+                      strokeType="OUTSIDE" strokeWidth="0.0" text="" textAlignment="CENTER">
                     <font>
-                        <Font size="25.0" />
+                        <Font size="25.0"/>
                     </font>
                 </Text>
             </children>

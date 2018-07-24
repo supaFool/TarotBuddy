@@ -12,6 +12,11 @@ import javafx.scene.text.Text;
 public class QuizController {
 
     private int questionNumber = 0;
+    /**
+     * The question info at bottom left of screen
+     */
+    @FXML
+    private Text qNumInfo;
 
     /**
      * Goes Home
@@ -36,10 +41,4 @@ public class QuizController {
     public void submit() {
 
     }
-
-    /**
-     * The question info at bottom left of screen
-     */
-    @FXML
-    private Text qNumInfo;
 }

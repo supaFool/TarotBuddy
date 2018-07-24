@@ -43,6 +43,7 @@ public class T_B_Props extends Properties {
     public String[] getPropNames() {
         return propNames;
     }
+
     private void initProperties(String[] pNames) {
 
         for (String pName : pNames) {
@@ -73,9 +74,7 @@ public class T_B_Props extends Properties {
     }
 
     /**
-     *
      * @param name Name of the .tb file you are needing
-     *
      * @throws IOException if no file is found with given parameter
      */
     public void loadUserInfo(String name) throws IOException {

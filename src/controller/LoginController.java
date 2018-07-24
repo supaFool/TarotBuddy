@@ -17,7 +17,7 @@ import java.io.IOException;
  * User: Erick
  * Date: 9/21/13
  * Time: 11:38 PM
- *
+ * <p>
  * TEST
  */
 public class LoginController {
@@ -25,11 +25,8 @@ public class LoginController {
 //    Test
 
     public static T_B_Props props = new T_B_Props();
-
-    private static AstroSign sign;
-
     public static String username;
-
+    private static AstroSign sign;
     public String password;
 
     /**
@@ -68,6 +65,14 @@ public class LoginController {
     @FXML
     private PasswordField newPw2;
 
+    public static AstroSign getSign() {
+        return sign;
+    }
+
+    public static T_B_Props getProps() {
+        return props;
+    }
+
     /**
      * Called on login button event
      */
@@ -98,10 +103,6 @@ public class LoginController {
 
     }
 
-    public static AstroSign getSign() {
-        return sign;
-    }
-
     private void flashSelection(String text) {
         loginError.setText(text);
         Timeline ani = new Timeline();
@@ -109,10 +110,6 @@ public class LoginController {
         KeyFrame fadeFrame = new KeyFrame(Duration.millis(7500), new KeyValue(loginError.opacityProperty(), 0.0f));
         ani.getKeyFrames().addAll(frame, fadeFrame);
         ani.play();
-    }
-
-    public static T_B_Props getProps() {
-        return props;
     }
 
     @FXML

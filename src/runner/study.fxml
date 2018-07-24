@@ -6,14 +6,12 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.effect.*?>
-<?import javafx.scene.effect.Light.Point?>
-<?import javafx.scene.effect.Light.Spot?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="650.12109375" prefWidth="675.0" xmlns:fx="http://javafx.com/fxml/1"
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="650.12109375" prefWidth="675.0"
             xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.LookAtController">
     <children>
         <ImageView fitHeight="650.12109375" fitWidth="675.0000305175781" layoutX="0.0" layoutY="0.0" pickOnBounds="true"

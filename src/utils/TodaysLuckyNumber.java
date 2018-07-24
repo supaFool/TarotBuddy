@@ -2,7 +2,7 @@ package utils;
 
 /**
  * Class to generate a single int as a lucky number for the day, Resets after 24 hours
- *
+ * <p>
  * Created by supafool on 12/17/2014.
  */
 public class TodaysLuckyNumber extends LuckyNumbers {

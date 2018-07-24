@@ -11,9 +11,9 @@ public class LuckyNumbers {
 
     public int[] getLuckyNumbers(int how_many_numbers) {
         luckyNumbers = new int[how_many_numbers];
-         for (int x = 0; x<how_many_numbers; x++) {
-             luckyNumbers[x] = new Random().nextInt();
-         }
+        for (int x = 0; x < how_many_numbers; x++) {
+            luckyNumbers[x] = new Random().nextInt();
+        }
         return luckyNumbers;
 //         TEST
     }

@@ -1,10 +1,6 @@
 package scenes;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by supaFool on 7/16/2018.
@@ -29,7 +25,7 @@ public class SceneController {
         init();
     }
 
-    private void init(){
+    private void init() {
         try {
             scenes = new int[AMOUNT_OF_SCENES];
             loadAllScenes();

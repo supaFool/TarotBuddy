@@ -13,20 +13,22 @@ import java.util.GregorianCalendar;
  */
 public class AstroSign {
 
-    public enum Quaternaries {
-        CARDINAL, FIXED, MUTABLE
-    }
-
-    public enum Element {
-        EARTH, FIRE, AIR, WATER
-    }
-
-    private T_B_Props props = LoginController.getProps();
-
-    private GregorianCalendar date;
-
-    private String NO_HOR_SET = "You do not currently have a saved sign";
-
+    /**
+     * int to get from arrays
+     */
+    public static int
+            ARIES = 0,
+            TAURUS = 1,
+            GEMINI = 2,
+            CANCER = 3,
+            LEO = 4,
+            VIRGO = 5,
+            LIBRA = 6,
+            SCORPIO = 7,
+            SAGITTARIUS = 8,
+            CAPRICORN = 9,
+            AQUARIUS = 10,
+            PISCES = 11;
     /**
      * String Arrays of all names
      */
@@ -44,7 +46,6 @@ public class AstroSign {
             "Aquarius",
             "Pisces"
     };
-
     protected String[] birthYearRange = new String[]{
             "March 21 to April 19",
             "April 20 to May 20",
@@ -59,7 +60,6 @@ public class AstroSign {
             "January 20 to February 18",
             "February 19 to March 20"
     };
-
     //Char of each sign
     protected String[] CHARACTERISTICS = new String[]{
             "Dynamic, Adventurous, Courageous, Confident, Energetic, Selfish, Impatient, Impulsive and Aggressive",
@@ -75,30 +75,26 @@ public class AstroSign {
             "Friendly, Loyal, Honest, Independent, Unemotional, Detached, Perverse and Unpredictable",
             "Compassionate, Spiritual, Emotional, Intuitive, Idealistic, Secretive, Vague and Weak-willed"
     };
-
-
-    /**
-     * int to get from arrays
-     */
-    public static int
-            ARIES = 0,
-            TAURUS = 1,
-            GEMINI = 2,
-            CANCER = 3,
-            LEO = 4,
-            VIRGO = 5,
-            LIBRA = 6,
-            SCORPIO = 7,
-            SAGITTARIUS = 8,
-            CAPRICORN = 9,
-            AQUARIUS = 10,
-            PISCES = 11;
-
+    private T_B_Props props = LoginController.getProps();
+    private GregorianCalendar date;
+    private String NO_HOR_SET = "You do not currently have a saved sign";
     private Integer sign = 100;
-
     private Quaternaries quat;
     private Element element;
-
+    private String[] loveSigns = new String[]{
+            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
+            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
+            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces"
+    };
     public AstroSign(int sign) {
         this.sign = sign;
 
@@ -118,38 +114,6 @@ public class AstroSign {
     public void saveProp() {
         props.setProperty("astrology sign", sign.toString());
         props.saveUserInfo(props.getProperty("name"));
-    }
-
-    private void setElement(int sign) {
-        //Categorize Elements
-        if (sign == ARIES || sign == LEO || sign == SAGITTARIUS) {
-            element = Element.FIRE;
-        }
-
-        if (sign == TAURUS || sign == VIRGO || sign == CAPRICORN) {
-            element = Element.EARTH;
-        }
-
-        if (sign == GEMINI || sign == LIBRA || sign == AQUARIUS) {
-            element = Element.AIR;
-        }
-
-        if (sign == CANCER || sign == SCORPIO || sign == PISCES) {
-            element = Element.WATER;
-        }
-    }
-
-    private void setQuat(int sign) {
-        //Categorize Quats
-        if (sign == ARIES || sign == CANCER || sign == CAPRICORN || sign == LIBRA) {
-            quat = Quaternaries.CARDINAL;
-        }
-        if (sign == TAURUS || sign == LEO || sign == SCORPIO || sign == AQUARIUS) {
-            quat = Quaternaries.FIXED;
-        }
-        if (sign == GEMINI || sign == VIRGO || sign == SAGITTARIUS || sign == PISCES) {
-            quat = Quaternaries.MUTABLE;
-        }
     }
 
     public String getCharacteristics() {
@@ -182,21 +146,6 @@ public class AstroSign {
         return i;
     }
 
-    private String[] loveSigns = new String[]{
-            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
-            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
-            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
-            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
-            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
-            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
-            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
-            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
-            "Fire and Air signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
-            "Earth and Water signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces",
-            "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
-            "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces"
-    };
-
     /**
      * @return the String of the current quat
      */
@@ -218,8 +167,40 @@ public class AstroSign {
         return quat;
     }
 
+    private void setQuat(int sign) {
+        //Categorize Quats
+        if (sign == ARIES || sign == CANCER || sign == CAPRICORN || sign == LIBRA) {
+            quat = Quaternaries.CARDINAL;
+        }
+        if (sign == TAURUS || sign == LEO || sign == SCORPIO || sign == AQUARIUS) {
+            quat = Quaternaries.FIXED;
+        }
+        if (sign == GEMINI || sign == VIRGO || sign == SAGITTARIUS || sign == PISCES) {
+            quat = Quaternaries.MUTABLE;
+        }
+    }
+
     public Element getElement() {
         return element;
+    }
+
+    private void setElement(int sign) {
+        //Categorize Elements
+        if (sign == ARIES || sign == LEO || sign == SAGITTARIUS) {
+            element = Element.FIRE;
+        }
+
+        if (sign == TAURUS || sign == VIRGO || sign == CAPRICORN) {
+            element = Element.EARTH;
+        }
+
+        if (sign == GEMINI || sign == LIBRA || sign == AQUARIUS) {
+            element = Element.AIR;
+        }
+
+        if (sign == CANCER || sign == SCORPIO || sign == PISCES) {
+            element = Element.WATER;
+        }
     }
 
     public String getBirthYearString() {
@@ -228,5 +209,13 @@ public class AstroSign {
 
     public String getBirthYearString(int sign) {
         return birthYearRange[sign];
+    }
+
+    public enum Quaternaries {
+        CARDINAL, FIXED, MUTABLE
+    }
+
+    public enum Element {
+        EARTH, FIRE, AIR, WATER
     }
 }

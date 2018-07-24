@@ -127,7 +127,7 @@ public class Stage {
             Main.getStage().getScene().setFill(Color.BLACK);
             Main.getStage().centerOnScreen();
         }
-       // getStageAni(width, height).play();
+        // getStageAni(width, height).play();
     }
 
     /**

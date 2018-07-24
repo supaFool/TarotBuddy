@@ -57,6 +57,14 @@ public class ProfileController {
     @FXML
     private RadioButton pisces;
 
+    public static boolean isSignSelected() {
+        return isSignSelected;
+    }
+
+    public static void setIsSignSelected(boolean b) {
+        isSignSelected = b;
+    }
+
     @FXML
     public void setSign() {
 
@@ -126,15 +134,6 @@ public class ProfileController {
 
         Stage.setStage(Stage.MENU);
 
-    }
-
-
-    public static boolean isSignSelected() {
-        return isSignSelected;
-    }
-
-    public static void setIsSignSelected(boolean b) {
-        isSignSelected = b;
     }
 
     @FXML

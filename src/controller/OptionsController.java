@@ -28,6 +28,11 @@ public class OptionsController {
     @FXML
     private Text optionConfirmText;
 
+    //Type of animation toggle
+    public static boolean isAnimated() {
+        return isAnimated;
+    }
+
     @FXML
     public void setBackGroundColor() {
         Utils.BG_COLOR = colorPicker.getValue();
@@ -53,10 +58,5 @@ public class OptionsController {
     public void listenForAnimationSelection() {
         setIsAnimated(aniToggle.isSelected() ? false : true);
         flashSelection(aniToggle.isSelected() ? "Background Animation Off" : "Background Animation On");
-    }
-
-    //Type of animation toggle
-    public static boolean isAnimated() {
-        return isAnimated;
     }
 }

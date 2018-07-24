@@ -19,50 +19,35 @@ import java.util.Random;
  * Time: 1:21 PM
  */
 public class SpreadController {
-    private Random r = new Random();
-
-    private String pastPositionMeaning;
-    private String presentPositionMeaning;
-    private String futurePositionMeaning;
-
-
-    private String[] meanings = new String[3];
-
-    private int pastCardNumber = r.nextInt(77);
-    private int presentCardNumber = r.nextInt(77);
-    private int futureCardNumber = r.nextInt(77);
-
     //Wants help
     public static boolean help = true;
     public static ReadingController.DeckType deck;
-
+    public static boolean invert = true;
+    private Random r = new Random();
+    private String pastPositionMeaning;
+    private String presentPositionMeaning;
+    private String futurePositionMeaning;
+    private String[] meanings = new String[3];
+    private int pastCardNumber = r.nextInt(77);
+    private int presentCardNumber = r.nextInt(77);
+    private int futureCardNumber = r.nextInt(77);
     private boolean pastIsShowing = false;
     private boolean presentIsShowing = false;
     private boolean futureIsShowing = false;
-
     private boolean c1inverted = false;
     private boolean c2inverted = false;
     private boolean c3inverted = false;
-
     @FXML
     private ImageView past;
-
     @FXML
     private ImageView present;
-
     @FXML
     private ImageView future;
-
-
     @FXML
     private Text meaningTitle;
-
     @FXML
     private Text meaningText;
-
     private int counter = 0;
-
-    public static boolean invert = true;
 
     public SpreadController() {
 
@@ -112,7 +97,7 @@ public class SpreadController {
                 try {
                     meaningTitle.setText(CardData.getCardTitle(presentCardNumber));
                     meaningText.setText(CardData.getCardMeaning(presentCardNumber));
-                }catch (NullPointerException n){
+                } catch (NullPointerException n) {
 
                 }
             }
@@ -126,7 +111,7 @@ public class SpreadController {
                 try {
                     meaningTitle.setText(CardData.getCardTitle(pastCardNumber));
                     meaningText.setText(CardData.getCardMeaning(pastCardNumber));
-                }catch (NullPointerException n){
+                } catch (NullPointerException n) {
 
                 }
             }
@@ -138,9 +123,9 @@ public class SpreadController {
         if (futureIsShowing) {
             if (help) {
                 try {
-                meaningTitle.setText(CardData.getCardTitle(futureCardNumber));
-                meaningText.setText(CardData.getCardMeaning(futureCardNumber));
-                }catch (NullPointerException n){
+                    meaningTitle.setText(CardData.getCardTitle(futureCardNumber));
+                    meaningText.setText(CardData.getCardMeaning(futureCardNumber));
+                } catch (NullPointerException n) {
 
                 }
             }

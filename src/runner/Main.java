@@ -9,7 +9,6 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import scenes.SceneController;
 
 import java.io.IOException;
 
@@ -24,7 +23,7 @@ public class Main extends Application {
     //Root for all the Scenes
     private static Parent reading;
     private static Parent studyCards;
-//    private static Parent quiz;
+    //    private static Parent quiz;
     private static Parent lookAt;
     private static Parent menu;
     private static Parent tcs;
@@ -34,17 +33,90 @@ public class Main extends Application {
     private static Parent zodiac;
     private static Parent login;
     private static Parent loginNew;
-    boolean isTest;
-//    private static Parent loginConfirm;
-
-
-
     private static Stage ps;
-
+//    private static Parent loginConfirm;
+    boolean isTest;
 
 
 //    private static double version = 1.0;
 //    public static String ver = "Beta ver." + version;
+
+    /**
+     * @return the reading parent
+     */
+
+    //TODO add to array
+    public static Parent getReading() {
+        return reading;
+    }
+
+    public static Parent getZodiac() {
+        return zodiac;
+    }
+
+    public static Parent getMenu() {
+        return menu;
+    }
+
+    public static Parent getSwordSpread() {
+        return swordSpread;
+    }
+
+    public static Parent getTcsNoHelp() {
+        return tcsNoHelp;
+    }
+
+    public static Parent getTCS() {
+        return tcs;
+    }
+
+    public static Parent getNewProfile() {
+        return loginNew;
+    }
+
+//    public static Parent getLogingConfirm() {
+//        return loginConfirm;
+//    }
+
+    public static Parent getLogin() {
+        return login;
+    }
+
+    public static Parent getProfile() {
+        return profile;
+    }
+
+    public static Stage getStage() {
+        return ps;
+    }
+
+    /**
+     * @return the look at cards parent
+     */
+    public static Parent getStudyCards() {
+        return studyCards;
+    }
+
+    /**
+     * @return the lookAt parent
+     */
+    public static Parent getLookAt() {
+        return lookAt;
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+
+
+    }
+
+
+//    /**
+//     * @return the quiz parent
+//     */
+//    public static Parent getQuiz() {
+//        return quiz;
+//    }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -56,7 +128,6 @@ public class Main extends Application {
 
         //Set Stage so we can retrieve it later
         Main.ps = primaryStage;
-
 
 
         //set stage props
@@ -89,93 +160,12 @@ public class Main extends Application {
 //        loginConfirm = FXMLLoader.load(getClass().getResource("loginConfirm.fxml"));
                 System.out.println("Loaded FXML");
 //                SceneController sc = new SceneController();
-            }else{
+            } else {
                 System.out.println("Exiting Program...test booleans are colliding");
                 System.exit(1);
-            } 
+            }
         }
     }
-
-
-    /**
-     * @return the reading parent
-     *
-     *
-     */
-
-    //TODO add to array
-    public static Parent getReading() {
-        return reading;
-    }
-
-    public static Parent getZodiac() {
-        return zodiac;
-    }
-
-    public static Parent getMenu() {
-        return menu;
-    }
-
-    public static Parent getSwordSpread() {
-        return swordSpread;
-    }
-
-    public static Parent getTcsNoHelp() {
-        return tcsNoHelp;
-    }
-
-//    public static Parent getLogingConfirm() {
-//        return loginConfirm;
-//    }
-
-    public static Parent getTCS() {
-        return tcs;
-    }
-
-    public static Parent getNewProfile() {
-        return loginNew;
-    }
-
-    public static Parent getLogin() {
-        return login;
-    }
-
-    public static Parent getProfile() {
-        return profile;
-    }
-
-    public static Stage getStage() {
-        return ps;
-    }
-
-    /**
-     * @return the look at cards parent
-     */
-    public static Parent getStudyCards() {
-        return studyCards;
-    }
-
-
-//    /**
-//     * @return the quiz parent
-//     */
-//    public static Parent getQuiz() {
-//        return quiz;
-//    }
-
-    /**
-     * @return the lookAt parent
-     */
-    public static Parent getLookAt() {
-        return lookAt;
-    }
-
-    public static void main(String[] args) {
-        launch(args);
-
-
-    }
-
 
 
 }

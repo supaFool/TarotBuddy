@@ -24,51 +24,36 @@ import utils.Utils;
 
 public class ReadingController {
 
-    public enum SpreadType {
-        THREE_CARD_SPREAD, SWORD
-    }
-
-    public enum DeckType {
-        WIATE, MARC, WIA_ART, MANGTENGA
-    }
-
+    public static SpreadType spread;
+    private static Stage stage;
     @FXML
     private String enabled = "Reading Helper Enabled";
     @FXML
     private String disabled = "Reading Helper Disabled";
-
-    public static SpreadType spread;
-
-    private static Stage stage;
-
     @FXML
     private ToggleButton helpToggle;
-
     @FXML
     private Text selection;
-
     @FXML
     private MenuButton typeOfReading;
-
     @FXML
     private RadioButton wiaChoose;
-
     @FXML
     private RadioButton mercChoose;
-
     @FXML
     private RadioButton wiaArtChoose;
-
     @FXML
     private CheckBox invert;
-
     ///////////
     // boole's to keep track of what user wants
     private boolean wantsHelp = true;
     private boolean invertCards = false;
 
-
     public ReadingController() {
+    }
+
+    public static void setStage(Stage stage) {
+        ReadingController.stage = stage;
     }
 
     @FXML
@@ -152,7 +137,6 @@ public class ReadingController {
         }
     }
 
-
     /**
      * Sets the Parent of the current Scene to the SwordSpread.fxml
      * Also plays the Animation
@@ -187,7 +171,6 @@ public class ReadingController {
         }
     }
 
-
     @FXML
     public void wants3Card() {
 //        wants3Card = true;
@@ -200,10 +183,6 @@ public class ReadingController {
         spread = SpreadType.SWORD;
 //        typeOfReading.setText(typeOfReading.getItems().get(1).getText());
         typeOfReading.setText("Coming Soon");
-    }
-
-    public static void setStage(Stage stage) {
-        ReadingController.stage = stage;
     }
 
     public void setWantsHelp(boolean wantsHelp) {
@@ -252,5 +231,13 @@ public class ReadingController {
         KeyFrame fadeFrame = new KeyFrame(Duration.millis(2000), new KeyValue(selection.opacityProperty(), 0.0f));
         ani.getKeyFrames().addAll(frame, fadeFrame);
         ani.play();
+    }
+
+    public enum SpreadType {
+        THREE_CARD_SPREAD, SWORD
+    }
+
+    public enum DeckType {
+        WIATE, MARC, WIA_ART, MANGTENGA
     }
 }

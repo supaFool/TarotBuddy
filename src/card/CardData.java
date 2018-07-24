@@ -17,12 +17,6 @@ import java.util.Random;
  */
 public class CardData {
 
-    public static int WIADEC = 1910;
-
-    public static int MERC_DECK = 5244;
-
-    public static int WIA_ART_DECK = 191010;
-
     /**
      * Card Numbers used to get cards from []
      */
@@ -105,8 +99,6 @@ public class CardData {
     public static final int KNIGHT_OF_PENTACLES = 75;
     public static final int KING_OF_PENTACLES = 76;
     public static final int QUEEN_OF_PENTACLES = 77;
-//    public static final int BACK_GROUND = 78;
-
     /**
      * Card In Depth Meaning
      */
@@ -194,97 +186,10 @@ public class CardData {
             "The face suggests that of a dark woman, whose qualities might be summed up in the idea of greatness of soul; she has also the serious cast of intelligence; she contemplates her symbol and may see worlds therein. Divinatory Meanings: Opulence, generosity, magnificence, security, liberty. Reversed: Evil, suspicion, suspense, fear, mistrust.",
             " "
     };
-
-    /**
-     * Major Arcana card names
-     */
-
-//    todo Make these not static!
-    public static String[] CARD_TITLE = new String[]{
-            "0 - The Fool",
-            "1 - The Magus",
-            "2 - The High Priestess",
-            "3 - The Empress",
-            "4 - The Emperor",
-            "5 - The Hierophant",
-            "6 - The Lover(s)",
-            "7 - The Charoit",
-            "8 - Strength",
-            "9 - The Hermit",
-            "10 - Wheel of Fortune",
-            "11 - Justice",
-            "12 - The Hanged Man",
-            "13 - Death",
-            "14 - Temperance",
-            "15 - The Devil",
-            "16 - The Tower",
-            "17 - The Star",
-            "18 - The Moon",
-            "19 - The Sun",
-            "20 - Judgement",
-            "21 - The World",                     //s,w,c,p
-            //SWORDS
-            "Ace of Swords",
-            "Two of Swords",
-            "Three of Sword",
-            "Four of Swords",
-            "Five of Swords",
-            "Six of Swords",
-            "Seven of Swords",
-            "Eight of Swords",
-            "Nine of Swords",
-            "Ten of Swords",
-            "Page of Swords",
-            "Knight of Swords",
-            "King of Swords",
-            "Queen of Swords",
-            //WANDS
-            "Ace of Wands",
-            "Two of Wands",
-            "Three of Wands",
-            "Four of Wands",
-            "Five of Wands",
-            "Six of Wands",
-            "Seven of Wands",
-            "Eight of Wands",
-            "Nine of Wands",
-            "Ten of Wands",
-            "Page of Wands",
-            "Knight of Wands",
-            "King of Wands",
-            "Queen of wands",
-            //CUPS
-            "Ace of Cups",
-            "Two of Cups",
-            "Three of Cups",
-            "Four of Cups",
-            "Five of Cups",
-            "Six of Cups",
-            "Seven of Cups",
-            "Eight of Cups",
-            "Nine of Cups",
-            "Ten of Cups",
-            "Page of Cups",
-            "Knight of Cups",
-            "King of Cups",
-            "Queen of Cups",
-            //COINS
-            "Ace of Pentacles",
-            "Two of Pentacles",
-            "Three of Pentacles",
-            "Four of Pentacles",
-            "Five of Pentacles",
-            "Six of Pentacles",
-            "Seven of Pentacles",
-            "Eight of Pentacles",
-            "Nine of Pentacles",
-            "Ten of Pentacles",
-            "Page of Pentacles",
-            "Knight of Pentacles",
-            "King of Pentacles",
-            "Queen of Pentacles"
-    };
-
+    public static int WIADEC = 1910;
+    public static int MERC_DECK = 5244;
+//    public static final int BACK_GROUND = 78;
+    public static int WIA_ART_DECK = 191010;
     /**
      * Card Images
      */
@@ -463,7 +368,6 @@ public class CardData {
             new ImageView(new Image(getImageFile(KING_OF_PENTACLES, WIADEC))),
             new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES, WIADEC))),
             new ImageView(new Image("/card/image/ZSpBack.gif"))};
-
     /**
      * Card Images
      */
@@ -554,6 +458,95 @@ public class CardData {
             new ImageView(new Image(getImageFile(KING_OF_PENTACLES, WIA_ART_DECK))),
             new ImageView(new Image(getImageFile(QUEEN_OF_PENTACLES, WIA_ART_DECK))),
             new ImageView(new Image("/card/image/ZSpBack.gif"))};
+    /**
+     * Major Arcana card names
+     */
+
+//    todo Make these not static!
+    public static String[] CARD_TITLE = new String[]{
+            "0 - The Fool",
+            "1 - The Magus",
+            "2 - The High Priestess",
+            "3 - The Empress",
+            "4 - The Emperor",
+            "5 - The Hierophant",
+            "6 - The Lover(s)",
+            "7 - The Charoit",
+            "8 - Strength",
+            "9 - The Hermit",
+            "10 - Wheel of Fortune",
+            "11 - Justice",
+            "12 - The Hanged Man",
+            "13 - Death",
+            "14 - Temperance",
+            "15 - The Devil",
+            "16 - The Tower",
+            "17 - The Star",
+            "18 - The Moon",
+            "19 - The Sun",
+            "20 - Judgement",
+            "21 - The World",                     //s,w,c,p
+            //SWORDS
+            "Ace of Swords",
+            "Two of Swords",
+            "Three of Sword",
+            "Four of Swords",
+            "Five of Swords",
+            "Six of Swords",
+            "Seven of Swords",
+            "Eight of Swords",
+            "Nine of Swords",
+            "Ten of Swords",
+            "Page of Swords",
+            "Knight of Swords",
+            "King of Swords",
+            "Queen of Swords",
+            //WANDS
+            "Ace of Wands",
+            "Two of Wands",
+            "Three of Wands",
+            "Four of Wands",
+            "Five of Wands",
+            "Six of Wands",
+            "Seven of Wands",
+            "Eight of Wands",
+            "Nine of Wands",
+            "Ten of Wands",
+            "Page of Wands",
+            "Knight of Wands",
+            "King of Wands",
+            "Queen of wands",
+            //CUPS
+            "Ace of Cups",
+            "Two of Cups",
+            "Three of Cups",
+            "Four of Cups",
+            "Five of Cups",
+            "Six of Cups",
+            "Seven of Cups",
+            "Eight of Cups",
+            "Nine of Cups",
+            "Ten of Cups",
+            "Page of Cups",
+            "Knight of Cups",
+            "King of Cups",
+            "Queen of Cups",
+            //COINS
+            "Ace of Pentacles",
+            "Two of Pentacles",
+            "Three of Pentacles",
+            "Four of Pentacles",
+            "Five of Pentacles",
+            "Six of Pentacles",
+            "Seven of Pentacles",
+            "Eight of Pentacles",
+            "Nine of Pentacles",
+            "Ten of Pentacles",
+            "Page of Pentacles",
+            "Knight of Pentacles",
+            "King of Pentacles",
+            "Queen of Pentacles"
+    };
 
     //Keep track of which way the card is facing, prob going to use this in DealingLogic.initAnimation
 //    private boolean hasBeenFlipped = false;
@@ -564,7 +557,7 @@ public class CardData {
 
 //    public void setHasBeenFlipped(boolean b) {
 //    }
-
+    static Random r = new Random();
 
     /**
      * @param card card requested
@@ -585,8 +578,6 @@ public class CardData {
             return null;
         }
     }
-
-    static Random r = new Random();
 
     /**
      * @param card card Number
