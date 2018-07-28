@@ -10,6 +10,10 @@ import org.newdawn.slick.Input;
 public class Listener {
     private Input input;
     public Listener(BasicGame game, GameContainer gc) {
+        input = gc.getInput();
         System.out.println("Listener Called");
+        if (input.isKeyPressed(Input.KEY_ESCAPE)){
+            System.exit(0);
+        }
     }
 }
