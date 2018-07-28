@@ -3,6 +3,7 @@ package card;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -16,6 +17,18 @@ import java.util.Random;
  * todo NONE OF THIS SHOULD BE STATIC!!!!!
  */
 public class CardData {
+
+    private ArrayList<String> Meanings;
+    private String[] Names;
+
+    public CardData() {
+        init();
+    }
+
+    private void init(){
+
+        
+    }
 
     /**
      * Card Numbers used to get cards from []

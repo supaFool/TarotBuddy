@@ -1,3 +1,4 @@
+import card.CardData;
 import display.Display;
 import listener.Listener;
 import org.newdawn.slick.*;
@@ -14,7 +15,8 @@ public class Game extends BasicGame {
     private Listener listen;
     private GameContainer gc;
     private Display display;
-    private static boolean isFullScreen = true;
+    private CardData data;
+    private static boolean isFullScreen = false;
 
 
     public Game(String gamename) {
@@ -38,6 +40,7 @@ public class Game extends BasicGame {
         this.gc = gc;
         this.listen = new Listener();
         this.display = new Display(gc);
+        data = new CardData();
         System.out.println();
     }
 

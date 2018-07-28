@@ -1,6 +1,7 @@
 package display;
 
 import card.CardData;
+import logic.CardLogic;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
@@ -12,6 +13,7 @@ public class Display {
     private String currentText;
     private GameContainer gc;
 
+
     public Display(GameContainer gc) {
         this.gc = gc;
     }
@@ -21,6 +23,7 @@ public class Display {
     }
 
     public void render(Graphics g){
-//        g.drawString(CardData.getCardMeaning(40), gc.getWidth() / 2, gc.getHeight() / 2);
+        new CardLogic();
+        g.drawString("Testing", gc.getWidth()/2,gc.getHeight()/2);
     }
 }
