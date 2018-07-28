@@ -14,7 +14,7 @@ import java.util.Random;
 
 /**
  * Class that holds Card names, Meanings, Images, etc...
- * todo NONE OF THIS SHOULD BE STATIC!!!!!
+ * todo Not Static
  */
 public class CardData {
 
@@ -27,7 +27,7 @@ public class CardData {
 
     private void init(){
 
-        
+
     }
 
     /**
