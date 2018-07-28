@@ -1,3 +1,4 @@
+import display.Display;
 import listener.Listener;
 import org.newdawn.slick.*;
 
@@ -12,6 +13,8 @@ public class Game extends BasicGame {
 
     private Listener listen;
     private GameContainer gc;
+    private Display display;
+    private static boolean isFullScreen = true;
 
 
     public Game(String gamename) {
@@ -23,7 +26,7 @@ public class Game extends BasicGame {
             AppGameContainer appgc;
             appgc = new AppGameContainer(new Game("Tarot Buddy"));
             appgc.setDisplayMode(640, 480, false);
-            appgc.setFullscreen(true);
+            appgc.setFullscreen(isFullScreen);
             appgc.start();
         } catch (SlickException ex) {
             Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
@@ -33,17 +36,18 @@ public class Game extends BasicGame {
     @Override
     public void init(GameContainer gc) throws SlickException {
         this.gc = gc;
+        this.listen = new Listener();
+        this.display = new Display(gc);
         System.out.println();
     }
 
     @Override
     public void update(GameContainer gc, int i) throws SlickException {
-        listen = new Listener(this, gc);
+        listen.listen(gc);
     }
 
     @Override
     public void render(GameContainer gc, Graphics g) throws SlickException {
-        g.setColor(Color.green);
-        g.drawString("Welcome to Tarot Buddy" , 0, gc.getHeight() / 2);
+        display.render(g);
     }
 }
