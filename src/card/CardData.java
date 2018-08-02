@@ -26,8 +26,7 @@ public class CardData {
     }
 
     private void init(){
-
-
+        System.out.println("Card data called");
     }
 
     /**

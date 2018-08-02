@@ -40,7 +40,7 @@ public class Game extends BasicGame {
         this.gc = gc;
         this.listen = new Listener();
         this.display = new Display(gc);
-        data = new CardData();
+//        data = new CardData();
         System.out.println();
     }
 
