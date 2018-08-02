@@ -8,86 +8,87 @@ import card.CardData;
 public class CardLogic {
 
     //    CARD LOCATIONS IN ARRAY
-    final int THE_FOOL = 0;
-    final int THE_MAGUS = 1;
-    final int THE_HIGH_PRIESTESS = 2;
-    final int THE_EMPRESS = 3;
-    final int THE_EMPEROR = 4;
-    final int THE_HEIROPHANT = 5;
-    final int THE_LOVER = 6;
-    final int THE_CHARIOT = 7;
-    final int STRENGTH = 8;
-    final int THE_HERMIT = 9;
-    final int WHEEL_OF_FORTUNE = 10;
-    final int JUSTICE = 11;
-    final int THE_HANGED_MAN = 12;
-    final int DEATH = 13;
-    final int TEMPERANCE = 14;
-    final int THE_DEVIL = 15;
-    final int THE_TOWER = 16;
-    final int THE_STAR = 17;
-    final int THE_MOON = 18;
-    final int THE_SUN = 19;
-    final int JUDGEMENT = 20;
-    final int THE_WORLD = 21;
-    final int ACE_OF_SWORDS = 22;
-    final int TWO_OF_SWORDS = 23;
-    final int THREE_OF_SWORDS = 24;
-    final int FOUR_OF_SWORDS = 25;
-    final int FIVE_OF_SWORDS = 26;
-    final int SIX_OF_SWORDS = 27;
-    final int SEVEN_OF_SWORDS = 28;
-    final int EIGHT_OF_SWORDS = 29;
-    final int NINE_OF_SWORDS = 30;
-    final int TEN_OF_SWORDS = 31;
-    final int PAGE_OF_SWORDS = 32;
-    final int KNIGHT_OF_SWORDS = 33;
-    final int KING_OF_SWORDS = 34;
-    final int QUEEN_OF_SWORDS = 35;
-    final int ACE_OF_WANDS = 36;
-    final int TWO_OF_WANDS = 37;
-    final int THREE_OF_WANDS = 38;
-    final int FOUR_OF_WANDS = 39;
-    final int FIVE_OF_WANDS = 40;
-    final int SIX_OF_WANDS = 41;
-    final int SEVEN_OF_WANDS = 42;
-    final int EIGHT_OF_WANDS = 43;
-    final int NINE_OF_WANDS = 44;
-    final int TEN_OF_WANDS = 45;
-    final int PAGE_OF_WANDS = 46;
-    final int KNIGHT_OF_WANDS = 47;
-    final int KING_OF_WANDS = 48;
-    final int QUEEN_OF_WANDS = 49;
-    final int ACE_OF_CUPS = 50;
-    final int TWO_OF_CUPS = 51;
-    final int THREE_OF_CUPS = 52;
-    final int FOUR_OF_CUPS = 53;
-    final int FIVE_OF_CUPS = 54;
-    final int SIX_OF_CUPS = 55;
-    final int SEVEN_OF_CUPS = 56;
-    final int EIGHT_OF_CUPS = 57;
-    final int NINE_OF_CUPS = 58;
-    final int TEN_OF_CUPS = 59;
-    final int PAGE_OF_CUPS = 60;
-    final int KNIGHT_OF_CUPS = 61;
-    final int KING_OF_CUPS = 62;
-    final int QUEEN_OF_CUPS = 63;
-    final int ACE_OF_PENTACLES = 64;
-    final int TWO_OF_PENTACLES = 65;
-    final int THREE_OF_PENTACLES = 66;
-    final int FOUR_OF_PENTACLES = 67;
-    final int FIVE_OF_PENTACLES = 68;
-    final int SIX_OF_PENTACLES = 69;
-    final int SEVEN_OF_PENTACLES = 70;
-    final int EIGHT_OF_PENTACLES = 71;
-    final int NINE_OF_PENTACLES = 72;
-    final int TEN_OF_PENTACLES = 73;
-    final int PAGE_OF_PENTACLES = 74;
-    final int KNIGHT_OF_PENTACLES = 75;
-    final int KING_OF_PENTACLES = 76;
-    final int QUEEN_OF_PENTACLES = 77;
+  public static final int THE_FOOL = 0;
+  public static final int THE_MAGUS = 1;
+  public static final int THE_HIGH_PRIESTESS = 2;
+  public static final int THE_EMPRESS = 3;
+  public static final int THE_EMPEROR = 4;
+  public static final int THE_HEIROPHANT = 5;
+  public static final int THE_LOVER = 6;
+  public static final int THE_CHARIOT = 7;
+  public static final int STRENGTH = 8;
+  public static final int THE_HERMIT = 9;
+  public static final int WHEEL_OF_FORTUNE = 10;
+  public static final int JUSTICE = 11;
+  public static final int THE_HANGED_MAN = 12;
+  public static final int DEATH = 13;
+  public static final int TEMPERANCE = 14;
+  public static final int THE_DEVIL = 15;
+  public static final int THE_TOWER = 16;
+  public static final int THE_STAR = 17;
+  public static final int THE_MOON = 18;
+  public static final int THE_SUN = 19;
+  public static final int JUDGEMENT = 20;
+  public static final int THE_WORLD = 21;
+  public static final int ACE_OF_SWORDS = 22;
+  public static final int TWO_OF_SWORDS = 23;
+  public static final int THREE_OF_SWORDS = 24;
+  public static final int FOUR_OF_SWORDS = 25;
+  public static final int FIVE_OF_SWORDS = 26;
+  public static final int SIX_OF_SWORDS = 27;
+  public static final int SEVEN_OF_SWORDS = 28;
+  public static final int EIGHT_OF_SWORDS = 29;
+  public static final int NINE_OF_SWORDS = 30;
+  public static final int TEN_OF_SWORDS = 31;
+  public static final int PAGE_OF_SWORDS = 32;
+  public static final int KNIGHT_OF_SWORDS = 33;
+  public static final int KING_OF_SWORDS = 34;
+  public static final int QUEEN_OF_SWORDS = 35;
+  public static final int ACE_OF_WANDS = 36;
+  public static final int TWO_OF_WANDS = 37;
+  public static final int THREE_OF_WANDS = 38;
+  public static final int FOUR_OF_WANDS = 39;
+  public static final int FIVE_OF_WANDS = 40;
+  public static final int SIX_OF_WANDS = 41;
+  public static final int SEVEN_OF_WANDS = 42;
+  public static final int EIGHT_OF_WANDS = 43;
+  public static final int NINE_OF_WANDS = 44;
+  public static final int TEN_OF_WANDS = 45;
+  public static final int PAGE_OF_WANDS = 46;
+  public static final int KNIGHT_OF_WANDS = 47;
+  public static final int KING_OF_WANDS = 48;
+  public static final int QUEEN_OF_WANDS = 49;
+  public static final int ACE_OF_CUPS = 50;
+  public static final int TWO_OF_CUPS = 51;
+  public static final int THREE_OF_CUPS = 52;
+  public static final int FOUR_OF_CUPS = 53;
+  public static final int FIVE_OF_CUPS = 54;
+  public static final int SIX_OF_CUPS = 55;
+  public static final int SEVEN_OF_CUPS = 56;
+  public static final int EIGHT_OF_CUPS = 57;
+  public static final int NINE_OF_CUPS = 58;
+  public static final int TEN_OF_CUPS = 59;
+  public static final int PAGE_OF_CUPS = 60;
+  public static final int KNIGHT_OF_CUPS = 61;
+  public static final int KING_OF_CUPS = 62;
+  public static final int QUEEN_OF_CUPS = 63;
+  public static final int ACE_OF_PENTACLES = 64;
+  public static final int TWO_OF_PENTACLES = 65;
+  public static final int THREE_OF_PENTACLES = 66;
+  public static final int FOUR_OF_PENTACLES = 67;
+  public static final int FIVE_OF_PENTACLES = 68;
+  public static final int SIX_OF_PENTACLES = 69;
+  public static final int SEVEN_OF_PENTACLES = 70;
+  public static final int EIGHT_OF_PENTACLES = 71;
+  public static final int NINE_OF_PENTACLES = 72;
+  public static final int TEN_OF_PENTACLES = 73;
+  public static final int PAGE_OF_PENTACLES = 74;
+  public static final int KNIGHT_OF_PENTACLES = 75;
+  public static final int KING_OF_PENTACLES = 76;
+  public static final int QUEEN_OF_PENTACLES = 77;
 
     private String[] CARD_MEANINGS;
+    private String[] CARD_TITLE;
 
     private CardData cardData;
 
@@ -179,6 +180,93 @@ public class CardLogic {
                 " "
         };
 
-        System.out.println(CARD_MEANINGS[TEMPERANCE]);
+        CARD_TITLE = new String[] {
+                "0 - The Fool",
+                "1 - The Magus",
+                "2 - The High Priestess",
+                "3 - The Empress",
+                "4 - The Emperor",
+                "5 - The Hierophant",
+                "6 - The Lover(s)",
+                "7 - The Charoit",
+                "8 - Strength",
+                "9 - The Hermit",
+                "10 - Wheel of Fortune",
+                "11 - Justice",
+                "12 - The Hanged Man",
+                "13 - Death",
+                "14 - Temperance",
+                "15 - The Devil",
+                "16 - The Tower",
+                "17 - The Star",
+                "18 - The Moon",
+                "19 - The Sun",
+                "20 - Judgement",
+                "21 - The World",                     //s,w,c,p
+                //SWORDS
+                "Ace of Swords",
+                "Two of Swords",
+                "Three of Sword",
+                "Four of Swords",
+                "Five of Swords",
+                "Six of Swords",
+                "Seven of Swords",
+                "Eight of Swords",
+                "Nine of Swords",
+                "Ten of Swords",
+                "Page of Swords",
+                "Knight of Swords",
+                "King of Swords",
+                "Queen of Swords",
+                //WANDS
+                "Ace of Wands",
+                "Two of Wands",
+                "Three of Wands",
+                "Four of Wands",
+                "Five of Wands",
+                "Six of Wands",
+                "Seven of Wands",
+                "Eight of Wands",
+                "Nine of Wands",
+                "Ten of Wands",
+                "Page of Wands",
+                "Knight of Wands",
+                "King of Wands",
+                "Queen of wands",
+                //CUPS
+                "Ace of Cups",
+                "Two of Cups",
+                "Three of Cups",
+                "Four of Cups",
+                "Five of Cups",
+                "Six of Cups",
+                "Seven of Cups",
+                "Eight of Cups",
+                "Nine of Cups",
+                "Ten of Cups",
+                "Page of Cups",
+                "Knight of Cups",
+                "King of Cups",
+                "Queen of Cups",
+                //COINS
+                "Ace of Pentacles",
+                "Two of Pentacles",
+                "Three of Pentacles",
+                "Four of Pentacles",
+                "Five of Pentacles",
+                "Six of Pentacles",
+                "Seven of Pentacles",
+                "Eight of Pentacles",
+                "Nine of Pentacles",
+                "Ten of Pentacles",
+                "Page of Pentacles",
+                "Knight of Pentacles",
+                "King of Pentacles",
+                "Queen of Pentacles"
+        };
+    }
+
+    private void loadCardImages() {
+        //TODO add Images from CardData.java
     }
 }

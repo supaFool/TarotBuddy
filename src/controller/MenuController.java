@@ -51,7 +51,6 @@ public class MenuController {
 
     @FXML
     public void setColor() {
-        //todo set color
     }
 
 

@@ -13,8 +13,6 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 public class Main extends Application {
-//TODO Make a saving class
-    //TODO Optimize load files
 
     /**
      * I guess you have to initialize all .fxml in menu class
@@ -45,7 +43,6 @@ public class Main extends Application {
      * @return the reading parent
      */
 
-    //TODO add to array
     public static Parent getReading() {
         return reading;
     }
