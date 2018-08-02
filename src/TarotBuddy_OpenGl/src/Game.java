@@ -1,6 +1,7 @@
 import card.CardData;
 import display.Display;
 import listener.Listener;
+import logic.CardLogic;
 import org.newdawn.slick.*;
 
 import java.util.logging.Level;
@@ -15,7 +16,7 @@ public class Game extends BasicGame {
     private Listener listen;
     private GameContainer gc;
     private Display display;
-    private CardData data;
+    private CardLogic data;
     private static boolean isFullScreen = false;
 
 
@@ -40,7 +41,7 @@ public class Game extends BasicGame {
         this.gc = gc;
         this.listen = new Listener();
         this.display = new Display(gc);
-//        data = new CardData();
+        data = new CardLogic();
         System.out.println();
     }
 

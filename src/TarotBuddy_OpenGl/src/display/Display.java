@@ -26,15 +26,14 @@ public class Display {
     }
 
     private void init(){
-        currentX = 0;
+        currentX = 10;
         currentY = 0;
     }
 
     public void render(Graphics g){
         currentX += 0.05;
         currentY += 0.05;
-        new CardLogic();
         g.draw(new Rectangle(currentX,currentY,10,10));
-        g.drawGradientLine(0.5f,1f,0.5f,1f,.32f,1f,125f,125f,0.75f,1f,0.8f,1);
+        g.drawGradientLine(0.5f,1f,0.5f,1f,.32f,1f,125f *3,125f *3,0.75f,0.2f,0.8f,1);
     }
 }
