@@ -3,8 +3,7 @@ package display;
 import card.Card;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Circle;
 
 import java.util.Random;
 
@@ -17,6 +16,7 @@ public class Display {
     int counter = 0;
     float speed = 0.25f;
     Card card;
+    Random r;
 
 
     public Display(GameContainer gc) {
@@ -26,7 +26,7 @@ public class Display {
     private void init() {
         currentX = 0;
         currentY = 0;
-        card = new Card(6);
+        r = new Random();
     }
 
     /**
@@ -39,5 +39,6 @@ public class Display {
         currentX += speed;
         currentY += speed / 2;
 
+        g.draw(new Circle(currentX, currentY, 15, r.nextInt(5) + 1));
     }
 }

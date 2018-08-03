@@ -1,9 +1,11 @@
 package logic;
 
+import card.Card;
 import card.CardData;
 import org.newdawn.slick.Image;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Created by supaFool on 7/27/2018.
@@ -93,6 +95,7 @@ public class CardLogic {
     private String[] CARD_MEANINGS;
     private String[] CARD_TITLE;
     private ArrayList<Image> cardImages;
+    private Random random;
 
     private CardData cardData;
 
@@ -102,6 +105,7 @@ public class CardLogic {
 
     private void init() {
         cardImages = new ArrayList<>(numberOfCardsInDeck);
+        random = new Random();
 
 //        init Card Meaning
         CARD_MEANINGS = new String[]{
@@ -274,5 +278,15 @@ public class CardLogic {
 
     private void loadCardImages() {
         //TODO add Images from CardData.java
+    }
+
+    public void getCardSpread(int number_of_cards) {
+
+    }
+
+    public Card getRandomCard(){
+        int card = random.nextInt(78);
+
+        return null;
     }
 }

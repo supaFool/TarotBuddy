@@ -29,6 +29,7 @@ public class Game extends BasicGame {
             appgc = new AppGameContainer(new Game("Tarot Buddy"));
             appgc.setDisplayMode(640, 480, false);
             appgc.setFullscreen(isFullScreen);
+            appgc.setTargetFrameRate(60);
             appgc.start();
         } catch (SlickException ex) {
             Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);
@@ -38,7 +39,6 @@ public class Game extends BasicGame {
     @Override
     public void init(GameContainer gc) throws SlickException {
         this.gc = gc;
-        gc.setVSync(true);
         this.listen = new Listener();
         this.display = new Display(gc);
         data = new CardLogic();

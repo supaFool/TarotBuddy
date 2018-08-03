@@ -2,6 +2,8 @@ TarotBuddy Alpha
 ==================
 Tarot Buddy Beta. Build - Fortune Telling Software.
 
+#####This is the most stable version. We are doing a total overhaul to make Tarot buddy communicate better, and faster with all scenarios. 
+
 # Picking up where I let off.
 ### Got Everything ready for OpenGl. This is going to make TB a lot more resource friendly. 
 
@@ -40,6 +42,7 @@ Tarot Buddy Beta. Build - Fortune Telling Software.
 
 ### Release Beta
 >#### Known Bugs
+>* Problem with duel monitors 
 >* Switching from Marc deck on the deck selection, Doesn't show help text when going back to 1910, without re-selecting it.
 
 
