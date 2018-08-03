@@ -12,6 +12,9 @@ Tarot Buddy Beta. Build - Fortune Telling Software.
 >* Different Tarot decks to choose from
 >* Personal Profile for each user
 
+##Yet To Come
+>* OpenGL! It means a lot faster render times, and I can make cards move easier!
+
 ![sss](http://www.java-gaming.org/user-generated-content/members/159849/reader-ss.jpg)
 > Spread Screenshot
 
