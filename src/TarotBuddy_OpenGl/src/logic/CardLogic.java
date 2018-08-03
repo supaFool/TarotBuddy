@@ -5,7 +5,6 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 /**
  * Created by supaFool on 7/27/2018.
@@ -291,8 +290,16 @@ public class CardLogic {
         }
     }
 
-    public Image getCardImage(int cardIndex){
+    public Image getCardImage(int cardIndex) {
         return images.get(cardIndex);
+    }
+
+    public String getCARD_MEANINGS(int index) {
+        return CARD_MEANINGS[index];
+    }
+
+    public String getCARD_TITLE(int index) {
+        return CARD_TITLE[index];
     }
 
     public void getCardSpread(int number_of_cards) {

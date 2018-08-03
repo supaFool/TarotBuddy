@@ -17,9 +17,7 @@ public class Game extends BasicGame {
     private static boolean isVSync = false; //Causing FPS to stay at 30FPS?
 
     private Listener listen;
-    private GameContainer gc;
     private Display display;
-    private CardLogic data;
 
 
     public Game(String gamename) {
@@ -42,11 +40,8 @@ public class Game extends BasicGame {
 
     @Override
     public void init(GameContainer gc) throws SlickException {
-        this.gc = gc;
         this.listen = new Listener();
         this.display = new Display(gc);
-        data = new CardLogic();
-        System.out.println();
     }
 
     @Override

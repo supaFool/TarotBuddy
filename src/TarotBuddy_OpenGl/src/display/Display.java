@@ -1,9 +1,12 @@
 package display;
 
 import logic.CardLogic;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.geom.Circle;
+import org.newdawn.slick.geom.Polygon;
+import org.newdawn.slick.geom.Rectangle;
+import org.newdawn.slick.geom.Shape;
 
 import java.util.Random;
 
@@ -15,12 +18,16 @@ public class Display {
     float currentY;
     int counter = 0;
     float speed = 0.25f;
+    float scale = 1f;
+    Shape shape;
     Random r;
+    GameContainer gc;
 
     CardLogic logic;
 
 
     public Display(GameContainer gc) {
+        this.gc = gc;
         init();
     }
 
@@ -29,6 +36,7 @@ public class Display {
         currentY = 0;
         r = new Random();
         logic = new CardLogic();
+        shape = new Rectangle(currentX, currentY, logic.getCardImage(15).getWidth(), logic.getCardImage(15).getHeight());
     }
 
     /**
@@ -41,7 +49,6 @@ public class Display {
         currentX += speed;
         currentY += speed;
 
-        g.drawImage(logic.getCardImage(18), currentX, currentY);
-
+        g.drawImage(logic.getCardImage(18).getScaledCopy(scale), gc.getWidth() /2, currentY);
     }
 }
