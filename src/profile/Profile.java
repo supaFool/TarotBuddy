@@ -18,6 +18,7 @@ public class Profile {
     private int luckyNumber = 0;
     private int favCard = 100;
     private int unluckyNum = 0;
+
     public Profile(String name) {
         if (name == null) {
             this.name = name;

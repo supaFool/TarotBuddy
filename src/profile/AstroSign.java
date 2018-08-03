@@ -95,6 +95,7 @@ public class AstroSign {
             "Air and Fire signs – Aries, Gemini, Leo, Libra, Sagittarius and Aquarius",
             "Water and Earth signs – Taurus, Cancer, Virgo, Scorpio, Capricorn and Pisces"
     };
+
     public AstroSign(int sign) {
         this.sign = sign;
 

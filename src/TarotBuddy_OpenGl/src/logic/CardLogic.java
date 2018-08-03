@@ -10,89 +10,86 @@ import java.util.ArrayList;
  */
 public class CardLogic {
 
-  private int numberOfCardsInDeck = 78;
-
-
     //    CARD LOCATIONS IN ARRAY
-  public static final int THE_FOOL = 0;
-  public static final int THE_MAGUS = 1;
-  public static final int THE_HIGH_PRIESTESS = 2;
-  public static final int THE_EMPRESS = 3;
-  public static final int THE_EMPEROR = 4;
-  public static final int THE_HEIROPHANT = 5;
-  public static final int THE_LOVER = 6;
-  public static final int THE_CHARIOT = 7;
-  public static final int STRENGTH = 8;
-  public static final int THE_HERMIT = 9;
-  public static final int WHEEL_OF_FORTUNE = 10;
-  public static final int JUSTICE = 11;
-  public static final int THE_HANGED_MAN = 12;
-  public static final int DEATH = 13;
-  public static final int TEMPERANCE = 14;
-  public static final int THE_DEVIL = 15;
-  public static final int THE_TOWER = 16;
-  public static final int THE_STAR = 17;
-  public static final int THE_MOON = 18;
-  public static final int THE_SUN = 19;
-  public static final int JUDGEMENT = 20;
-  public static final int THE_WORLD = 21;
-  public static final int ACE_OF_SWORDS = 22;
-  public static final int TWO_OF_SWORDS = 23;
-  public static final int THREE_OF_SWORDS = 24;
-  public static final int FOUR_OF_SWORDS = 25;
-  public static final int FIVE_OF_SWORDS = 26;
-  public static final int SIX_OF_SWORDS = 27;
-  public static final int SEVEN_OF_SWORDS = 28;
-  public static final int EIGHT_OF_SWORDS = 29;
-  public static final int NINE_OF_SWORDS = 30;
-  public static final int TEN_OF_SWORDS = 31;
-  public static final int PAGE_OF_SWORDS = 32;
-  public static final int KNIGHT_OF_SWORDS = 33;
-  public static final int KING_OF_SWORDS = 34;
-  public static final int QUEEN_OF_SWORDS = 35;
-  public static final int ACE_OF_WANDS = 36;
-  public static final int TWO_OF_WANDS = 37;
-  public static final int THREE_OF_WANDS = 38;
-  public static final int FOUR_OF_WANDS = 39;
-  public static final int FIVE_OF_WANDS = 40;
-  public static final int SIX_OF_WANDS = 41;
-  public static final int SEVEN_OF_WANDS = 42;
-  public static final int EIGHT_OF_WANDS = 43;
-  public static final int NINE_OF_WANDS = 44;
-  public static final int TEN_OF_WANDS = 45;
-  public static final int PAGE_OF_WANDS = 46;
-  public static final int KNIGHT_OF_WANDS = 47;
-  public static final int KING_OF_WANDS = 48;
-  public static final int QUEEN_OF_WANDS = 49;
-  public static final int ACE_OF_CUPS = 50;
-  public static final int TWO_OF_CUPS = 51;
-  public static final int THREE_OF_CUPS = 52;
-  public static final int FOUR_OF_CUPS = 53;
-  public static final int FIVE_OF_CUPS = 54;
-  public static final int SIX_OF_CUPS = 55;
-  public static final int SEVEN_OF_CUPS = 56;
-  public static final int EIGHT_OF_CUPS = 57;
-  public static final int NINE_OF_CUPS = 58;
-  public static final int TEN_OF_CUPS = 59;
-  public static final int PAGE_OF_CUPS = 60;
-  public static final int KNIGHT_OF_CUPS = 61;
-  public static final int KING_OF_CUPS = 62;
-  public static final int QUEEN_OF_CUPS = 63;
-  public static final int ACE_OF_PENTACLES = 64;
-  public static final int TWO_OF_PENTACLES = 65;
-  public static final int THREE_OF_PENTACLES = 66;
-  public static final int FOUR_OF_PENTACLES = 67;
-  public static final int FIVE_OF_PENTACLES = 68;
-  public static final int SIX_OF_PENTACLES = 69;
-  public static final int SEVEN_OF_PENTACLES = 70;
-  public static final int EIGHT_OF_PENTACLES = 71;
-  public static final int NINE_OF_PENTACLES = 72;
-  public static final int TEN_OF_PENTACLES = 73;
-  public static final int PAGE_OF_PENTACLES = 74;
-  public static final int KNIGHT_OF_PENTACLES = 75;
-  public static final int KING_OF_PENTACLES = 76;
-  public static final int QUEEN_OF_PENTACLES = 77;
-
+    public static final int THE_FOOL = 0;
+    public static final int THE_MAGUS = 1;
+    public static final int THE_HIGH_PRIESTESS = 2;
+    public static final int THE_EMPRESS = 3;
+    public static final int THE_EMPEROR = 4;
+    public static final int THE_HEIROPHANT = 5;
+    public static final int THE_LOVER = 6;
+    public static final int THE_CHARIOT = 7;
+    public static final int STRENGTH = 8;
+    public static final int THE_HERMIT = 9;
+    public static final int WHEEL_OF_FORTUNE = 10;
+    public static final int JUSTICE = 11;
+    public static final int THE_HANGED_MAN = 12;
+    public static final int DEATH = 13;
+    public static final int TEMPERANCE = 14;
+    public static final int THE_DEVIL = 15;
+    public static final int THE_TOWER = 16;
+    public static final int THE_STAR = 17;
+    public static final int THE_MOON = 18;
+    public static final int THE_SUN = 19;
+    public static final int JUDGEMENT = 20;
+    public static final int THE_WORLD = 21;
+    public static final int ACE_OF_SWORDS = 22;
+    public static final int TWO_OF_SWORDS = 23;
+    public static final int THREE_OF_SWORDS = 24;
+    public static final int FOUR_OF_SWORDS = 25;
+    public static final int FIVE_OF_SWORDS = 26;
+    public static final int SIX_OF_SWORDS = 27;
+    public static final int SEVEN_OF_SWORDS = 28;
+    public static final int EIGHT_OF_SWORDS = 29;
+    public static final int NINE_OF_SWORDS = 30;
+    public static final int TEN_OF_SWORDS = 31;
+    public static final int PAGE_OF_SWORDS = 32;
+    public static final int KNIGHT_OF_SWORDS = 33;
+    public static final int KING_OF_SWORDS = 34;
+    public static final int QUEEN_OF_SWORDS = 35;
+    public static final int ACE_OF_WANDS = 36;
+    public static final int TWO_OF_WANDS = 37;
+    public static final int THREE_OF_WANDS = 38;
+    public static final int FOUR_OF_WANDS = 39;
+    public static final int FIVE_OF_WANDS = 40;
+    public static final int SIX_OF_WANDS = 41;
+    public static final int SEVEN_OF_WANDS = 42;
+    public static final int EIGHT_OF_WANDS = 43;
+    public static final int NINE_OF_WANDS = 44;
+    public static final int TEN_OF_WANDS = 45;
+    public static final int PAGE_OF_WANDS = 46;
+    public static final int KNIGHT_OF_WANDS = 47;
+    public static final int KING_OF_WANDS = 48;
+    public static final int QUEEN_OF_WANDS = 49;
+    public static final int ACE_OF_CUPS = 50;
+    public static final int TWO_OF_CUPS = 51;
+    public static final int THREE_OF_CUPS = 52;
+    public static final int FOUR_OF_CUPS = 53;
+    public static final int FIVE_OF_CUPS = 54;
+    public static final int SIX_OF_CUPS = 55;
+    public static final int SEVEN_OF_CUPS = 56;
+    public static final int EIGHT_OF_CUPS = 57;
+    public static final int NINE_OF_CUPS = 58;
+    public static final int TEN_OF_CUPS = 59;
+    public static final int PAGE_OF_CUPS = 60;
+    public static final int KNIGHT_OF_CUPS = 61;
+    public static final int KING_OF_CUPS = 62;
+    public static final int QUEEN_OF_CUPS = 63;
+    public static final int ACE_OF_PENTACLES = 64;
+    public static final int TWO_OF_PENTACLES = 65;
+    public static final int THREE_OF_PENTACLES = 66;
+    public static final int FOUR_OF_PENTACLES = 67;
+    public static final int FIVE_OF_PENTACLES = 68;
+    public static final int SIX_OF_PENTACLES = 69;
+    public static final int SEVEN_OF_PENTACLES = 70;
+    public static final int EIGHT_OF_PENTACLES = 71;
+    public static final int NINE_OF_PENTACLES = 72;
+    public static final int TEN_OF_PENTACLES = 73;
+    public static final int PAGE_OF_PENTACLES = 74;
+    public static final int KNIGHT_OF_PENTACLES = 75;
+    public static final int KING_OF_PENTACLES = 76;
+    public static final int QUEEN_OF_PENTACLES = 77;
+    private int numberOfCardsInDeck = 78;
     private String[] CARD_MEANINGS;
     private String[] CARD_TITLE;
     private ArrayList<Image> cardImages;
@@ -104,7 +101,7 @@ public class CardLogic {
     }
 
     private void init() {
-      cardImages = new ArrayList<>(numberOfCardsInDeck);
+        cardImages = new ArrayList<>(numberOfCardsInDeck);
 
 //        init Card Meaning
         CARD_MEANINGS = new String[]{
@@ -189,7 +186,7 @@ public class CardLogic {
                 " "
         };
 
-        CARD_TITLE = new String[] {
+        CARD_TITLE = new String[]{
                 "0 - The Fool",
                 "1 - The Magus",
                 "2 - The High Priestess",

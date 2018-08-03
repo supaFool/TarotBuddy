@@ -1,4 +1,3 @@
-import card.CardData;
 import display.Display;
 import listener.Listener;
 import logic.CardLogic;
@@ -13,11 +12,11 @@ import java.util.logging.Logger;
 
 public class Game extends BasicGame {
 
+    private static boolean isFullScreen = false;
     private Listener listen;
     private GameContainer gc;
     private Display display;
     private CardLogic data;
-    private static boolean isFullScreen = false;
 
 
     public Game(String gamename) {

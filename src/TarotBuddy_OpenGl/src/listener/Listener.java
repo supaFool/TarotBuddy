@@ -1,6 +1,5 @@
 package listener;
 
-import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Input;
 
@@ -12,6 +11,6 @@ public class Listener {
     }
 
     public void listen(GameContainer gc) {
-        if(gc.getInput().isKeyPressed(Input.KEY_ESCAPE)) System.exit(0);
+        if (gc.getInput().isKeyPressed(Input.KEY_ESCAPE)) System.exit(0);
     }
 }

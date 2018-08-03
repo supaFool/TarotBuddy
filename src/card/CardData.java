@@ -17,17 +17,6 @@ import java.util.Random;
  */
 public class CardData {
 
-    private ArrayList<String> Meanings;
-    private String[] Names;
-
-    public CardData() {
-        init();
-    }
-
-    private void init(){
-        System.out.println("Card data called");
-    }
-
     /**
      * Card Numbers used to get cards from []
      */
@@ -198,7 +187,7 @@ public class CardData {
     };
     public static int WIADEC = 1910;
     public static int MERC_DECK = 5244;
-//    public static final int BACK_GROUND = 78;
+    //    public static final int BACK_GROUND = 78;
     public static int WIA_ART_DECK = 191010;
     /**
      * Card Images
@@ -553,6 +542,14 @@ public class CardData {
             "King of Pentacles",
             "Queen of Pentacles"
     };
+    //    public void setHasBeenFlipped(boolean b) {
+//    }
+    static Random r = new Random();
+    private ArrayList<String> Meanings;
+    private String[] Names;
+    public CardData() {
+        init();
+    }
 
     //Keep track of which way the card is facing, prob going to use this in DealingLogic.initAnimation
 //    private boolean hasBeenFlipped = false;
@@ -560,10 +557,6 @@ public class CardData {
 //    public boolean isHasBeenFlipped() {
 //        return hasBeenFlipped;
 //    }
-
-//    public void setHasBeenFlipped(boolean b) {
-//    }
-    static Random r = new Random();
 
     /**
      * @param card card requested
@@ -630,6 +623,10 @@ public class CardData {
      */
     public static String getCardTitle(int card) {
         return CARD_TITLE[card];
+    }
+
+    private void init() {
+        System.out.println("Card data called");
     }
 
 

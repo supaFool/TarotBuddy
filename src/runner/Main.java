@@ -32,7 +32,7 @@ public class Main extends Application {
     private static Parent login;
     private static Parent loginNew;
     private static Stage ps;
-//    private static Parent loginConfirm;
+    //    private static Parent loginConfirm;
     boolean isTest;
 
 
