@@ -29,7 +29,6 @@ Tarot Buddy Beta. Build - Fortune Telling Software.
 >* Symbolism
 >* Games!!
 >* Quizzes
->*
 
 
 #### To Install

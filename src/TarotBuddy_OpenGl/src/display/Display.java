@@ -17,6 +17,7 @@ public class Display {
     float currentY;
     Image i;
     int counter = 0;
+    float speed = 0.25f;
 
 
 
@@ -25,7 +26,7 @@ public class Display {
     }
 
     private void init(){
-        currentX = 10;
+        currentX = 0;
         currentY = 0;
 
     }
@@ -37,14 +38,14 @@ public class Display {
      */
     public void render(Graphics g){
         counter ++;
-        currentX += 0.05;
-        currentY += 0.05;
+        currentX += speed;
+        currentY += speed/2;
 //        g.draw(new Rectangle(currentX,currentY,10,10));
 
-        g.drawGradientLine(0.5f,1f,0.5f,1f,.32f,1f,125f *3,125f *3,0.75f,0.2f,0.8f,1);
+        g.drawGradientLine(0.5f,1f,0.5f,1f,.32f,1f,125f *3,125f *3/2,0.75f,0.2f,0.8f,1);
         try {
             Random r = new Random();
-            i = new Image("card/image/decks/1910/"+ r.nextInt(78) +".jpg");
+            i = new Image("card/image/decks/merc/"+ r.nextInt(78) +".jpg");
             g.drawImage(i,currentX,currentY );
         } catch (SlickException e) {
             e.printStackTrace();

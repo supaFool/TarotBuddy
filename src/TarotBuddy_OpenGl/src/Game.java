@@ -39,6 +39,7 @@ public class Game extends BasicGame {
     @Override
     public void init(GameContainer gc) throws SlickException {
         this.gc = gc;
+        gc.setVSync(true);
         this.listen = new Listener();
         this.display = new Display(gc);
         data = new CardLogic();
