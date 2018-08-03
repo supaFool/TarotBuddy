@@ -5,6 +5,8 @@ Tarot Buddy Beta. Build - Fortune Telling Software.
 # Picking up where I let off.
 ### Got Everything ready for OpenGl. This is going to make TB a lot more resource friendly. 
 
+### Stay Tuned for the v2!
+
 ## Features
 >* Personalized Tarot Reading
 >* Look through Hi-Res Tarot Decks
@@ -32,8 +34,8 @@ Tarot Buddy Beta. Build - Fortune Telling Software.
 
 #### To Install
 >* [Download Beta](https://github.com/supaFool/TarotBuddy/releases)
->* Navigate to -- TarotBuddy\out\artifacts\TarotBuddy
->* Place the .jar file anywhere you like and run it
+>*  Navigate to -- TarotBuddy\out\artifacts\TarotBuddy
+>*  Place the .jar file anywhere you like and run it
 
 #### Add *.tb to .gitignore
 
