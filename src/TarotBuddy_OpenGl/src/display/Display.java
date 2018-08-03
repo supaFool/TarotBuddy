@@ -16,6 +16,7 @@ public class Display {
     float currentX;
     float currentY;
     Image i;
+    int counter = 0;
 
 
 
@@ -35,9 +36,11 @@ public class Display {
      * @param g Graphics Context
      */
     public void render(Graphics g){
+        counter ++;
         currentX += 0.05;
         currentY += 0.05;
 //        g.draw(new Rectangle(currentX,currentY,10,10));
+
         g.drawGradientLine(0.5f,1f,0.5f,1f,.32f,1f,125f *3,125f *3,0.75f,0.2f,0.8f,1);
         try {
             Random r = new Random();
