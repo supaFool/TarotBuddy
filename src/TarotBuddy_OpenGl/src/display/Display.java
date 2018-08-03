@@ -1,6 +1,6 @@
 package display;
 
-import card.Card;
+import logic.CardLogic;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Circle;
@@ -15,8 +15,9 @@ public class Display {
     float currentY;
     int counter = 0;
     float speed = 0.25f;
-    Card card;
     Random r;
+
+    CardLogic logic;
 
 
     public Display(GameContainer gc) {
@@ -27,6 +28,7 @@ public class Display {
         currentX = 0;
         currentY = 0;
         r = new Random();
+        logic = new CardLogic();
     }
 
     /**
@@ -37,8 +39,9 @@ public class Display {
     public void render(Graphics g) {
         counter++;
         currentX += speed;
-        currentY += speed / 2;
+        currentY += speed;
 
-        g.draw(new Circle(currentX, currentY, 15, r.nextInt(5) + 1));
+        g.drawImage(logic.getCardImage(18), currentX, currentY);
+
     }
 }

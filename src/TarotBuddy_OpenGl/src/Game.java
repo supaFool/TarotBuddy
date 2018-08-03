@@ -12,7 +12,10 @@ import java.util.logging.Logger;
 
 public class Game extends BasicGame {
 
-    private static boolean isFullScreen = false;
+//    SETTINGS
+    private static boolean isFullScreen = true;
+    private static boolean isVSync = false; //Causing FPS to stay at 30FPS?
+
     private Listener listen;
     private GameContainer gc;
     private Display display;
@@ -27,9 +30,10 @@ public class Game extends BasicGame {
         try {
             AppGameContainer appgc;
             appgc = new AppGameContainer(new Game("Tarot Buddy"));
-            appgc.setDisplayMode(640, 480, false);
-            appgc.setFullscreen(isFullScreen);
+            appgc.setDisplayMode(appgc.getScreenWidth(), appgc.getScreenHeight(), isFullScreen);
             appgc.setTargetFrameRate(60);
+            appgc.setVSync(isVSync);
+            appgc.setMultiSample(3);
             appgc.start();
         } catch (SlickException ex) {
             Logger.getLogger(Game.class.getName()).log(Level.SEVERE, null, ex);

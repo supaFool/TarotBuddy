@@ -1,8 +1,8 @@
 package logic;
 
-import card.Card;
 import card.CardData;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -92,10 +92,12 @@ public class CardLogic {
     public static final int KING_OF_PENTACLES = 76;
     public static final int QUEEN_OF_PENTACLES = 77;
     private int numberOfCardsInDeck = 78;
+
+
     private String[] CARD_MEANINGS;
     private String[] CARD_TITLE;
-    private ArrayList<Image> cardImages;
-    private Random random;
+    private Image[] CARD_IMAGES;
+    private ArrayList<Image> images;
 
     private CardData cardData;
 
@@ -104,8 +106,7 @@ public class CardLogic {
     }
 
     private void init() {
-        cardImages = new ArrayList<>(numberOfCardsInDeck);
-        random = new Random();
+        images = new ArrayList<>(numberOfCardsInDeck);
 
 //        init Card Meaning
         CARD_MEANINGS = new String[]{
@@ -274,19 +275,27 @@ public class CardLogic {
                 "King of Pentacles",
                 "Queen of Pentacles"
         };
+
+        loadCardImages();
     }
 
     private void loadCardImages() {
         //TODO add Images from CardData.java
+        for (int i = 0; i < numberOfCardsInDeck; i++) {
+            try {
+                images.add(i, new Image("card/image/decks/wiate/" + i + ".gif"));
+
+            } catch (SlickException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public Image getCardImage(int cardIndex){
+        return images.get(cardIndex);
     }
 
     public void getCardSpread(int number_of_cards) {
 
-    }
-
-    public Card getRandomCard(){
-        int card = random.nextInt(78);
-
-        return null;
     }
 }
