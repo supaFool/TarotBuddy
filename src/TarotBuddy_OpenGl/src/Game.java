@@ -18,6 +18,7 @@ public class Game extends BasicGame {
 
     private Listener listen;
     private Display display;
+    private CardLogic logic;
 
 
     public Game(String gamename) {
@@ -52,5 +53,10 @@ public class Game extends BasicGame {
     @Override
     public void render(GameContainer gc, Graphics g) throws SlickException {
         display.render(g);
+    }
+    private void loadSpecialScene(AppGameContainer appgc){
+        appgc.setTitle("Testing");
+        System.out.println("For you enjoyment we now do a what if");
+
     }
 }
