@@ -1,6 +1,5 @@
 package profile;
 
-import controller.LoginController;
 import javafx.scene.image.Image;
 import utils.T_B_Props;
 
@@ -75,7 +74,6 @@ public class AstroSign {
             "Friendly, Loyal, Honest, Independent, Unemotional, Detached, Perverse and Unpredictable",
             "Compassionate, Spiritual, Emotional, Intuitive, Idealistic, Secretive, Vague and Weak-willed"
     };
-    private T_B_Props props = LoginController.getProps();
     private GregorianCalendar date;
     private String NO_HOR_SET = "You do not currently have a saved sign";
     private Integer sign = 100;
@@ -106,15 +104,15 @@ public class AstroSign {
     }
 
     public void update() {
-        sign = Integer.parseInt(props.getProperty("astrology sign"));
+//        sign = Integer.parseInt(props.getProperty("astrology sign"));
 
         setQuat(sign);
         setElement(sign);
     }
 
     public void saveProp() {
-        props.setProperty("astrology sign", sign.toString());
-        props.saveUserInfo(props.getProperty("name"));
+//        props.setProperty("astrology sign", sign.toString());
+//        props.saveUserInfo(props.getProperty("name"));
     }
 
     public String getCharacteristics() {
