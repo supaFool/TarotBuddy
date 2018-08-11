@@ -36,9 +36,7 @@ www.TheSupaDev.com
 
 
 #### To Install
->* [Download Beta](https://github.com/supaFool/TarotBuddy/releases)
->*  Navigate to -- TarotBuddy\out\artifacts\TarotBuddy
->*  Place the .jar file anywhere you like and run it
+Open TarotBuddy.exe...thats about it
 
 #### Add *.tb to .gitignore
 
