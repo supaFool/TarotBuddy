@@ -1,6 +1,7 @@
 TarotBuddy Alpha
 ==================
 Tarot Buddy Beta. Build - Fortune Telling Software.
+www.TheSupaDev.com
 
 #####This is the most stable version. We are doing a total overhaul to make Tarot buddy communicate better, and faster with all scenarios. 
 
