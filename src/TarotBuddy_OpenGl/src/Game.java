@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class Game extends BasicGame {
 
 //    SETTINGS
-    private static boolean isFullScreen = true;
+    private static boolean isFullScreen = false;
     private static boolean isVSync = false; //Causing FPS to stay at 30FPS?
 
     private Listener listen;
