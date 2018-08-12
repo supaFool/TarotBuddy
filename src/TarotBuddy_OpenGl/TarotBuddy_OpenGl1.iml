@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="false">
-    <output url="file:///production/TarotBuddy" />
-    <output-test url="file:///test/TarotBuddy" />
+    <output url="file:///production/TarotBuddy_OpenGl1" />
+    <output-test url="file:///test/TarotBuddy_OpenGl1" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
@@ -10,7 +10,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="TarotBuddy" level="project" />
-    <orderEntry type="library" name="libs1" level="project" />
-    <orderEntry type="module" module-name="TarotBuddy_OpenGl1" exported="" />
+    <orderEntry type="library" exported="" name="libs1" level="project" />
   </component>
 </module>

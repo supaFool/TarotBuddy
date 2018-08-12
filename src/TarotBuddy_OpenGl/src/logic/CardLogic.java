@@ -1,6 +1,5 @@
 package logic;
 
-import card.CardData;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
@@ -98,7 +97,7 @@ public class CardLogic {
     private Image[] CARD_IMAGES;
     private ArrayList<Image> images;
 
-    private CardData cardData;
+    private CardLogic cardData;
 
     public CardLogic() {
         init();

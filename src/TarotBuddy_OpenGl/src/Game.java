@@ -41,7 +41,7 @@ public class Game extends BasicGame {
 
     @Override
     public void init(GameContainer gc) throws SlickException {
-        this.listen = new Listener();
+        this.listen = new listener.Listener();
         this.display = new Display(gc);
     }
 
