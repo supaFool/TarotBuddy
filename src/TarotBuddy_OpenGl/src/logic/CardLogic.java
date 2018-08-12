@@ -281,7 +281,7 @@ public class CardLogic {
         //TODO add Images from CardData.java
         for (int i = 0; i < numberOfCardsInDeck; i++) {
             try {
-                images.add(i, new Image("card/image/decks/wiate/" + i + ".gif"));
+                images.add(i, new Image("image/decks/wiate/" + i + ".gif"));
 
             } catch (SlickException e) {
                 e.printStackTrace();
