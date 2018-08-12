@@ -1,6 +1,5 @@
 import display.Display;
 import listener.Listener;
-import logic.CardLogic;
 import org.newdawn.slick.*;
 
 import java.util.logging.Level;
@@ -12,13 +11,14 @@ import java.util.logging.Logger;
 
 public class Game extends BasicGame {
 
-//    SETTINGS
-    private static boolean isFullScreen = true;
+    //    SETTINGS
+    private static boolean isFullScreen = false;
     private static boolean isVSync = false; //Causing FPS to stay at 30FPS?
+    private static int width = 800;
+    private static int height = 600;
 
     private Listener listen;
     private Display display;
-    private CardLogic logic;
 
 
     public Game(String gamename) {
@@ -28,9 +28,17 @@ public class Game extends BasicGame {
     public static void main(String[] args) {
         try {
             AppGameContainer appgc;
+
             appgc = new AppGameContainer(new Game("Tarot Buddy"));
-//            appgc.setDisplayMode(500, 500, isFullScreen);
-            appgc.setDisplayMode(appgc.getScreenWidth(), appgc.getScreenHeight(), isFullScreen);
+
+//            Check for full screen
+            if (isFullScreen){
+            appgc.setDisplayMode(appgc.getScreenWidth(), appgc.getScreenHeight(), true);
+            }else{
+            appgc.setDisplayMode(width, height, false);
+            }
+
+
             appgc.setTargetFrameRate(60);
             appgc.setVSync(isVSync);
             appgc.setMultiSample(3);
@@ -54,10 +62,5 @@ public class Game extends BasicGame {
     @Override
     public void render(GameContainer gc, Graphics g) throws SlickException {
         display.render(g);
-    }
-    private void loadSpecialScene(AppGameContainer appgc){
-        appgc.setTitle("Testing");
-        System.out.println("For you enjoyment we now do a what if");
-
     }
 }

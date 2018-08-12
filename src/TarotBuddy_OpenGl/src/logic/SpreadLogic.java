@@ -18,7 +18,7 @@ public class SpreadLogic {
         populateSpread();
     }
 
-    private void init(){
+    private void init() {
         cards_in_spread = new ArrayList<>();
     }
 
@@ -30,7 +30,7 @@ public class SpreadLogic {
         return cards_in_spread;
     }
 
-    private void populateSpread(){
+    private void populateSpread() {
         Random r = new Random();
         for (int i = 0; i < amount_in_spread; i++) {
             cards_in_spread.add(i, r.nextInt(78));

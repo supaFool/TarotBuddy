@@ -276,7 +276,7 @@ public class CardLogic {
         loadCardImages();
     }
 
-//    Loads all the card images into an ArrayList
+    //    Loads all the card images into an ArrayList
     private void loadCardImages() {
         for (int i = 0; i < numberOfCardsInDeck; i++) {
             try {

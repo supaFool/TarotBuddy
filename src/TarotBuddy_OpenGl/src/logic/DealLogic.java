@@ -21,7 +21,7 @@ public class DealLogic {
         init();
     }
 
-    private void init(){
+    private void init() {
         cardLogic = new CardLogic();
         spreadLogic = new SpreadLogic(how_many_cards_to_deal);
         cards = new ArrayList<>(how_many_cards_to_deal);
@@ -32,16 +32,16 @@ public class DealLogic {
             String meaning = cardLogic.getCARD_MEANINGS(card_numbers.get(i));
             String title = cardLogic.getCARD_TITLE(card_numbers.get(i));
             Image image = cardLogic.getCardImage(card_numbers.get(i));
-            Card c = new Card(title,meaning,card_numbers.get(i).toString(), image);
+            Card c = new Card(title, meaning, card_numbers.get(i).toString(), image);
             cards.add(i, c);
         }
     }
 
-    public void render(Graphics g){
+    public void render(Graphics g) {
         float x = 10;
         for (Card c :
                 cards) {
-            g.drawImage(c.getImage(),x += c.getImage().getWidth() , 100);
+            g.drawImage(c.getImage(), x += c.getImage().getWidth(), 100);
         }
     }
 }
