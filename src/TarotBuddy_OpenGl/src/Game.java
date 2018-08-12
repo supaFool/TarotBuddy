@@ -39,7 +39,7 @@ public class Game extends BasicGame {
             }
 
 
-            appgc.setTargetFrameRate(60);
+//            appgc.setTargetFrameRate(60);
             appgc.setVSync(isVSync);
             appgc.setMultiSample(3);
             appgc.start();

@@ -33,6 +33,8 @@ public class SpreadLogic {
     private void populateSpread() {
         Random r = new Random();
         for (int i = 0; i < amount_in_spread; i++) {
+//            Populate the array with random numbers in accordance
+//            with how many cards are in the spread
             cards_in_spread.add(i, r.nextInt(78));
         }
     }
