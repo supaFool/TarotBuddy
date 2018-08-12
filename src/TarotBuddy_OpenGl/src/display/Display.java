@@ -1,6 +1,7 @@
 package display;
 
 import logic.CardLogic;
+import logic.DealLogic;
 import logic.SpreadLogic;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -18,13 +19,10 @@ public class Display {
     int counter = 0;
     float speed = 0.75f;
     float scale = 1f;
-    Shape shape;
-    Random r;
     GameContainer gc;
 
-    CardLogic logic;
 
-
+    DealLogic deal;
 
     public Display(GameContainer gc) {
         this.gc = gc;
@@ -34,10 +32,7 @@ public class Display {
     private void init() {
         currentX = 0;
         currentY = 0;
-        r = new Random();
-        logic = new CardLogic();
-        shape = new Rectangle(currentX, currentY, logic.getCardImage(15).getWidth(), logic.getCardImage(15).getHeight());
-
+        deal = new DealLogic( 4);
     }
 
     /**
@@ -50,7 +45,6 @@ public class Display {
         currentX += speed;
         currentY += speed;
 
-        g.drawImage(logic.getCardImage(18).getScaledCopy(scale), gc.getWidth() /2, currentY);
-        new SpreadLogic(10,1,1);
+        deal.render(g);
     }
 }

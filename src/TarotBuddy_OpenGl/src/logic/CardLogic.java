@@ -91,13 +91,12 @@ public class CardLogic {
     public static final int QUEEN_OF_PENTACLES = 77;
     private int numberOfCardsInDeck = 78;
 
+//    VARS to keep track of the finished array
 
     private String[] CARD_MEANINGS;
     private String[] CARD_TITLE;
     private Image[] CARD_IMAGES;
     private ArrayList<Image> images;
-
-    private CardLogic cardData;
 
     public CardLogic() {
         init();
@@ -277,8 +276,8 @@ public class CardLogic {
         loadCardImages();
     }
 
+//    Loads all the card images into an ArrayList
     private void loadCardImages() {
-        //TODO add Images from CardData.java
         for (int i = 0; i < numberOfCardsInDeck; i++) {
             try {
                 images.add(i, new Image("image/decks/wiate/" + i + ".gif"));

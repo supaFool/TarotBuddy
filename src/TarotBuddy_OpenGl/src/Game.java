@@ -13,7 +13,7 @@ import java.util.logging.Logger;
 public class Game extends BasicGame {
 
 //    SETTINGS
-    private static boolean isFullScreen = false;
+    private static boolean isFullScreen = true;
     private static boolean isVSync = false; //Causing FPS to stay at 30FPS?
 
     private Listener listen;
@@ -29,6 +29,7 @@ public class Game extends BasicGame {
         try {
             AppGameContainer appgc;
             appgc = new AppGameContainer(new Game("Tarot Buddy"));
+//            appgc.setDisplayMode(500, 500, isFullScreen);
             appgc.setDisplayMode(appgc.getScreenWidth(), appgc.getScreenHeight(), isFullScreen);
             appgc.setTargetFrameRate(60);
             appgc.setVSync(isVSync);
