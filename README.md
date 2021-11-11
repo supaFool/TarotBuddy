@@ -2,7 +2,7 @@ TarotBuddy Beta
 ==================
 Tarot Buddy Beta. Build - Fortune Telling Software.
 
-www.TheSupaDev.com
+www.SupaDev.com
 
 ### This is the 1st version, It is staying the way it is for retro reasons.
 
